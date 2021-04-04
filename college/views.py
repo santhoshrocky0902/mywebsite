@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import New, Event,Department,HOD,Main_facility, Admission, PersonalInformation,ParentsInformation,StudentDetails,ParentsDetails,TcDetails,EleventhDetails,TwelthDetails,MarkDetails, EnquiryStatus
+from .models import New, Event,Department,HOD,Main_facility,OnlineApplication
 from MainPage.models import mci
 from django.template import loader
 from django.contrib.auth.models import User
@@ -937,7 +937,7 @@ def admission(request):
         branch = request.POST['ap_course']
         # personal
         name = request.POST['ap_studname']
-        dob = request.POST['ap_dob_date']
+        dob = request.POST['ap_dob_date'+'/'+'ap_dob_month'+'/'+'ap_dob_year']
         age = request.POST['ap_dob_age']
         blood = request.POST['ap_blood']
         mother_tounge = request.POST['ap_mothertng']
@@ -956,20 +956,77 @@ def admission(request):
         gname = request.POST['ap_guardian_name']
         goccupation = request.POST['ap_guardian_occ']
         gincome = request.POST['ap_guardian_income']
+        # 
+        nationality = request.POST['ap_nationality']
+        native = request.POST['ap_native']
+        state = request.POST['ap_state']
+        aphone = request.POST['ap_phone']
+        email = request.POST['ap_email']
+        address11 = request.POST['ap_address1']
+        address12 = request.POST['ap_address2']
+        city1 = request.POST['ap_city']
+        pincode1 = request.POST['ap_pincode']
+        phone1 = request.POST['ap_phone2']
+        address21 = request.POST['ap_address_1']
+        address22 = request.POST['ap_address_2']
+        city2 = request.POST['ap_city_2']
+        pincode2 = request.POST['ap_pincode_2']
+        phone2 = request.POST['ap_phone_3']
+        if 'ap1_xinter_yearpass' in request.POST:
+            month_and_year_of_passing = request.POST['ap1_xinter_yearpass']
+        else:
+            month_and_year_of_passing = False
+        if 'ap1_xinter_percent' and 'ap1_xinter_class'and 'ap1_xinter_school' in request.POST:
+            percentage_of_marks = request.POST['ap1_xinter_percent']
+            board = request.POST['ap1_xinter_class']
+            name_of_institution = request.POST['ap1_xinter_school']
+        else:
+            percentage_of_marks = False
+            board= False
+            name_of_institution = False
+# 
+        tc_no = request.POST['ap_tc_no']
+        tc_date = request.POST['ap_tc_date'+'/'+'ap_tc_month'+'/'+'ap_tc_year']
+        medium_of_instruction = request.POST['ap_medium']
+        reg_no = request.POST['ap_reg_no']
+        # month_and_year_of_passing = request.POST['ap1_xinter_yearpass']
+        # percentage_of_marks = request.POST['ap1_xinter_percent']
+        language = request.POST['ap_hsc_marks_ob_lan']
+        english = request.POST['ap_hsc_marks_ob_eng']
+        maths = request.POST['ap_hsc_marks_ob_math']
+        physics = request.POST['ap_hsc_marks_ob_phy']
+        chemistry = request.POST['ap_hsc_marks_ob_che']
+        biology = request.POST['ap_hsc_marks_ob_bio']
+        eligible_percentage = request.POST['ap_elig_percentage']
+       
+        reg_no1 = request.POST['ap_reg_no12']
+        month_and_year_of_passing1 = request.POST['ap2_xinter_yearpass']
+        percentage_of_marks1 = request.POST['ap2_xinter_percent']
+        board1 = request.POST['ap2_xinter_class']
+        name_of_institution1 = request.POST['ap2_xinter_school']
+        language1 = request.POST['ap_hsc_marks_ob_lan2']
+        english1 = request.POST['ap_hsc_marks_ob_eng2']
+        maths1 = request.POST['ap_hsc_marks_ob_math2']
+        physics1 = request.POST['ap_hsc_marks_ob_phy2']
+        chemistry1 = request.POST['ap_hsc_marks_ob_che2']
+        biology1 = request.POST['ap_hsc_marks_ob_bio2']
+        eligible_percentage1 = request.POST['ap_elig_percentage2']
+        
+      
 
-
-        ins = Admission(degree = degree, image=doc_name ,course_type=course_type, year= year, branch = branch)
-        ins2 = PersonalInformation(        applicant_name = name, date_of_birth=dob,age=age, blood_group=blood, mother_tounge=mother_tounge, religion = religion, cast=cast, community= community, reserved_category= reserved,physically_handicapped=handicap)
-        ins3=ParentsInformation(father_name=fname, father_income= fincome, father_occupation= foccupation,mother_income=mincome, mother_name=mname,mother_occupation=moccupation, gaurdian_income=gincome, gaurdian_name=gname, gaurdian_occupation=goccupation,)
+        ins = OnlineApplication(degree = degree, image=doc_name ,course_type=course_type, year= year, branch = branch,
+      applicant_name = name, date_of_birth=dob,age=age, blood_group=blood, mother_tounge=mother_tounge, religion = religion, cast=cast, community= community, reserved_category= reserved,physically_handicapped=handicap,
+      father_name=fname, father_income= fincome, father_occupation= foccupation,mother_income=mincome, mother_name=mname,mother_occupation=moccupation, gaurdian_income=gincome, gaurdian_name=gname, gaurdian_occupation=goccupation,
+      nationality=nationality, native_place=native,state=state,email=email,phone=aphone,current_address_line2=address12,current_city=city1,current_pincode=pincode1,current_phone=phone1,permanent_address_line1=address21, permanent_address_line2=address22,permanent_city=city2,permanent_pincode=pincode2, permanent_phone= phone2,
+tc_no=tc_no,tc_date=tc_date,medium_of_instruction=medium_of_instruction,
+reg_no=reg_no,month_and_year_of_passing=month_and_year_of_passing,percentage_of_marks=percentage_of_marks,board=board,name_of_institution=name_of_institution,language=language,english=english,maths=maths,physics=physics,chemistry=chemistry,biology=biology,eligible_percentage=eligible_percentage,
+reg_no1=reg_no1,month_and_year_of_passing1=month_and_year_of_passing1,percentage_of_marks1=percentage_of_marks1,board1=board1,name_of_institution1=name_of_institution1,language1=language1,english1=english1,maths1=maths1,physics1=physics1,chemistry1=chemistry1,biology1=biology1,eligible_percentage1=eligible_percentage1, 
+      )
         ins.save()
-        ins2.save()
-        ins3.save()
         print('saved')
-        return render(request, 'thankyou.html')
 
     else:
-        print('not saved')
-        print(request.method)
+       pass
     return render(request, 'admission.html',{'form':form})
 
 

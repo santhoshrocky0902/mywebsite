@@ -215,18 +215,16 @@ class PaperPublication(models.Model):
     department_name = models.ForeignKey(Department, on_delete=models.CASCADE, default =None)
 
 
-class Admission(models.Model):
+class OnlineApplication(models.Model):
     degree = models.CharField(max_length=20, default=None)
-    image = models.ImageField(upload_to='college/admission', blank=False, default=None)
+    image = models.ImageField(upload_to='college/online-application', blank=False, default=None)
     course_type = models.CharField(max_length=20, default=None)
     year = models.CharField(max_length=20, default=None)
     branch = models.CharField(max_length=20, default=None)
 
-    # personal information
-class PersonalInformation(models.Model):  
     applicant_name = models.CharField(max_length=50, default=None)
     date_of_birth = models.CharField(max_length=20, default=None)
-    age = models.IntegerField(default=None)
+    age = models.IntegerField(default=None, null=True)
     blood_group = models.CharField(max_length=3, default=None)
     mother_tounge = models.CharField(max_length=15, default=None)
     religion = models.CharField(max_length=20, default=None)
@@ -234,9 +232,7 @@ class PersonalInformation(models.Model):
     community =models.CharField(max_length=20, default=None)
     reserved_category = models.CharField(max_length=20, default=None)
     physically_handicapped = models.CharField(max_length=20, default=None)
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE, default=None)
-    # parents information
-class ParentsInformation(models.Model):  
+
     father_name = models.CharField(max_length=30, default=None)
     father_occupation = models.CharField(max_length=50, default=None)
     father_income = models.CharField(max_length=20, default=None)
@@ -246,53 +242,31 @@ class ParentsInformation(models.Model):
     gaurdian_name = models.CharField(max_length=30, default=None)
     gaurdian_occupation = models.CharField(max_length=50, default=None)
     gaurdian_income = models.CharField(max_length=20, default=None)
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE, default=None)
-    # student details
-class StudentDetails(models.Model):  
+
     nationality = models.CharField(max_length=20, default=None)
     native_place = models.CharField(max_length=20, default=None)
     state = models.CharField(max_length=20, default=None)
-    email = models.EmailField()
+    email = models.EmailField(default=None)
     phone = models.CharField(max_length=20, default=None)
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE, default=None)
-#parents details
-class ParentsDetails(models.Model):  
-    currrent_address_line1 = models.CharField(max_length=20, default=None)
-    current_address_line2 = models.CharField(max_length=20, default=None)
-    current_city = models.CharField(max_length=30, default=None)
-    current_pincode = models.CharField(max_length=15, default=None)
-    current_phone = models.CharField(max_length=20, default=None)
-    permanent_address_line1 = models.CharField(max_length=20, default=None)
-    permanent_address_line2 = models.CharField(max_length=20, default=None)
-    permanent_city = models.CharField(max_length=30, default=None)
-    permanent_pincode = models.CharField(max_length=15, default=None)
-    permanent_phone = models.CharField(max_length=20, default=None)
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE, default=None)
+    currrent_address_line1 = models.CharField(max_length=100, default=None,null=True)
+    current_address_line2 = models.CharField(max_length=100, default=None)
+    current_city = models.CharField(max_length=50, default=None,verbose_name="City")
+    current_pincode = models.CharField(max_length=15, default=None, verbose_name="Pincode")
+    current_phone = models.CharField(max_length=20, default=None, verbose_name="Phone")
+    permanent_address_line1 = models.CharField(max_length=100, default=None)
+    permanent_address_line2 = models.CharField(max_length=100, default=None)
+    permanent_city = models.CharField(max_length=50, default=None,verbose_name="City")
+    permanent_pincode = models.CharField(max_length=15, default=None,verbose_name="Pincode")
+    permanent_phone = models.CharField(max_length=20, default=None,verbose_name="Phone")
     
-class TcDetails(models.Model):
     tc_no = models.CharField(max_length=20, default=None)
     tc_date = models.CharField(max_length=20, default=None)
     medium_of_instruction = models.CharField(max_length=20, default=None)
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE, default=None)
-#11
-class EleventhDetails(models.Model):
-    reg_no = models.CharField(max_length=20, default=None)
+    reg_no = models.CharField(max_length=20, default=None, verbose_name="Registration number")
     month_and_year_of_passing = models.CharField(max_length=20, default=None)
     percentage_of_marks = models.CharField(max_length=3, default=None)
     board = models.CharField(max_length=10, default=None)
     name_of_institution = models.CharField(max_length=100, default=None)
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE,default=None)
-#12
-class TwelthDetails(models.Model):
-    reg_no = models.CharField(max_length=20, default=None)
-    month_and_year_of_passing = models.CharField(max_length=20, default=None)
-    percentage_of_marks = models.CharField(max_length=3, default=None)
-    board = models.CharField(max_length=10, default=None)
-    name_of_institution = models.CharField(max_length=100, default=None)
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE,default=None)
-
-
-class MarkDetails(models.Model):
     language = models.CharField(max_length=20, default=None)
     english = models.CharField(max_length=20, default=None)
     maths = models.CharField(max_length=20, default=None)
@@ -300,14 +274,24 @@ class MarkDetails(models.Model):
     chemistry = models.CharField(max_length=20, default=None)
     biology = models.CharField(max_length=20, default=None)
     eligible_percentage = models.CharField(max_length=20, default=None)
-    some_name = models.ForeignKey(EleventhDetails, on_delete=models.CASCADE,default=None)
-    another_name = models.ForeignKey(TwelthDetails, on_delete=models.CASCADE,default=None)
 
-class EnquiryStatus(models.Model):
-    has_enquired = models.BooleanField()
-    admission_name = models.ForeignKey(Admission, on_delete=models.CASCADE,default=None)
+    reg_no1 = models.CharField(max_length=20, default=None, verbose_name="Registration number")
+    month_and_year_of_passing1 = models.CharField(max_length=20, default=None ,verbose_name="Month And Year of Passing")
+    percentage_of_marks1 = models.CharField(max_length=3, default=None,verbose_name="Percentage of Marks")
+    board1 = models.CharField(max_length=10, default=None,verbose_name="    Board")
+    name_of_institution1 = models.CharField(max_length=100, default=None,verbose_name="Name of Institution")
+    language1 = models.CharField(max_length=20, default=None,verbose_name="Language")
+    english1 = models.CharField(max_length=20, default=None,verbose_name="English")
+    maths1 = models.CharField(max_length=20, default=None,verbose_name=" Maths")
+    physics1 = models.CharField(max_length=20, default=None,verbose_name="Physics")
+    chemistry1 = models.CharField(max_length=20, default=None,verbose_name="Chemistry")
+    biology1 = models.CharField(max_length=20, default=None,verbose_name="Biology")
+    eligible_percentage1 = models.CharField(max_length=20, default=None,verbose_name="Eligible Percentage")
 
+    has_enquired = models.BooleanField(default=False, null=True)
 
+    def __str__(self):
+        return str(self.applicant_name)
 
 
 

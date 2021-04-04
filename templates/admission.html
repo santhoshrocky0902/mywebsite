@@ -307,10 +307,1234 @@
                     <div class="clearfix">
                         <div class="col-xs-6">
                             <div class="form-input-wrap nextprevwrap">
-                                <input type="submit" value="Submit" />
 
                                 <a class="btn_web" id="menu2-prev-button">Previous</a>
                                 <a class="btn_web" data-toggle="tab" id="menu2-next-button">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content fade" id="menu3">
+                    <div class="col-xs-6">
+                        <div class="form-input-wrap">
+                            <h2 class="inner_sub_hd">Applicant/Student Address</h2>
+                            <div class="form-group nationtext">
+                                <label for="nationtext">Nationality</label>
+                                <input type="text" id="nationtext" name="ap_nationality" required="required">
+                                <span class="apply-form-error-msg">Please fill this field.</span>
+                            </div>
+                            <div class="form-group native_place">
+                                <label for="placetext">Native Place</label>
+                                <input type="text" id="native_place" name="ap_native" required="required">
+                                <span class="apply-form-error-msg">Please fill this field.</span>
+                            </div>
+
+                            <div class="form-group stateselect">
+                                <label for="stateselect">State</label>
+                                <select id="stateselect" required="required" name="ap_state">
+    <option disabled selected>Select</option>
+    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+    <option value="Daman and Diu">Daman and Diu</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Lakshadweep">Lakshadweep</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Orissa">Orissa</option>
+    <option value="Pondicherry">Pondicherry</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttaranchal">Uttaranchal</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="West Bengal">West Bengal</option>
+    </select>
+                                <span class="apply-form-error-msg">Please fill this field.</span>
+                            </div>
+                            <div class="form-group phonetext">
+                                <label for="phonetext">Phone</label>
+                                <input type="text" id="phonetext" name="ap_phone" required="required" maxlength="10" onkeypress="return isPhoneNumber(event)">
+                                <span class="apply-form-error-msg">Please fill this field.</span>
+                                <span class="apply-form-error-phnumber">Phone number must be 10 digits</span>
+                            </div>
+                            <div class="form-group emailtext">
+                                <label for="emailtext">Email</label>
+                                <input type="email" name="ap_email" id="emailtext" required="required">
+                                <span class="apply-form-error-msg">Please fill this field.</span>
+                                <span class="apply-form-error-msgemail">Invalid Email.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-input-wrap">
+                            <h2 class="inner_sub_hd">Parent/Guardian Address</h2>
+                            <div class="permanent-address">
+                                <div class="form-group perma_addrline1text">
+                                    <label for="addrline1text">Address Line 1</label>
+                                    <input type="text" id="addrline1text" name="ap_address1" required="required" class="PrFirstAddr">
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                                <div class="form-group perma_addrline2text">
+                                    <label for="addrline2text">Address Line 2</label>
+                                    <input type="text" id="addrline2text" name="ap_address2" required="required" class="PrAdd2">
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                                <div class="form-group perma_citytext">
+                                    <label for="citytext">City</label>
+                                    <input type="text" id="citytext" required="required" name="ap_city" class="PrCity">
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-6 perma_pincodetext">
+                                        <label for="citytext">Pincode</label>
+                                        <input type="text" id="pincodetext" required="required" name="ap_pincode" maxlength="6" onkeypress="return isNumber(event)" class="PrPin">
+                                        <span class="apply-form-error-msg">Please fill this field.</span>
+                                    </div>
+                                    <div class="form-group col-xs-6 perma_addressphonetext">
+                                        <label for="citytext">Phone</label>
+                                        <input type="text" id="addressphonetext" name="ap_phone2" required="required" maxlength="10" onkeypress="return isNumber(event)" class="PrPhone">
+                                        <span class="apply-form-error-msg">Please fill this field.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group communication_adress">
+                                <label>Use Same for Future Communication?</label>
+                                <div class="checkbox-group">
+                                    <input type="radio" id="sameaddrfutyes" name="ap_sameaddrfut" required="required" value="yes" id="filladdress" class="setValue" onclick="fillAddress()" />
+                                    <label for="sameaddrfutyes">Yes</label>
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="radio" id="sameaddrfutno" name="ap_sameaddrfut" required="required" value="no" id="clearaddress" class="setValue" onclick="fillAddress()" />
+                                    <label for="sameaddrfutno">No</label>
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                            </div>
+                            <div class="different-address">
+                                <div class="form-group diff_addrline1text">
+                                    <label for="addrline1text">Address Line 1</label>
+                                    <input type="text" id="addrline1text" name="ap_address_1" required="required" class="PreFirstAddr">
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                                <div class="form-group diff_addrline2text">
+                                    <label for="addrline2text">Address Line 2</label>
+                                    <input type="text" id="addrline2text" name="ap_address_2" required="required" class="PreAdd2">
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                                <div class="form-group diff_citytext">
+                                    <label for="citytext">City</label>
+                                    <input type="text" id="citytext" name="ap_city_2" required="required" class="PreCity">
+                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-6 diff_pincodetext">
+                                        <label for="citytext">Pincode</label>
+                                        <input type="text" id="pincodetext" name="ap_pincode_2" required="required" maxlength="6" onkeypress="return isNumber(event)" class="PrePin">
+                                        <span class="apply-form-error-msg">Please fill this field.</span>
+                                    </div>
+                                    <div class="form-group col-xs-6 diff_addressphonetext">
+                                        <label for="citytext">Phone</label>
+                                        <input type="text" id="addressphonetext" name="ap_phone_3" required="required" maxlength="10" onkeypress="return isNumber(event)" class="PrePhone">
+                                        <span class="apply-form-error-msg">Please fill this field.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="col-xs-6">
+                            <div class="form-input-wrap nextprevwrap">
+                                <a class="btn_web" id="menu3-prev-button">Previous</a>
+                                <a class="btn_web" data-toggle="tab" href="#" id="menu3-next-button">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content fade" id="menu4">
+                    <div class="academic-content">
+                        <div class="academic-intro">
+                            <div class="row">
+                                <div class="form-group availconcess">
+                                    <p class="col-lg-6">
+                                        Whether availing First Graduate Concession. If yes,certificate from Revenue Department is to be enclosed (Goverment Quota Candidates only).
+                                    </p>
+                                    <div class="col-xs-6">
+                                        <div class="checkbox-group">
+                                            <input type="radio" id="availconcessyes" name="ap_availconcess" required="required" value="yes" />
+                                            <label for="availconcessyes">Yes</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="radio" id="availconcessno" name="ap_availconcess" required="required" value="no" />
+                                            <label for="availconcessno">No</label>
+                                        </div>
+                                        <span class="apply-form-error-msg">Please fill this field.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="form-group col-sm-6 tcnumtext">
+                                            <label for="tcnumtext">(i) T.C. No</label>
+                                            <input type="text" id="tcnumtext" name="ap_tc_no" required="required" onkeypress="return isNumber(event)">
+                                            <span class="apply-form-error-msg">Please fill this field.</span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row multiple-form-group">
+                                                <label>(ii) T.C Date</label>
+                                                <div class="form-group col-xs-4 tc_date">
+                                                    <select required="required" name="ap_tc_date" id="tc_date">
+    <option disabled selected>DD</option>
+    <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option>
+    </select>
+                                                    <span class="apply-form-error-msg">Invalid date.</span>
+                                                </div>
+                                                <div class="form-group col-xs-4 tc_month">
+                                                    <select required="required" name="ap_tc_month" id="tc_month">
+    <option disabled selected>MMM</option>
+    <option value="1">JAN</option>
+    <option value="2">FEB</option>
+    <option value="3">MAR</option>
+    <option value="4">APR</option>
+    <option value="5">MAY</option>
+    <option value="6">JUN</option>
+    <option value="7">JUL</option>
+    <option value="8">AUG</option>
+    <option value="9">SEP</option>
+    <option value="10">OCT</option>
+    <option value="11">NOV</option>
+    <option value="12">DEC</option>
+    </select>
+                                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                                </div>
+                                                <div class="form-group col-xs-4 tc_year">
+                                                    <select required="required" name="ap_tc_year" id="tc_year">
+    <option disabled selected>YYYY</option>
+    <option value='1999'>1999</option><option value='2000'>2000</option><option value='2001'>2001</option><option value='2002'>2002</option><option value='2003'>2003</option><option value='2004'>2004</option><option value='2005'>2005</option><option value='2006'>2006</option><option value='2007'>2007</option><option value='2008'>2008</option><option value='2009'>2009</option><option value='2010'>2010</option><option value='2011'>2011</option><option value='2012'>2012</option><option value='2013'>2013</option><option value='2014'>2014</option><option value='2015'>2015</option><option value='2016'>2016</option><option value='2017'>2017</option><option value='2018'>2018</option><option value='2019'>2019</option><option value='2020'>2020</option>                          </select>
+                                                    </select>
+                                                    <span class="apply-form-error-msg">Please fill this field.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-6 qualifyexamtext">
+                                            <label for="qualifyexamtext">Qualifying of Examination</label>
+                                            <input type="text" id="qualifyexamtext" name="ap_qualification" onkeypress="return /[a-z]/i.test(event.key);" required="required">
+                                            <span class="apply-form-error-msg">Please fill this field.</span>
+                                        </div>
+                                        <div class="form-group col-sm-6 instrmedtext">
+                                            <label for="instrmedtext">Medium of Instruction</label>
+                                            <input type="text" id="instrmedtext" name="ap_medium" onkeypress="return /[a-z]/i.test(event.key);" required="required">
+                                            <span class="apply-form-error-msg">Please fill this field.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-table">
+                            <div class="acadtab-head">
+                                <h3>academic details of (X std & hsc / equivalent)</h3>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h4>Class</h4>
+                                        </th>
+                                        <th width="15%">
+                                            <h4>Year of Passing</h4>
+                                        </th>
+                                        <th width="15%">
+                                            <h4>% of Marks</h4>
+                                        </th>
+                                        <th width="13%">
+                                            <h4>Class</h4>
+                                        </th>
+                                        <th width="35%">
+                                            <h4>Name of the School/Polytechnic</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h4>X Std. /Matric</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm11">
+                                                <input type="text" id="xm11" name="ap_xmatric_yearpass" maxlength="4" onkeypress="return isNumber(event)">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm12">
+                                                <input type="text" id="xm12" name="ap_xmatric_percent">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm13">
+                                                <input type="text" id="xm13" name="ap_xmatric_class">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm14">
+                                                <input type="text" id="xm14" name="ap_xmatric_school" onkeypress="return /[a-z]/i.test(event.key);">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>XI Std</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm21">
+                                                <input type="text" id="xm21" name="ap_x1inter_yearpass" maxlength="4" onkeypress="return isNumber(event)">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm22">
+                                                <input type="text" id="xm22" name="ap_x1inter_percent">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm23">
+                                                <input type="text" id="xm23" name="ap_x1inter_class">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm24">
+                                                <input type="text" id="xm24" name="ap_x1inter_school" onkeypress="return /[a-z]/i.test(event.key);">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>XII Std</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm21">
+                                                <input type="text" id="xm201" name="ap2_xinter_yearpass" maxlength="4" onkeypress="return isNumber(event)">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm22">
+                                                <input type="text" id="xm202" name="ap2_xinter_percent">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm23">
+                                                <input type="text" id="xm203" name="ap2_xinter_class">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm24">
+                                                <input type="text" id="xm204" name="ap2_xinter_school" onkeypress="return /[a-z]/i.test(event.key);">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Diploma</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm31">
+                                                <input type="text" id="xm31" name="ap_diploma_yearpass" maxlength="4" onkeypress="return isNumber(event)">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm32">
+                                                <input type="text" id="xm32" name="ap_diploma_percent">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm33">
+                                                <input type="text" id="xm33" name="ap_diploma_class">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm34">
+                                                <input type="text" id="xm34" name="ap_diploma_school" onkeypress="return /[a-z]/i.test(event.key);">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="academic-table academic_ntable">
+                            <div class="acadtab-head">
+                                <h3>HSC(+1) (ACADEMIC OR EQUIVALENT)</h3>
+                            </div>
+                            <div class="col-md-7 input-wrap">
+                                <div class="form-group col-xs-6 boardnametext">
+                                    <label for="boardnametext">Name of Board</label>
+                                    <input type="text" id="boardnametext" name="ap_board" onkeypress="return /[a-z]/i.test(event.key);">
+                                </div>
+                                <div class="form-group col-xs-6 regnumtext">
+                                    <label for="regnumtext">Register Number</label>
+                                    <input type="text" id="regnumtext" name="ap_reg_no">
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h4>Subjects</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Month and Year of Passing</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Marks Obtained</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Maximum Marks </h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Percentage</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h4>Language</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm41" name="ap_hsc_year_pass_lan">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm42" name="ap_hsc_marks_ob_lan">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm43" name="ap_hsc_marks_mx_lan">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm44" name="ap_hsc_percent_lan" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>English</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm51">
+                                                <input type="text" id="xm51" name="ap_hsc_year_pass_eng">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm52">
+                                                <input type="text" id="xm52" name="ap_hsc_marks_ob_eng">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm53">
+                                                <input type="text" id="xm53" name="ap_hsc_marks_mx_eng">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm54">
+                                                <input type="text" id="xm54" name="ap_hsc_percent_eng" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Physics</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm61">
+                                                <input type="text" id="xm61" name="ap_hsc_year_pass_phy">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm62">
+                                                <input type="text" id="xm62" name="ap_hsc_marks_ob_phy">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm63">
+                                                <input type="text" id="xm63" name="ap_hsc_marks_mx_phy">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm64">
+                                                <input type="text" id="xm64" name="ap_hsc_percent_phy" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Chemistry</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm71">
+                                                <input type="text" id="xm71" name="ap_hsc_year_pass_che">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm72">
+                                                <input type="text" id="xm72" name="ap_hsc_marks_ob_che">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm73">
+                                                <input type="text" id="xm73" name="ap_hsc_marks_mx_che">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm74">
+                                                <input type="text" id="xm74" name="ap_hsc_percent_che" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Mathematics</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm81">
+                                                <input type="text" id="xm81" name="ap_hsc_year_pass_math">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm82">
+                                                <input type="text" id="xm82" name="ap_hsc_marks_ob_math">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm83">
+                                                <input type="text" id="xm83" name="ap_hsc_marks_mx_math">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm84">
+                                                <input type="text" id="xm84" name="ap_hsc_percent_math" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Biology</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm81">
+                                                <input type="text" id="xm81" name="ap_hsc_year_pass_bio">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm82">
+                                                <input type="text" id="xm82" name="ap_hsc_marks_ob_bio">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm83">
+                                                <input type="text" id="xm83" name="ap_hsc_marks_mx_bio">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm84">
+                                                <input type="text" id="xm84" name="ap_hsc_percent_bio" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="academic-table-bottom">
+                                <p>Eligible percentage (Maths+Chemistry+Physcis)</p>
+                                <div class="form-group eligible_percentage">
+                                    <input type="text" id="eligible_percentage" name="ap_elig_percentage">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="academic-table academic_ntable">
+                            <div class="acadtab-head">
+                                <h3>HSC(+2) (ACADEMIC OR EQUIVALENT)</h3>
+                            </div>
+                            <div class="col-md-7 input-wrap">
+                                <div class="form-group col-xs-6 boardnametext">
+                                    <label for="boardnametexts">Name of Board</label>
+                                    <input type="text" id="boardnametexts" name="ap_board">
+                                </div>
+                                <div class="form-group col-xs-6 regnumtext">
+                                    <label for="regnumtexts">Register Number</label>
+                                    <input type="text" id="regnumtexts" name="ap_reg_no12">
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h4>Subjects</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Month and Year of Passing</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Marks Obtained</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Maximum Marks </h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Percentage</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h4>Language</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm41" name="ap_hsc_year_pass_lan">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm42" name="ap_hsc_marks_ob_lan2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm43" name="ap_hsc_marks_mx_lan">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm44" name="ap_hsc_percent_lan" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>English</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm51">
+                                                <input type="text" id="xm51" name="ap_hsc_year_pass_eng">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm52">
+                                                <input type="text" id="xm52" name="ap_hsc_marks_ob_eng2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm53">
+                                                <input type="text" id="xm53" name="ap_hsc_marks_mx_eng">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm54">
+                                                <input type="text" id="xm54" name="ap_hsc_percent_eng" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Physics</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm61">
+                                                <input type="text" id="xm61" name="ap_hsc_year_pass_phy">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm62">
+                                                <input type="text" id="xm62" name="ap_hsc_marks_ob_phy2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm63">
+                                                <input type="text" id="xm63" name="ap_hsc_marks_mx_phy">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm64">
+                                                <input type="text" id="xm64" name="ap_hsc_percent_phy" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Chemistry</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm71">
+                                                <input type="text" id="xm71" name="ap_hsc_year_pass_che">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm72">
+                                                <input type="text" id="xm72" name="ap_hsc_marks_ob_che2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm73">
+                                                <input type="text" id="xm73" name="ap_hsc_marks_mx_che">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm74">
+                                                <input type="text" id="xm74" name="ap_hsc_percent_che" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Mathematics</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm81">
+                                                <input type="text" id="xm81" name="ap_hsc_year_pass_math">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm82">
+                                                <input type="text" id="xm82" name="ap_hsc_marks_ob_math2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm83">
+                                                <input type="text" id="xm83" name="ap_hsc_marks_mx_math">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm84">
+                                                <input type="text" id="xm84" name="ap_hsc_percent_math" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Biology</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm81">
+                                                <input type="text" id="xm81" name="ap_hsc_year_pass_bio">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm82">
+                                                <input type="text" id="xm82" name="ap_hsc_marks_ob_bio2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm83">
+                                                <input type="text" id="xm83" name="ap_hsc_marks_mx_bio">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm84">
+                                                <input type="text" id="xm84" name="ap_hsc_percent_bio" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="academic-table-bottom">
+                                <p>Eligible percentage (Maths+Chemistry+Physcis)</p>
+                                <div class="form-group eligible_percentage">
+                                    <input type="text" id="eligible_percentages" name="ap_elig_percentage2">
+                                </div>
+                            </div>
+                        </div>
+                        <!--  ------------------------------------------------------------------------------------------  -->
+                        <div class="academic-table academic_ntable" id="lateralEntry">
+                            <div class="acadtab-head">
+                                <h3>Diploma (ACADEMIC OR EQUIVALENT)</h3>
+                            </div>
+                            <div class="input-wrap">
+                                <div class="form-group col-xs-12 courseDiploma">
+                                    <label for="courseDiploma">Diploma in</label>
+                                    <input type="text" id="courseDiploma" name="ap_course_dp">
+                                </div>
+                                <div class="form-group col-xs-6 boardnameDiploma">
+                                    <label for="boardnameDiploma">Name of Board</label>
+                                    <input type="text" id="boardnameDiploma" name="ap_board_dp">
+                                </div>
+                                <div class="form-group col-xs-6 regnumDiploma">
+                                    <label for="regnumDiploma">Register Number</label>
+                                    <input type="text" id="regnumDiploma" name="ap_reg_no_dp">
+                                </div>
+                                <div class="form-group col-xs-12 college_dp">
+                                    <label for="college_dp">Name of the College/Polytechnic & Place </label>
+                                    <input type="text" id="college_dp" name="ap_college_dp">
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h4>Semester</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Month and Year of Passing</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Maximum Marks </h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Marks Obtained</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Percentage of Marks for the semester</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h4>I</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm1001" name="ap_dp_year_pass_1">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm1003" name="ap_dp_marks_mx_1">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm1002" name="ap_dp_marks_ob_1">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm1004" name="ap_dp_percent_1" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>II</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm2001" name="ap_dp_year_pass_2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm2003" name="ap_dp_marks_mx_2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm2002" name="ap_dp_marks_ob_2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm2004" name="ap_dp_percent_2" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>III</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm3001" name="ap_dp_year_pass_3">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm3003" name="ap_dp_marks_mx_3">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm3002" name="ap_dp_marks_ob_3">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm3004" name="ap_dp_percent_3" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>IV</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm4001" name="ap_dp_year_pass_4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm4003" name="ap_dp_marks_mx_4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm4002" name="ap_dp_marks_ob_4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm4004" name="ap_dp_percent_4" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>V</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm5001" name="ap_dp_year_pass_5">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm5003" name="ap_dp_marks_mx_5">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm5002" name="ap_dp_marks_ob_5">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm5004" name="ap_dp_percent_5" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>VI</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xm6001" name="ap_dp_year_pass_6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xm6003" name="ap_dp_marks_mx_6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xm6002" name="ap_dp_marks_ob_6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xm6004" name="ap_dp_percent_6" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="academic-table-bottom">
+                                <p>Aggregate percentage of Marks in all Semester put together</p>
+                                <div class="form-group eligible_percentage">
+                                    <input type="text" id="dp_aggregate_percentage" name="ap_elig_percentage_dp">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PG marks entry -->
+                        <div class="academic-table academic_ntable" id="pgEntry">
+                            <div class="acadtab-head">
+                                <h3>Bachelor's Degree (ACADEMIC OR EQUIVALENT)</h3>
+                            </div>
+                            <div class="input-wrap">
+                                <div class="form-group col-xs-6 courseDiploma">
+                                    <label for="ugUniv">Name of the University & State</label>
+                                    <input type="text" id="ugUniv" name="ap_university_ug">
+                                </div>
+                                <div class="form-group col-xs-6 courseDiploma">
+                                    <label for="ugRegno">Reg.No </label>
+                                    <input type="text" id="ugRegno" name="ap_regno_ug">
+                                </div>
+                                <div class="form-group col-xs-6 boardnameDiploma">
+                                    <label for="ugDegree">Qualifying Degree passed</label>
+                                    <input type="text" id="ugDegree" name="ap_degree_ug">
+                                </div>
+                                <div class="form-group col-xs-6 regnumDiploma">
+                                    <label for="UgMainSub">Name of the Major Subject</label>
+                                    <input type="text" id="UgMainSub" name="ap_sub_ug">
+                                </div>
+                                <div class="form-group col-xs-12 college_dp">
+                                    <label for="ugCollege">Name of the College & Place </label>
+                                    <input type="text" id="ugCollege" name="ap_college_ug">
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h4>Semester</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Month and Year of Passing</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Maximum Marks </h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Marks Obtained</h4>
+                                        </th>
+                                        <th width="20%">
+                                            <h4>Percentage</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h4>I</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug1001" name="ap_ug_year_pass_1">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug1003" name="ap_ug_marks_mx_1">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug1002" name="ap_ug_marks_ob_1">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug1004" name="ap_ug_percent_1" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>II</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug2001" name="ap_ug_year_pass_2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug2003" name="ap_ug_marks_mx_2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug2002" name="ap_ug_marks_ob_2">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug2004" name="ap_ug_percent_2" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>III</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug3001" name="ap_ug_year_pass_3">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug3003" name="ap_ug_marks_mx_3">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug3002" name="ap_ug_marks_ob_3">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug3004" name="ap_ug_percent_3" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>IV</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug4001" name="ap_ug_year_pass_4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug4003" name="ap_ug_marks_mx_4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug4002" name="ap_ug_marks_ob_4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug4004" name="ap_ug_percent_4" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>V</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug5001" name="ap_ug_year_pass_5">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug5003" name="ap_ug_marks_mx_5">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug5002" name="ap_ug_marks_ob_5">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug5004" name="ap_ug_percent_5" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>VI</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug6001" name="ap_ug_year_pass_6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug6003" name="ap_ug_marks_mx_6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug6002" name="ap_ug_marks_ob_6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug6004" name="ap_ug_percent_6" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>VII</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug7001" name="ap_ug_year_pass_7">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug7003" name="ap_ug_marks_mx_7">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug7002" name="ap_ug_marks_ob_7">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug7004" name="ap_ug_percent_7" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>VIII</h4>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm41">
+                                                <input type="text" id="xmug8001" name="ap_ug_year_pass_8">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm43">
+                                                <input type="text" id="xmug8003" name="ap_ug_marks_mx_8">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm42">
+                                                <input type="text" id="xmug8002" name="ap_ug_marks_ob_8">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group xm44">
+                                                <input type="text" id="xmug8004" name="ap_ug_percent_8" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="academic-table-bottom">
+                                <p>Aggregate percentage of Marks in all Semester put together</p>
+                                <div class="form-group eligible_percentage">
+                                    <input type="text" id="ug_aggregate_percentage" name="ap_elig_percentage_ug">
+                                </div>
+                            </div>
+                        </div>
+                        <!--  --------------------------------------------------------------------------------------------------  -->
+                        <div class="clearfix">
+                            <div class="clearfix form-input-wrap nextprevwrap academic-table-bottom">
+                                <input value="submit" type="submit">
+                                <a class="btn_web" id="menu4-prev-button">Previous</a>
+                                <a class="btn_web" data-toggle="tab" href="#" id="form-submit-button">Submit</a>
+                                <svg class="gen_svg-loader">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uploadimg"></use>
+    </svg>
                             </div>
                         </div>
                     </div>

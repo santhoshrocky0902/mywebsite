@@ -1,0 +1,133 @@
+{% extends "college/base.html" %} {% block content %}
+<style>
+    /* .nws_evnts_inner .events_container .nws_evnts_box .evnts_bx_btm ul li a svg {
+        height: 18px;
+        width: 18px;
+        fill: #002e4b !important;
+        margin-left: 15px;
+        vertical-align: middle;
+    } */
+</style>
+<section class="nws_evnts_inner">
+    <div class="events_container">
+        <h2 class="title_line">News & Events</h2>
+        {% for event in events|dictsortreversed:"date" %}
+        <div class="nws_evnts_box nws_evnts_img_sec">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="thumbnail-img-wrap">
+                        {% if event.image %}
+                        <img src="{{event.image.url}}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="{{news.image.url}}" sizes="(max-width: 443px) 100vw, 443px" /> </div>
+                    {% else %}
+                    <img src="#" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="#" sizes="(max-width: 443px) 100vw, 443px" /> </div>
+
+                {% endif %}
+            </div>
+            <div class=" nae col-sm-7">
+                <ul>
+                    <li><a href="#">#<a href="#" rel="category tag">Event</a></a>
+                    </li>
+                </ul>
+                <h3>{{event.title}}</h3>
+                </h3>
+                <div>
+                    <p>{{event.description}} </p>
+                </div>
+                <div class="evnts_bx_btm">
+                    <span>{{event.date}} </span>
+                    <ul>
+
+                        <li>
+                            {% if event.brochure %}
+                            <a href="{{event.brochure.url}} " target="_self">
+                                    {% else %}
+                                    <a href="# " target="_self">
+
+                                    {% endif %}
+
+                                    Download Brochure
+                  <svg>
+                    <use xlink:href="#evnts_dwnlod"></use>
+                  </svg>
+                </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %} {% for news in news|dictsortreversed:"date" %} {% if not news.image %}
+    <div class="nws_evnts_box">
+        <ul>
+            <li><a href="#">#News</a></li>
+        </ul>
+        <h3>{{news.news}}</h3>
+        <div></div>
+        <a href="#" target="_self" class="full_cont-link"></a>
+
+
+        <div class="evnts_bx_btm">
+            <span>{{news.date}} </span>
+            <ul>
+                <li>
+                    {% if event.brochure %}
+                    <a href="{{event.brochure.url}} " target="_self">
+                            {% else %}
+                            <a href="# " target="_self">
+
+                            {% endif %}
+
+                            Download Brochure
+          <svg>
+            <use xlink:href="#evnts_dwnlod"></use>
+          </svg>
+        </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% else %}
+
+    <div class="nws_evnts_box nws_evnts_img_sec">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="thumbnail-img-wrap">
+                    <img src="{{news.image.url}}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="{{news.image.url}}" sizes="(max-width: 443px) 100vw, 443px" /> </div>
+            </div>
+            <div class="col-sm-7">
+                <ul>
+                    <li><a href="#">#<a href="#" rel="category tag">News</a></a>
+                    </li>
+                </ul>
+                <h3>{{news.news}}</h3>
+                </h3>
+                <div>
+                    <p>{{news.date}} </p>
+                </div>
+                <div class="evnts_bx_btm">
+                    <span> </span>
+                    <ul>
+                        <li>
+                            {% if event.brochure %}
+                            <a href="{{event.brochure.url}} " target="_self">
+                                    {% else %}
+                                    <a href="# " target="_self">
+
+                                    {% endif %}
+
+                                    Download Brochure
+                  <svg>
+                    <use xlink:href="#evnts_dwnlod"></use>
+                  </svg>
+                </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>{% endif %} {% endfor %}
+    <!-- events -->
+    </div>
+</section>
+{% endblock %}

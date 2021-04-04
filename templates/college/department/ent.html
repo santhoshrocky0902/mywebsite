@@ -1,0 +1,310 @@
+{% extends "college/base.html" %} {% block content %} {% for dept in ENT %}
+<div class="courses_banner" style="background-image: url('{{dept.background_image.url}}')">
+    <div class="container">
+        <div class="course_title">
+            <div>
+                <span>
+<!-- <img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-it.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-it.svg" alt=""></noscript> -->
+</span>
+                <h1>{{dept.get_Name_display}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="course-tab-contain">
+    <div class="container">
+        <div class="tab-menu">
+            <ul>
+                <li class="active"><a data-toggle="tab" href="#menu1"> About Course</a></li>
+                <li><a data-toggle="tab" href="#menu2">Department</a></li>
+                <li><a data-toggle="tab" href="#menu3">Faculty</a></li>
+                <li><a data-toggle="tab" href="#menu4">Infrastructure</a></li>
+                <li><a data-toggle="tab" href="#menu7">Gallery</a></li>
+            </ul>
+        </div>
+
+
+        <div class="tab-content-wrap clearfix">
+            <div class="tab-content fade in active" id="menu1">
+                <div>
+                    <h3>Our Vision</h3>
+                    <p> {{dept.vision}}</p>
+                </div>
+                <div>
+
+                    <h3>Our Mission</h3>
+                    <ul class="tic_list">
+                        <li>
+                            <p>{{dept.mission}}</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="course_feature">
+                    <div class="feat-box">
+                        <a class="full_cont-link" href="#" target="_blank"></a>
+                        <i>
+  <img  alt=""  data-src="https://saec.ac.in/wp-content/uploads/2019/10/icon-program.svg" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/icon-program.svg" alt="" class="img-responsive"></noscript>
+</i>
+                        <div>
+                            <label>Program</label>
+                            <p>{{dept.get_program_type_display}} Degree</p>
+                        </div>
+                    </div>
+                    <div class="feat-box">
+                        <a class="full_cont-link" href="#" target="_blank"></a>
+                        <i>
+  <img  alt=""  data-src="https://saec.ac.in/wp-content/uploads/2019/10/icon-duration.svg" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/icon-duration.svg" alt="" class="img-responsive"></noscript>
+</i>
+                        <div>
+                            <label>Duration</label>
+                            <p>{{dept.duration}} Years</p>
+                        </div>
+                    </div>
+                    <div class="feat-box">
+                        <a class="full_cont-link" href="#" target="_blank"></a>
+                        <i>
+  <img  alt=""  data-src="https://saec.ac.in/wp-content/uploads/2019/10/icon-language.svg" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/icon-language.svg" alt="" class="img-responsive"></noscript>
+</i>
+                        <div>
+                            <label>Language</label>
+                            <p>English</p>
+                        </div>
+                    </div>
+                    <div class="feat-box">
+                        {% if dept.brochure %}
+                        <a class="full_cont-link" href="{{dept.brochure.url}}" target="_blank"></a>
+                        {% else %}
+                        <a class="full_cont-link" href="#" target="_self"></a>
+
+                        {% endif %}
+                        <i>
+  <img  alt=""  data-src="https://saec.ac.in/wp-content/uploads/2019/10/icon-download.svg" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/icon-download.svg" alt="" class="img-responsive"></noscript>
+</i>
+                        <div>
+                            <label>Download</label>
+                            <p>Brochure</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="tab-content fade" id="menu2">
+                <div>
+                    <p>{{dept.department_description}}</p>
+                </div>
+
+                <div>
+                    <h4>Best Movements</h4>
+                    <div class="ach_sec clearfix">
+                        {% for moment in dept.best_moments_set.all %}
+                        <div class="col-sm-3">
+                            <div>
+                                <a class="fancybox" href="#" data-fancybox-group="gallery1" title="best moments">
+                                    <img alt="" data-src="{{moment.best_moment.url}}" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="{{moment.best_moment.url}}" class="img-responsive" alt=""></noscript>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+
+                {% if dept.achievement %}
+                <div>
+                    <ul class="tic_list">
+                        <h3>ACHIEVEMENTS:</h3>
+                        {% for achieve in dept.achievement_set.all %}
+                        <li>
+                            <p>{{achieve.achievement}}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %} {% if dept.awards %}
+
+                <div>
+                    <ul class="tic_list">
+                        <h3>AWARDS:</h3>
+                        {% for awds in dept.awards_set.all %}
+
+                        <li>
+                            <p>{{awds.awards}}</p>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+                {% endif %}
+
+            </div>
+            <div class="tab-content fade" id="menu3">
+                <div class="head_department">
+                    <h3>Head of Department </h3>
+                    {% for hods in dept.hod_set.all %}
+                    <div>
+                        <img data-src="{{hods.image.url}}" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="{{hods.image.url}}" class="img-responsive" /></noscript>
+                    </div>
+
+                    <div>
+                        <p>&nbsp;</p>
+                        <p>Name : {{hods.name}}<br />Qualification and Specialization : {{hods.Qualification_And_Specification}}<br />Area of Interest : {{hods.AreaOfIntrest}}<br />Experience : {{hods.experience}} Years<br />Email &amp; Phone with extension
+                            number :
+                            <a href="mailto:{{hods.email}}">{{hods.email}}</a> &amp;
+                            <a href="tel:{{hods.Phone}}">{{hods.Phone}}</a></p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <div style="overflow-x: auto;">
+                    <h3> PROFESSORS</h3>
+                    <div>
+                        <p>&nbsp;</p>
+                        <table>
+                            <tbody>
+                                <tr>
+
+                                    <td>
+                                        <p><b>NAME</b></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Qualification &amp; Specialization</b></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Area Of Interest</b></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Experience</b></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Email</b></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Phone</b></p>
+                                    </td>
+                                </tr>
+                                {% for prof in dept.professor_set.all %}
+
+                                <tr>
+
+                                    <td>
+                                        <p><span style="font-weight: 400;">{{prof.name}}</span></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">{{prof.Qualification_And_Specification}}</span></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">{{prof.AreaOfIntrest}}</span></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">{{prof.experience}} Years</span></p>
+                                    </td>
+                                    <td>
+                                        <p><a href="mailto:{{prof.email}}"><span style="font-weight: 400;">{{prof.email}}</span></a></p>
+                                    </td>
+                                    <td>
+                                        <p><a href="tel:{{prof.Phone}}"><span style="font-weight: 400;">{{prof.Phone}}</span></a></p>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content fade" id="menu4">
+
+
+                <div>
+                    <h3>Infrastructure and Facilities </h3>
+
+                    <div>
+                        <div style="overflow-x: auto;">
+                            <table class="no_head" width="100%">
+                                <tbody>
+                                    {% for faci in dept.facility_set.all %}
+
+                                    <tr>
+                                        <td width="330">{{faci.name}}</td>
+                                        <td width="330">{{faci.quantity}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tab-content fade" id="menu7">
+                <div>
+                    <h3>Gallery </h3>
+                    <div class="ach_sec clearfix">
+                        {% for gal in dept.gallery_set.all %}
+
+                        <div class="col-sm-3">
+                            <div>
+                                <a class="fancybox" href="{{gal.image.url}}" data-fancybox-group="gallery11" title="National conference on “ NOVEL NOTIONS IN ENGINEERING COMMUNICATION AND TECHNOLOGY @ 7TH MAR 2014">
+                                    <img data-src="{{gal.image.url}}" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="{{gal.image.url}}" class="img-responsive" /></noscript>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="external_links course_ext-links">
+            <label>Also check: </label>
+            <ul class="share_icons clearfix">
+                <li>
+
+                    <a href="#" target="_blank">
+AICTE-Approval</a>
+                </li>
+                <li>
+
+                    <a href="#" target="_blank">
+Naac-approved</a>
+                </li>
+                <li>
+
+                    <a href="#" target="_blank">ISO Certified</a>
+                </li>
+                <li>
+
+                    <a href="#" target="_blank">MCI Clause</a>
+                </li>
+                <li>
+
+                    <a href="#" target="_blank">
+Web Mail</a>
+                </li>
+                <li>
+
+                    <a href="#" target="_blank">Research Projects</a>
+                </li>
+                <li>
+
+                    <a href="#" target="_blank">Paper Publications</a>
+                </li>
+                <li>
+
+                    <a href="#" target="_blank">Confrence Attended</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endfor %} {% endblock content %}

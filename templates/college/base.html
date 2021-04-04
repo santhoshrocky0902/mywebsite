@@ -1,0 +1,2232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta name="google-site-verification" content="BovoULUMTMwR8AQLQPVEZw0AhZ6_dZDSNX7YPB7b3SY" />
+    <title>College|ACS Medical College and Hospitals </title>
+    <meta name='robots' content='noindex,follow' />
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+    <!-- local css libraries -->
+    <link rel='stylesheet' id='wp-block-library-css' href="{% static 'css/block-library.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href="{% static 'css/contact-form.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='ctf_styles-css' href="{% static 'css/ctf-styles.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='megamenu-css' href="{% static 'css/cmegamenu.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='dashicons-css' href="{% static 'css/dashicons.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='plugins-css' href="{% static 'css/plugins.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='fancybox-css' href="{% static 'css/fancybox.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='main-style-css' href="{% static 'css/cstyle.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='new-style-css' href="{% static 'css/cnew.css' %}" type='text/css' media='all' />
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <!-- logo in title -->
+    <!-- todo: link the crt size image -->
+    <link rel="icon" href="/static/logo/logo.png" sizes="32x32" />
+    <link rel="icon" href="/static/logo/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/static/logo/logo.png" />
+    <meta name="msapplication-TileImage" content="/static/logo/logo.png" />
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate.js' %}"></script>
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    <style>
+        .no-js img.lazyload {
+            display: none;
+        }
+        
+        figure.wp-block-image img.lazyloading {
+            min-width: 150px;
+        }
+        
+        .lazyload,
+        .lazyloading {
+            opacity: 0;
+        }
+        
+        .lazyloaded {
+            opacity: 1;
+            transition: opacity 400ms;
+            transition-delay: 0ms;
+        }
+    </style>
+
+    <style type="text/css" id="wp-custom-css">
+        .dropmenu_intro span {
+            background-image: url("/static/assets/menu-overlay.png");
+        }
+        
+        #mega-menu-wrap-main-menu #mega-menu-main-menu>li.mega-menu-item>a.mega-menu-link {
+            font-size: 13px;
+        }
+        
+        .title_line.head-tab_wrap {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 50px;
+            font-family: 'Eurostile', sans-serif;
+        }
+        
+        .title_line.head-tab_wrap h2 {
+            margin: 0 auto;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+        
+        .title_line.head-tab_wrap h5 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .title_line.head-tab_wrap h6 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .online-activities-wrap {
+            position: absolute;
+            z-index: 9;
+            background: #0470ad;
+            padding: 10px;
+            min-width: 200px;
+            text-align: center;
+            min-height: 40px;
+            line-height: 40px;
+            margin-top: 50px;
+            border-radius: 5px;
+            transition: 0.5s all;
+        }
+        
+        .online-activities-wrap a {
+            color: #fff;
+            font-family: 'Eurostile', sans-serif !important;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+        }
+        
+        .online-activities-wrap:hover {
+            background: #002e4b85;
+            transition: 0.5s all;
+        }
+        
+        .web-modal.modal-open {
+            z-index: 10500;
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .modal-open .onloadmodal {
+            z-index: 10500;
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .modal-open .modal-backdrop {
+            z-index: 10400;
+            background-color: rgba(0, 0, 0, 0.31);
+        }
+        
+        .onloadmodal .modal-dialog {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 450px;
+            /*min-height: 600px;*/
+        }
+        
+        .onloadmodal button.close {
+            background: #015f91;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            border: none;
+            position: absolute;
+            top: -15px;
+            color: #fff;
+            font-size: 22px;
+            right: -10px;
+            cursor: pointer;
+        }
+        /*.onloadmodal .modal-body img {*/
+        /*    max-height: 700px;*/
+        /*    margin: 0 auto;*/
+        /*    width: 450px;*/
+        /*}*/
+        
+        .onloadmodal .modal-content {
+            background: transparent;
+            border: none;
+            padding: 0;
+            box-shadow: none;
+        }
+        
+        @media (max-width:500px) {
+            .onloadmodal .modal-dialog {
+                width: 300px;
+            }
+        }
+        
+        .headnews-scroller ul li.active {
+            background: #ff5245ad;
+        }
+        /* .menu-logo .container .header-logo img {
+    width: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    max-width: 425px;
+    object-fit: cover;
+}
+
+@media (max-width:1360px) {
+	.menu-logo .container .header-logo img {
+		width: 110px;}
+}
+@media (max-width:767px) {
+	.menu-logo .container .header-logo img {
+		width: 80px;}
+	.menu-logo .container .mobile-header-logo img{
+		width: 75px;
+	}
+} */
+        /***/
+        
+        blink {
+            animation: blinker 0.6s linear infinite;
+            color: #000000;
+        }
+        
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        /* for Safari 4.0 - 8.0 */
+        
+        @-webkit-keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        /**/
+        
+        .feedback-box-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width:767px) {
+            .menu-logo .container .mobile-header-logo img {
+                width: 80px;
+            }
+        }
+        
+        @media (max-width:480px) {
+            .menu-logo .container .mobile-header-logo img {
+                width: 87px;
+            }
+        }
+        
+        .fancybox-overlay-fixed {
+            z-index: 99999;
+        }
+    </style>
+    <style type="text/css">
+        /** Mega Menu CSS: fs **/
+    </style>
+</head>
+
+<style>
+    .menu-logo {
+        height: 100px;
+    }
+    
+    #mega-menu-wrap-main-menu #mega-menu-main-menu>li.mega-menu-item>a.mega-menu-link {
+        font-size: 16px;
+    }
+</style>
+
+
+
+<body class="home page-template page-template-index page-template-index-php page page-id-9 mega-menu-main-menu">
+    <div class="dummy-svg" style="height: 0;overflow: hidden;">
+        <svg version="1.1" id="bcome_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.1 51.1" style="enable-background:new 0 0 54.1 51.1;" xml:space="preserve">
+        <style type="text/css">
+            #bcome_icon .st0{fill:#FFFFFF;}
+        </style>
+        <g id="XMLID_57_">
+            <path id="XMLID_128_" class="st0" d="M53.5,14.9L26.7,1.2L0.5,14.9l26.5,13l21-10.3v16.6c0,0.6,0.4,1,1,1s1-0.4,1-1V16.6L53.5,14.9
+                z M5,14.8L26.7,3.4l22.3,11.4L27,25.6L5,14.8z"/>
+            <path id="XMLID_129_" class="st0" d="M42,25.7c-0.6,0-1,0.4-1,1v8.5c0,7.2-5.9,13.1-13.1,13.1h-1.3c-7.2,0-13.1-5.9-13.1-13.1v-8.5
+                c0-0.6-0.4-1-1-1s-1,0.4-1,1v8.5c0,8.3,6.8,15.1,15.1,15.1h1.3c8.3,0,15.1-6.8,15.1-15.1v-8.5C43,26.2,42.5,25.7,42,25.7z"/>
+        </g>
+        </svg>
+        <svg version="1.1" id="dwnload_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48.7 48.7" style="enable-background:new 0 0 48.7 48.7;" xml:space="preserve">
+        <style type="text/css">
+            #dwnload_icon .st0{fill:#FFFFFF;}
+        </style>
+        <g id="XMLID_57_">
+            <path id="XMLID_72_" class="st0" d="M24.3,0.5C11.2,0.5,0.5,11.2,0.5,24.3s10.7,23.8,23.8,23.8s23.8-10.7,23.8-23.8
+                S37.5,0.5,24.3,0.5z M24.3,46.1c-12,0-21.8-9.8-21.8-21.8S12.3,2.5,24.3,2.5s21.8,9.8,21.8,21.8S36.4,46.1,24.3,46.1z"/>
+            <path id="XMLID_91_" class="st0" d="M31.4,23.1l-6.1,6.1V12.2c0-0.6-0.4-1-1-1s-1,0.4-1,1v16.9l-6.1-6.1c-0.4-0.4-1-0.4-1.4,0
+                s-0.4,1,0,1.4l7.8,7.8c0,0,0,0,0,0l0.7,0.7l0.7-0.7c0,0,0,0,0,0l7.8-7.8c0.4-0.4,0.4-1,0-1.4S31.8,22.7,31.4,23.1z"/>
+            <path id="XMLID_92_" class="st0" d="M32.1,33.2H16.6c-0.6,0-1,0.4-1,1s0.4,1,1,1h15.6c0.6,0,1-0.4,1-1S32.7,33.2,32.1,33.2z"/>
+        </g>
+        </svg>
+        <svg version="1.1" id="map_pin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 47.9" style="enable-background:new 0 0 35 47.9;" xml:space="preserve">
+            <style type="text/css">
+                #map_pin .st0{fill:none;stroke:#002E4B;stroke-width:2;stroke-miterlimit:10;}
+                #map_pin .st1{fill:none;stroke:#BD943C;stroke-width:2;stroke-miterlimit:10;}
+            </style>
+            <g>
+                <path class="st0" d="M33.6,17.6c0-8.9-7.2-16.1-16.2-16.1C8.5,1.5,1.3,8.7,1.3,17.6c0,3.9,1.4,7.5,3.7,10.3l12.5,17.9
+                    c4.3-6.1,8.5-12.1,12.8-18.2c0.1-0.1,0.3-0.4,0.6-0.8c0.7-1.1,1.2-2,1.2-2c0,0-0.1,0.2-0.5,0.9c0,0,0,0,0,0c0.6-1,1.2-2.4,1.7-4.2
+                    C33.2,21.4,33.6,19.5,33.6,17.6z"/>
+                <ellipse class="st1" cx="17.5" cy="18.1" rx="6.7" ry="6.6"/>
+            </g>
+            </svg>
+
+        <svg version="1.1" id="map_close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.9 17.1" style="enable-background:new 0 0 16.9 17.1;" xml:space="preserve">
+            <style type="text/css">
+                #map_close .st0{fill:#002E4B;}
+            </style>
+            <path id="XMLID_84_" class="st0" d="M9.9,8.4l5.6-5.6c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L8.8,7.3L3.2,1.7c-0.3-0.3-0.8-0.3-1.1,0
+                s-0.3,0.8,0,1.1l5.6,5.6L2.1,14c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2l5.6-5.6l5.6,5.6
+                c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2c0.3-0.3,0.3-0.8,0-1.1L9.9,8.4z"/>
+            </svg>
+        <svg version="1.1" id="evnts_dwnlod" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 241 303" style="enable-background:new 0 0 241 303;" xml:space="preserve">
+<style type="text/css">
+	
+</style>
+<g id="XMLID_5_">
+	<path id="XMLID_59_" class="st0" d="M126.1,229.9c-6.3,0-12.7-2.4-17.5-7.2l-62.7-62.7c-7-7-7-18.4,0-25.5c7-7,18.4-7,25.5,0
+		l54.7,54.7l54.7-54.7c7-7,18.4-7,25.5,0c7,7,7,18.4,0,25.5l-62.7,62.7C138.7,227.4,132.4,229.9,126.1,229.9z"/>
+</g>
+<g id="XMLID_4_">
+	<path id="XMLID_7_" class="st0" d="M126.1,226.2c-9.9,0-18-8.1-18-18V47c0-9.9,8.1-18,18-18s18,8.1,18,18v161.2
+		C144.1,218.1,136,226.2,126.1,226.2z"/>
+</g>
+<g id="XMLID_3_">
+	<path id="XMLID_6_" class="st0" d="M193.6,274h-135c-9.9,0-18-8.1-18-18s8.1-18,18-18h135c9.9,0,18,8.1,18,18S203.5,274,193.6,274z
+		"/>
+</g>
+</svg>
+        <svg version="1.1" id="hover_deprtment" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.8 60.4" style="enable-background:new 0 0 50.8 60.4;" xml:space="preserve">
+<style type="text/css">
+	#hover_deprtment .st0{fill:#002E4B;}
+</style>
+<g id="XMLID_1_">
+	<path id="XMLID_8_" class="st0" d="M25.4,60.4l-0.8-1c-2.2-2.8-6.3-4-10.3-5.1c-1.8-0.5-3.5-1-5-1.6c-4.1-1.7-7.2-5.1-8.6-9.4
+		c-1.5-4.8-0.7-10.1,2.5-15.1C8.3,20,3.1,13.7,1.3,11.9c-0.3-0.3-0.4-0.7-0.4-1.1c0-0.4,0.2-0.8,0.5-1l11.2-9.4
+		c0.6-0.5,1.4-0.5,1.9,0.1l4.1,4l5.9-4.2c0.5-0.4,1.2-0.4,1.7,0l5.9,4.2l4.1-4c0.5-0.5,1.4-0.5,1.9-0.1l11.2,9.4
+		c0.3,0.3,0.5,0.6,0.5,1c0,0.4-0.1,0.8-0.4,1.1c-1.7,1.8-7,8.1-1.9,16.3c3.1,4.9,4,10.3,2.5,15.1c-1.4,4.3-4.5,7.7-8.6,9.4
+		c-1.5,0.6-3.2,1.1-5,1.6c-4,1.1-8.1,2.3-10.3,5.1L25.4,60.4z M3.2,11c2,2.2,7.3,9.4,1.7,18.3c-2.8,4.4-3.6,9.2-2.2,13.4
+		c1.2,3.7,3.9,6.7,7.4,8.1c1.4,0.6,3.1,1.1,4.8,1.6c3.7,1.1,7.8,2.2,10.5,4.9c2.7-2.7,6.8-3.9,10.5-4.9c1.7-0.5,3.4-1,4.8-1.6
+		c3.5-1.5,6.2-4.4,7.4-8.1c1.3-4.2,0.5-9-2.2-13.4c-5.6-8.9-0.3-16.1,1.7-18.3L37.3,2.2l-4.1,4c-0.5,0.5-1.3,0.5-1.8,0.1l-5.9-4.2
+		l-5.9,4.2c-0.6,0.4-1.3,0.3-1.8-0.1l-4.1-4L3.2,11z"/>
+	<path id="XMLID_5_" class="st0" d="M25.4,43.4c-7.6,0-13.8-6.2-13.8-13.8s6.2-13.8,13.8-13.8S39.2,22,39.2,29.6S33,43.4,25.4,43.4z
+		 M25.4,17.8c-6.5,0-11.8,5.3-11.8,11.8c0,6.5,5.3,11.8,11.8,11.8s11.8-5.3,11.8-11.8C37.2,23.1,31.9,17.8,25.4,17.8z"/>
+	<path id="XMLID_2_" class="st0" d="M21.2,36.4l-0.7-0.4c-0.4-0.3-0.5-0.7-0.4-1.2l1.4-4.2l-4.2-3.1l0.2-0.8c0.1-0.4,0.5-0.7,1-0.7
+		H23l1.6-4.9l0.8,0c0.5,0,0.9,0.3,1,0.7l0,0l1.4,4.2H33l0.3,0.7c0.1,0.4,0,0.9-0.4,1.2l-3.6,2.6l1.6,4.9l-0.6,0.5
+		c-0.4,0.3-0.9,0.3-1.2,0l-3.6-2.6L21.2,36.4z M25.4,30.9l0.7,0.4l1.8,1.3l-0.9-2.8l0.6-0.5l1.8-1.3h-3l-0.3-0.7l-0.7-2.1l-0.9,2.8
+		l-0.8,0h-2.3l2.4,1.7l-0.2,0.8L23,32.6L25.4,30.9z"/>
+	<rect id="XMLID_14_" x="17.6" y="11" class="st0" width="14.9" height="2"/>
+	<rect id="XMLID_13_" x="17.6" y="46.1" class="st0" width="14.9" height="2"/>
+</g>
+</svg>
+    </div>
+
+    <div id="wrapper">
+        <!-- mobile menu -->
+        <div class="mobile-menu"></div>
+        <div id="main">
+            <!-- header -->
+            <header>
+                <div class="menu-top">
+                    <div id="container" class="container ">
+
+                        <div class="top-menu-inner">
+                            <ul id="menu-top-head-menu" class="menu">
+                                <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a target="_blank" href="{% url 'home_page' %}" aria-haspopup="true" aria-expanded="false" tabindex="0">Home</a></li>
+                                <li id="menu-item-2608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2608"><a target="_blank" href="#">Accreditations</a></li>
+                                <li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651"><a target="_blank" href="{% url 'hospital:hospital_home_page' %}">Hospital</a></li>
+                                <li id="menu-item-1579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1579"><a target="_blank" href="{% url 'college:mci' %}">MCI Clause B.1.11</a></li>
+
+                                <li id="menu-item-1579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1579"><a target="_blank" href="#">Web Mail</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="logo" class="menu-logo">
+                    <div id="container" class="container logo-cont">
+                        <a href="#" class="header-logo">
+                            <img title="ACS Medical College and Hospitals" alt="ACS Medical College and Hospitals" data-src="/static/logo/mainlogo.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+
+                        </a>
+
+                        <a href="#" class="mobile-header-logo">
+                            <img title="ACS Medical College and Hospitals" alt="ACS Medical College and Hospitals" data-src="/static/logo/acslogo.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/logo/logo.png" title="ACS Medical College and Hospitals" alt="ACS Medical College and Hospitals"></noscript>
+                        </a>
+
+                        <div>
+                            <a href="#" class="header-contact">
+                                <img style="height: 100px;    margin-right: -55px;
+                                width: 585px;
+                            
+                            " src="/static/logo/mglogo2.png" alt="">
+
+
+                            </a>
+
+                            <style>
+                                .btn_web:before {
+                                    background: #FFF;
+                                }
+                                
+                                .header-contact {
+                                    margin-left: 0px;
+                                }
+                                
+                                .btn_web {
+                                    margin: 0;
+                                    border: none;
+                                    height: fit-content;
+                                }
+                                
+                                .menu-logo .container>div a {
+                                    vertical-align: middle;
+                                    margin-left: 0px;
+                                }
+                                
+                                @media only screen and (max-width: 1440px) {
+                                    .menu-logo .container>div a {
+                                        margin-left: -22px;
+                                    }
+                                }
+                            </style>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="main-menu-nav">
+                    <div class="container">
+                        <div id="mega-menu-wrap-main-menu" class="mega-menu-wrap">
+                            <div class="mega-menu-toggle">
+                                <div class="mega-toggle-blocks-left"></div>
+                                <div class="mega-toggle-blocks-center"></div>
+                                <div class="mega-toggle-blocks-right">
+                                    <div class='mega-toggle-block mega-menu-toggle-animated-block mega-toggle-block-1' id='mega-toggle-block-1'><button aria-label="" class="mega-toggle-animated mega-toggle-animated-slider" type="button" aria-expanded="false">
+                  <span class="mega-toggle-animated-box">
+                    <span class="mega-toggle-animated-inner"></span>
+                  </span>
+                </button></div>
+                                </div>
+                            </div>
+                            <ul id="mega-menu-main-menu" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="false"
+                                data-second-click="go" data-document-click="collapse" data-vertical-behaviour="accordion" data-breakpoint="1200" data-unbind="true">
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-9 mega-current_page_item mega-align-bottom-left mega-menu-flyout mega-menu-item-27' id='mega-menu-item-27'><a class="mega-menu-link" href="{%url 'college:college_home_page'%}" tabindex="0">Home</a></li>
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-hide-arrow mega-has-icon mega-icon-right mega-menu-item-782' id='mega-menu-item-782'><a class="dashicons-arrow-down-alt2 mega-menu-link" href="{%url 'about_page' %}" aria-haspopup="true" aria-expanded="false" tabindex="0">About Us<span class="mega-indicator"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" target="_blank" href="{% url 'founder' %}">Founder</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-890' id='mega-menu-item-890'><a class="dashicons-arrow-right-alt2 mega-menu-link" target="_blank" href="{% url 'president' %}">President</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" target="_blank" href="{% url 'secratary' %}">Secretary</a></li>
+                                    </ul>
+                                </li>
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-hide-arrow mega-has-icon mega-icon-right mega-menu-item-103' id='mega-menu-item-103'><a class="dashicons-arrow-down-alt2 mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">DEPARTMENTS<span class="mega-indicator"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class='mega-menu-row' id='mega-menu-103-0'>
+                                            <ul class="mega-sub-menu">
+                                                <li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-103-0-0'>
+                                                    <ul class="mega-sub-menu">
+                                                        <li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-7' id='mega-menu-item-custom_html-7'>
+                                                            <div class="textwidget custom-html-widget">
+                                                                <div class="dropmenu_intro">
+                                                                    <p> <span>20<sup>+</sup></span> </p>
+                                                                    <h2 class="graduate-title">Under Graduate and Post Graduate Programs</h2> <a href="" class="title_line">View All Courses</a></div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-103-0-1'>
+                                                    <ul class="mega-sub-menu">
+                                                        <li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-8' id='mega-menu-item-custom_html-8'>
+                                                            <h4 class="mega-block-title">All Departments</h4>
+                                                            <div class="textwidget custom-html-widget">
+                                                                <div class="dropmenu_links">
+                                                                    <ul>
+                                                                        <li><a href="{% url 'college:physiology' %}">Physiolgy</a></li>
+                                                                        <li><a href="{% url 'college:anatomy' %}">Anatomy</a></li>
+                                                                        <li><a href="{% url 'college:cm' %}">Community Medicine</a></li>
+                                                                        <li><a href="{% url 'college:tb' %}">Tb &#038; Chest Diseases</a></li>
+                                                                        <li><a href="{% url 'college:paediatrics' %}">Paediatrics</a></li>
+                                                                        <li><a href="{% url 'college:orthopaedics' %}">Orthopaedics</a></li>
+                                                                        <li><a href="{% url 'college:opthalmology' %}">Opthalmology</a></li>
+                                                                        <li><a href="{% url 'college:psychiatry' %}">Psychiatry</a></li>
+                                                                        <li><a href="{% url 'college:obstetrics' %}">Obstetrics &#038; Gynaecology</a></li>
+                                                                        <li><a href="{% url 'college:gs' %}">General Surgery</a></li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-103-0-2'>
+                                                    <ul class="mega-sub-menu">
+                                                        <li class='mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-9' id='mega-menu-item-custom_html-9'>
+                                                            <!-- <h4 class="mega-block-title">PG Programs</h4> -->
+                                                            <div class="textwidget custom-html-widget">
+                                                                <div class="dropmenu_links">
+                                                                    <ul>
+                                                                        <li><a href="{% url 'college:fm' %}">Forensic Medicine</a></li>
+                                                                        <li><a href="{% url 'college:ent' %}">ENT</a></li>
+                                                                        <li><a href="{% url 'college:dermatology' %}">Dermatology</a></li>
+                                                                        <li><a href="{% url 'college:dentistry' %}">Dentistry</a></li>
+                                                                        <li><a href="{% url 'college:anaesthesiology' %}">Anaesthesiology</a></li>
+                                                                        <li><a href="{% url 'college:pharmacology' %}">Pharmacology</a></li>
+                                                                        <li><a href="{% url 'college:bc' %}">Bio Chemistry</a></li>
+                                                                        <li><a href="{% url 'college:pathology' %}">Pathology</a></li>
+                                                                        <li><a href="{% url 'college:mb' %}">Micro Biology</a></li>
+                                                                        <li><a href="{% url 'college:rd' %}">Radio Diagnosis</a></li>
+                                                                        <li><a href="{% url 'college:gm' %}">General Medicine</a></li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-hide-arrow mega-has-icon mega-icon-right mega-menu-item-782' id='mega-menu-item-782'><a class="dashicons-arrow-down-alt2 mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Research<span class="mega-indicator"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cr_cme' %}">Continuing Medical Education (CME)</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-890' id='mega-menu-item-890'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cr_paper' %}">Paper Publications</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cr_research_project' %}">Research Projects</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cr_conference' %}">Conference Attended</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cr_awards' %}">Awards and Achievements</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-hide-arrow mega-has-icon mega-icon-right mega-menu-item-782' id='mega-menu-item-782'><a class="dashicons-arrow-down-alt2 mega-menu-link" href="{% url 'college:college_facility_page' %}" aria-haspopup="true" aria-expanded="false" tabindex="0">Facilities<span class="mega-indicator"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_central_lab' %}">Central Laboratory</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_library' %}">Library</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_infrastructure' %}">Infrastructure</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-890' id='mega-menu-item-890'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_internet_sec' %}">Internet</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_seminar' %}">Seminar Hall</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_canteen' %}">Canteen</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-890' id='mega-menu-item-890'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_hostel' %}">Hostels &#038; Quarters</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_transport' %}">Transport</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cf_anti' %}">Anti Ragging &#038; Gender Harassment</a></li>
+                                    </ul>
+                                </li>
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-hide-arrow mega-menu-item-3809' id='mega-menu-item-3809'><a class="mega-menu-link" href="{% url 'college:cg_ourgroup' %}" tabindex="0">Our Group</a></li>
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-hide-arrow mega-menu-item-3809' id='mega-menu-item-3809'><a class="mega-menu-link" href="{% url 'admission' %}" tabindex="0">Admission</a></li>
+                                <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-hide-arrow mega-menu-item-3809' id='mega-menu-item-3809'><a class="mega-menu-link" target="_blank" href="{% url 'contact-us' %}" tabindex="0">Contact Us</a></li>
+                                <li style="display: none;" class='others-menu mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-hide-arrow mega-has-icon mega-icon-right mega-menu-item-782'
+                                    id='mega-menu-item-782'><a class="dashicons-arrow-down-alt2 mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Others<span class="mega-indicator"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-886' id='mega-menu-item-886'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'home_page' %}">Home</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-890' id='mega-menu-item-890'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="#">Accreditations</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-890' id='mega-menu-item-890'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'hospital:hospital_home_page' %}">Hospital</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:mci' %}">MCI Clause B.1.11</a></li>
+                                        <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="#">Web Mail</a></li>
+                                        <!-- <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-resource mega-has-icon mega-icon-left mega-menu-item-889' id='mega-menu-item-889'><a class="dashicons-arrow-right-alt2 mega-menu-link" href="{% url 'college:cr_awards' %}">Awards and Achievements</a></li> -->
+
+                                    </ul>
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <style>
+                .social {
+                    z-index: 999;
+                    width: 200px;
+                    height: 150px;
+                    position: fixed;
+                    margin-top: 30px;
+                    perspective: 1000px
+                }
+                
+                .social li a {
+                    display: block;
+                    height: 40px;
+                    width: 38px;
+                    background: #222;
+                    border-bottom: 1px solid #333;
+                    font: normal normal normal 16px/20px 'FontAwesome', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+                    color: #fff;
+                    -webkit-font-smoothing: antialiased;
+                    padding: 10px;
+                    text-decoration: none;
+                    text-align: center;
+                    transition: background .5s ease .300ms;
+                }
+                
+                .social li:first-child a:hover {
+                    background: #3b5998 !important;
+                }
+                
+                .social li:nth-child(2) a:hover {
+                    background: #00acee
+                }
+                
+                .social li:nth-child(3) a:hover {
+                    background: #ea4c89
+                }
+                
+                .social li:nth-child(4) a:hover {
+                    background: #dd4b39
+                }
+                
+                .social li:first-child a {
+                    border-radius: 0 5px 0 0
+                }
+                
+                .social li:last-child a {
+                    border-radius: 0 0 5px 0
+                }
+                
+                .social li a span {
+                    width: 100px;
+                    float: left;
+                    text-align: center;
+                    background: #222;
+                    color: #fff;
+                    margin: -25px 74px;
+                    padding: 8px;
+                    transform-origin: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: rotateY(45deg);
+                    border-radius: 5px;
+                    transition: all .5s ease .300ms
+                }
+                
+                .social li span:after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    left: -20px;
+                    top: 7px;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid #222;
+                    border-bottom: 10px solid transparent;
+                    border-top: 10px solid transparent;
+                }
+                
+                .social li a:hover span {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: rotateY(0)
+                }
+                
+                @media (max-width: 768px) {
+                    .social {
+                        display: none;
+                    }
+                }
+            </style>
+            <ul class='social'>
+                <li>
+                    <a class="fa fa-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="fa fa-twitter" href="#">
+                        <span>Twitter</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="fa fa-linkedin" href="#">
+                        <span>LinkedIn</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="fa fa-google-plus" href="#">
+                        <span>Google Plus</span>
+                    </a>
+                </li>
+
+            </ul>
+            {% block content %} {% endblock %}
+
+            <footer>
+                <a href="javascript:" id="return-to-top">
+                    <img data-src="/static/assets/scroll-top-icon.svg" class="lazyload" src="/static/assets/scroll-top-icon.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/scroll-top-icon.svg"></noscript></noscript>
+                </a>
+
+                <div class="footer_sec">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer_sec_top">
+                                <div class="col-sm-9 clearfix">
+                                    <ul>
+
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i><svg>
+                                            <use xlink:href="#dwnload_icon"></use>
+                                          </svg>
+                                        </i> DOWNLOAD <br> COLLEGE PROSPECTUS</a>
+                                        </li>
+                                        <li><a href="
+                                        #"><i><svg>
+                                            <use xlink:href="#bcome_icon"></use>
+                                          </svg></i>BECOME A <br>
+                                        STUDENT AT ACS</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-sm-3 clearfix">
+                                    <div class="subscriber_box">
+                                        <p>Subscribe Newsletter</p>
+                                        <script>
+                                            (function() {
+                                                if (!window.mc4wp) {
+                                                    window.mc4wp = {
+                                                        listeners: [],
+                                                        forms: {
+                                                            on: function(event, callback) {
+                                                                window.mc4wp.listeners.push({
+                                                                    event: event,
+                                                                    callback: callback
+                                                                });
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            })();
+                                        </script>
+                                        <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-379" method="post" data-id="379" data-name="Subscribe Form">
+                                            <div class="mc4wp-form-fields">
+                                                <div class="subscriber_box">
+                                                    <form method="POST" action="">
+                                                        {% csrf_token %} {{form}}
+                                                        <input type="submit" name="arrow" class="subscriber_btn" value="→">
+
+                                                    </form>
+                                                    <div class="message"></div>
+
+                                                </div>
+                                            </div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp"
+                                                value="1602566829"><input type="hidden" name="_mc4wp_form_id" value="379"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1">
+                                            <div class="mc4wp-response"></div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer_sec_btm">
+                                <div class="col-sm-9 clearfix">
+                                    <div class="footer_sec_btm_box footer-menu-wrap">
+                                        <ul id="menu-footer-menu" class="menu">
+                                            <li id="menu-item-4388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-4388"><a href="{%url 'home_page' %}" aria-current="page">Home</a></li>
+                                            <li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="{%url 'about_page' %}">About us</a></li>
+                                            <li id="menu-item-2638" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2638"><a href="{% url 'admission' %}">Admission</a></li>
+                                            <li id="menu-item-3807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3807"><a href="{% url 'acc1' %}">Accreditations</a></li>
+                                            <li id="menu-item-2636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2636"><a href="{%url 'college:cr_cme' %}">Cme</a></li>
+                                            <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="{%url 'college:cm' %}">Community Medicine</a></li>
+                                            <li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="{%url 'college:cg_ourgroup' %}">Our Group</a></li>
+                                            <li id="menu-item-117" class="saecalumni_link menu-item menu-item-type-custom menu-item-object-custom menu-item-117"><a href="{%url 'college:cf_library' %}">Library</a></li>
+                                            <li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="{%url 'college:cf_hostel' %}">Hostels & Quarters</a></li>
+                                            <li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="{% url 'contact-us' %}">Contact Us</a></li>
+                                            <li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="{%url 'college:cf_seminar' %}">Seminar Hall</a></li>
+                                            <li id="menu-item-2634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2634"><a href="{%url 'college:college_facility_page' %}">Our Facilities</a></li>
+                                            <li id="menu-item-4170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4170"><a href="{%url 'college:cr_research_project' %}">Research Projects</a></li>
+                                            <li id="menu-item-134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a href="{%url 'college:cr_paper' %}">Paper Publications</a></li>
+                                            <li id="menu-item-2580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2580"><a href="{%url 'college:cr_awards' %}">Achievements</a></li>
+                                            <li id="menu-item-4182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4182"><a href="{%url 'college:mci' %}">MCI Clause</a></li>
+                                            <li id="menu-item-4183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4183"><a href="{%url 'college:cf_transport' %}">Transport</a></li>
+                                            <li id="menu-item-2633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2633"><a href="{%url 'college:cf_central_lab' %}">Central Laboratory</a></li>
+                                            <li id="menu-item-4184" class="menu-item menu-item-type-post_type menu-item-object-campus_activities menu-item-4184"><a href="{%url 'college:cf_infrastructure' %}">Infrastructure</a></li>
+                                            <li id="menu-item-4185" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4185"><a href="{% url 'hospital:hf_clinical' %}">Clinical Material</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-3 clearfix">
+                                    <!-- Address-->
+                                    <p>
+                                        <p>ACS Medical College and Hospitals<br /> Velappanchavadi, Poonamalle High Road,<br /> Chennai &#8211; 600 077.<br /> Phone: <a href="tel:044 6457 0316">044 6457 0316</a>, <a href="tel:6457 0316">6457 0316</a><br
+                                            /> Fax : <a href="tel:044-26801899">044-26801899</a>     <span class="email-spn">E-Mail:<a href="mailto:drmgrdu.ac.in">drmgrdu.ac.in</a></span></p>
+                                    </p>
+
+                                    <!-- social media-->
+                                    <style>
+                                        .footr_social li a i {
+                                            font-size: 18px;
+                                            color: #fff;
+                                        }
+                                    </style>
+                                    <ul class="footr_social">
+                                        <label> Follow:</label>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i class=" fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="btm_footr">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <ul id="menu-footer-bottom-menu" class="menu">
+                                    <li id="menu-item-2643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2643"><a target="_blank" href="https://www.drmgrdu.ac.in/">
+                                        Dr.M.G.R. Educational and Research Institute</a></li>
+                                    <!-- <li id="menu-item-2650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2650"><a href="#">Site map</a></li> -->
+                                    <!-- <li id="menu-item-4297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4297"><a href="#">Terms-and-conditions</a></li> -->
+                                </ul>
+                            </div>
+                            <!-- <div class="col-sm-5">
+                                <p> Designed by:<a href="#" target="_blank">webandcrafts.com </a></p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="web-modal fade" id="mediamodal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/cross-mark.png" alt=""></noscript></noscript></noscript></noscript></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <video autoplay="true" controls></video>-->
+                    <video autoplay="false" autoplay muted width="100%" height="" controls="controls">
+          <source src="#" type="video/mp4">
+        </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="web-modal fade" id="mediamodal_01" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/cross-mark.png" alt=""></noscript></noscript></noscript></noscript></button>
+                </div>
+                <div class="modal-body">
+
+                    <iframe width="100%" height="400px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="  https://www.youtube.com/embed/pGuKVd5TUzc?autoplay=1" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><iframe width="100%" height="400px" src="https://www.youtube.com/embed/UyDhWVnpves?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></noscript></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="org_modal web-modal fade" id="car_modal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img  alt="" data-src="https://saec.ac.in/wp-content/themes/saec/img/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="https://saec.ac.in/wp-content/themes/saec/img/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="https://saec.ac.in/wp-content/themes/saec/img/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="https://saec.ac.in/wp-content/themes/saec/img/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/themes/saec/img/cross-mark.png" alt=""></noscript></noscript></noscript></noscript></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <h3 class="inner_sub_hd">Apply Now</h3> -->
+                    <img data-src="https://saec.ac.in/wp-content/themes/saec/img/organizational-chart.jpg" class="img-responsive lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/themes/saec/img/organizational-chart.jpg" class="img-responsive"></noscript>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="web-modal img-modal fade" id="img-modal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  alt="" data-src="/static/assets/cross-mark.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/cross-mark.png" alt=""></noscript></noscript></noscript></noscript></button>
+                </div>
+                <div class="modal-body">
+                    <div class="display-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+
+
+    <!-- local libraries -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/jquery.hoverdir.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'js/jquery.selectric.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+
+    <!-- bootstrap -->
+    <script src=" {% static 'js/bootstrap.min.js' %}"></script>
+
+    <!--animation plugins -->
+    <script src="{% static 'js/TweenMax.min.js' %}"></script>
+    <script src="{% static 'js/ScrollMagic.js' %}"></script>
+    <script src="{% static 'js/animation.gsap.js' %}"></script>
+    <script src="{% static 'js/collegeanim.js' %}"></script>
+    <script src="{% static 'js/global.js' %}"></script>
+    <script src="{% static 'js/common.js' %}"></script>
+
+    <!-- others -->
+
+    <script type='text/javascript' src="{% static 'js/scripts.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/head.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/hoverIntent.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/smush-lazy-load.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/maxmegamenu.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/wp-embed.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/forms-api.min.js' %}"></script>
+
+
+    <script>
+        $(' .counter ').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count ');
+
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+
+                {
+                    duration: 8000,
+                    easing: 'linear ',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                        //alert('finished ');
+                    }
+                });
+        });
+
+
+        $(document).ready(function() {
+            var divlength = $('.res_course-wrap > div').length;
+            for (var i = 1; i <= divlength; i++) {
+                if (i % 2 == 1) {
+                    fadeinleft('.res_course-wrap > div:nth-of-type(' + i + ') .container > .img-contain', '.res_course-wrap > div:nth-of-type(' + i + ')');
+                    fadeinright('.res_course-wrap > div:nth-of-type(' + i + ') .container > .text-contain', '.res_course-wrap > div:nth-of-type(' + i + ')');
+                } else if (i % 2 == 0) {
+                    fadeinright('.res_course-wrap > div:nth-of-type(' + i + ') .container > .img-contain', '.res_course-wrap > div:nth-of-type(' + i + ')');
+                    fadeinleft('.res_course-wrap > div:nth-of-type(' + i + ') .container > .text-contain', '.res_course-wrap > div:nth-of-type(' + i + ')');
+                }
+            }
+        });
+
+        /* Validation Events for changing response CSS classes */
+        document.addEventListener('wpcf7invalid', function(event) {
+            $('.wpcf7-response-output').addClass('alert alert-danger');
+        }, false);
+        document.addEventListener('wpcf7spam', function(event) {
+            $('.wpcf7-response-output').addClass('alert alert-warning');
+        }, false);
+        document.addEventListener('wpcf7mailfailed', function(event) {
+            $('.wpcf7-response-output').addClass('alert alert-warning');
+        }, false);
+        document.addEventListener('wpcf7mailsent', function(event) {
+            $('.wpcf7-response-output').addClass('alert alert-success');
+        }, false);
+
+
+        //Inner page slider
+
+        $(document).ready(function() {
+            $(document).on('click', '#listmenu6', function() {
+                setTimeout(function() {
+                    $('.board_trustes_slder_hh1').owlCarousel({
+                        loop: true,
+                        items: 6,
+                        margin: 30,
+                        nav: true,
+                        dots: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        smartSpeed: 900,
+                        autoplaySpeed: 900,
+                        autoplayHoverPause: true,
+                        //navContainer: '.board_navslide',
+                        navText: ["<div class='nav-btn prev-slide'></div>", "<div class='nav-btn next-slide'></div>"],
+
+                        responsive: {
+                            0: {
+                                items: 1,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true,
+                                dots: true
+                            },
+                            700: {
+                                items: 2,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true
+                            },
+                            1200: {
+                                items: 3,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true
+                            },
+                            1440: {
+                                items: 4,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true
+                            }
+                        }
+                    });
+                }, 150);
+            });
+        });
+
+        $(document).ready(function() {
+            $(document).on('click', '#listmenu5', function() {
+                setTimeout(function() {
+                    $('.board_trustes_slder_hh1').owlCarousel({
+                        loop: true,
+                        items: 6,
+                        margin: 30,
+                        nav: true,
+                        dots: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        smartSpeed: 900,
+                        autoplaySpeed: 900,
+                        autoplayHoverPause: true,
+                        //navContainer: '.board_navslide',
+                        navText: ["<div class='nav-btn prev-slide'></div>", "<div class='nav-btn next-slide'></div>"],
+                        responsive: {
+                            0: {
+                                items: 1,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true,
+                                dots: true
+                            },
+                            700: {
+                                items: 2,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true
+                            },
+                            1200: {
+                                items: 3,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true
+                            },
+                            1440: {
+                                items: 4,
+                                mouseDrag: true,
+                                autoplay: true,
+                                loop: true
+                            }
+                        }
+                    });
+                }, 150);
+            });
+        });
+
+
+
+        /*$(document).ready(function() {
+          $(document).ajaxStart(function() {
+            $('.svg-loader').show();
+          }).ajaxStop(function() {
+            $('.svg-loader').hide();
+          });*/
+
+        $(document).ready(function() {
+            // Get the modal
+            var modal = document.getElementById('gen_car_modal');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                    if (event.target == modal) {
+                        $('.apply-form-error-msg').removeClass('error');
+                        $('#gen_career_form')[0].reset();
+                    }
+                }
+                // General Career Form
+        });
+
+        function getPostTitle(title) {
+            $("#post_ct").val(title);
+        }
+
+        // ===== Scroll to Top ==== 
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200); // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200); // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() { // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0 // Scroll to top of body
+            }, 500);
+        });
+    </script>
+
+    <!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAHWM3sMRD05PQk_wVExFjxRwXEPJsDLoo"></script> -->
+
+    <!-- <script>
+        $(document).ready(function() {
+            function init_map() {
+                var myOptions = {
+                    zoom: 14,
+                    center: new google.maps.LatLng(13.065630, 80.110942),
+
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(13.065630, 80.110942)
+
+                });
+                infowindow = new google.maps.InfoWindow({});
+
+            }
+            google.maps.event.addDomListener(window, 'load', init_map);
+        });
+    </script> -->
+    {% block scripts %} {% endblock %}
+
+</body>
+
+<script>
+    (function() {
+        function addEventListener(element, event, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(event, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + event, handler);
+            }
+        }
+
+        function maybePrefixUrlField() {
+            if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+                this.value = "http://" + this.value;
+            }
+        }
+
+        var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+        if (urlFields && urlFields.length > 0) {
+            for (var j = 0; j < urlFields.length; j++) {
+                addEventListener(urlFields[j], 'blur', maybePrefixUrlField);
+            }
+        } /* test if browser supports date fields */
+        var testInput = document.createElement('input');
+        testInput.setAttribute('type', 'date');
+        if (testInput.type !== 'date') {
+
+            /* add placeholder & pattern to all date fields */
+            var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
+            for (var i = 0; i < dateFields.length; i++) {
+                if (!dateFields[i].placeholder) {
+                    dateFields[i].placeholder = 'YYYY-MM-DD';
+                }
+                if (!dateFields[i].pattern) {
+                    dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
+                }
+            }
+        }
+
+    })();
+</script>
+<!-- <script type='text/javascript'>
+    /* <![CDATA[ */
+    var wpcf7 = {
+        "apiSettings": {
+            "root": "https:\/\/saec.ac.in\/wp-json\/contact-form-7\/v1",
+            "namespace": "contact-form-7\/v1"
+        }
+    };
+    /* ]]> */
+</script> -->
+
+
+
+<script type='text/javascript'>
+    window.lazySizesConfig = window.lazySizesConfig || {};
+
+    window.lazySizesConfig.lazyClass = 'lazyload';
+    window.lazySizesConfig.loadingClass = 'lazyloading';
+    window.lazySizesConfig.loadedClass = 'lazyloaded';
+
+    lazySizesConfig.loadMode = 1;
+</script>
+<script type='text/javascript'>
+    lazySizes.init();
+</script>
+
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var megamenu = {
+        "timeout": "300",
+        "interval": "100"
+    };
+    /* ]]> */
+</script>
+
+
+<script type='text/javascript'>
+    var mc4wp_forms_config = [];
+</script>
+<script>
+    $(document).ready(function() {
+        $(document).on('change', '#ugselect,#year-select,#typelat,#typereg', function() {
+            var ugselect = $("#ugselect").val();
+            var yer = $('#year-select').val();
+            if ($('#typelat').is(':checked') && ugselect == 'ug' && yer == 'IIyear') {
+                $('#lateralEntry').show();
+            } else {
+                $('#lateralEntry').hide();
+            }
+        });
+        $('#xm42,#xm43').keyup(function() {
+            var markObt = $('#xm42').val();
+            var markMax = $('#xm43').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm44').val(percRound);
+            }
+        });
+        $('#xm52,#xm53').keyup(function() {
+            var markObt = $('#xm52').val();
+            var markMax = $('#xm53').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm54').val(percRound);
+            }
+        });
+        $('#xm62,#xm63').keyup(function() {
+            var markObt = $('#xm62').val();
+            var markMax = $('#xm63').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm64').val(percRound);
+                if ($('#xm64').val() != "" && $('#xm74').val() != "" && $('#xm84').val() != "") {
+                    var phy = parseFloat($('#xm64').val());
+                    var che = parseFloat($('#xm74').val());
+                    var maths = parseFloat($('#xm84').val());
+                    var percEleg = (phy + che + maths) / 3;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#eligible_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xm72,#xm73').keyup(function() {
+            var markObt = $('#xm72').val();
+            var markMax = $('#xm73').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm74').val(percRound);
+                if ($('#xm64').val() != "" && $('#xm74').val() != "" && $('#xm84').val() != "") {
+                    var phy = parseFloat($('#xm64').val());
+                    var che = parseFloat($('#xm74').val());
+                    var maths = parseFloat($('#xm84').val());
+                    var percEleg = (phy + che + maths) / 3;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#eligible_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xm82,#xm83').keyup(function() {
+            var markObt = $('#xm82').val();
+            var markMax = $('#xm83').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm84').val(percRound);
+                if ($('#xm64').val() != "" && $('#xm74').val() != "" && $('#xm84').val() != "") {
+                    var phy = parseFloat($('#xm64').val());
+                    var che = parseFloat($('#xm74').val());
+                    var maths = parseFloat($('#xm84').val());
+                    var percEleg = (phy + che + maths) / 3;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#eligible_percentage').val(percElegRound);
+                }
+            }
+        });
+        // +2 section
+        $('#xm402,#xm403').keyup(function() {
+            var markObt = $('#xm402').val();
+            var markMax = $('#xm403').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm404').val(percRound);
+            }
+        });
+        $('#xm502,#xm503').keyup(function() {
+            var markObt = $('#xm502').val();
+            var markMax = $('#xm503').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm504').val(percRound);
+            }
+        });
+        $('#xm602,#xm603').keyup(function() {
+            var markObt = $('#xm602').val();
+            var markMax = $('#xm603').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm604').val(percRound);
+                if ($('#xm604').val() != "" && $('#xm704').val() != "" && $('#xm804').val() != "") {
+                    var phy = parseFloat($('#xm604').val());
+                    var che = parseFloat($('#xm704').val());
+                    var maths = parseFloat($('#xm804').val());
+                    var percEleg = (phy + che + maths) / 3;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#eligible_percentages').val(percElegRound);
+                }
+            }
+        });
+        $('#xm702,#xm703').keyup(function() {
+            var markObt = $('#xm702').val();
+            var markMax = $('#xm703').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm704').val(percRound);
+                if ($('#xm604').val() != "" && $('#xm704').val() != "" && $('#xm804').val() != "") {
+                    var phy = parseFloat($('#xm604').val());
+                    var che = parseFloat($('#xm704').val());
+                    var maths = parseFloat($('#xm804').val());
+                    var percEleg = (phy + che + maths) / 3;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#eligible_percentages').val(percElegRound);
+                }
+            }
+        });
+        $('#xm802,#xm803').keyup(function() {
+            var markObt = $('#xm802').val();
+            var markMax = $('#xm803').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm804').val(percRound);
+                if ($('#xm604').val() != "" && $('#xm704').val() != "" && $('#xm804').val() != "") {
+                    var phy = parseFloat($('#xm604').val());
+                    var che = parseFloat($('#xm704').val());
+                    var maths = parseFloat($('#xm804').val());
+                    var percEleg = (phy + che + maths) / 3;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#eligible_percentages').val(percElegRound);
+                }
+            }
+        });
+        // Diploma section..................................................
+        $('#xm1002,#xm1003').keyup(function() {
+            var markObt = $('#xm1002').val();
+            var markMax = $('#xm1003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm1004').val(percRound);
+                if ($('#xm1004').val() != "" && $('#xm2004').val() != "" && $('#xm3004').val() != "" && $('#xm4004').val() != "" && $('#xm5004').val() != "" && $('#xm6004').val() != "") {
+                    var sem1 = parseFloat($('#xm1004').val());
+                    var sem2 = parseFloat($('#xm2004').val());
+                    var sem3 = parseFloat($('#xm3004').val());
+                    var sem4 = parseFloat($('#xm4004').val());
+                    var sem5 = parseFloat($('#xm5004').val());
+                    var sem6 = parseFloat($('#xm6004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6) / 6;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#dp_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xm2002,#xm2003').keyup(function() {
+            var markObt = $('#xm2002').val();
+            var markMax = $('#xm2003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm2004').val(percRound);
+                if ($('#xm1004').val() != "" && $('#xm2004').val() != "" && $('#xm3004').val() != "" && $('#xm4004').val() != "" && $('#xm5004').val() != "" && $('#xm6004').val() != "") {
+                    var sem1 = parseFloat($('#xm1004').val());
+                    var sem2 = parseFloat($('#xm2004').val());
+                    var sem3 = parseFloat($('#xm3004').val());
+                    var sem4 = parseFloat($('#xm4004').val());
+                    var sem5 = parseFloat($('#xm5004').val());
+                    var sem6 = parseFloat($('#xm6004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6) / 6;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#dp_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xm3002,#xm3003').keyup(function() {
+            var markObt = $('#xm3002').val();
+            var markMax = $('#xm3003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm3004').val(percRound);
+                if ($('#xm1004').val() != "" && $('#xm2004').val() != "" && $('#xm3004').val() != "" && $('#xm4004').val() != "" && $('#xm5004').val() != "" && $('#xm6004').val() != "") {
+                    var sem1 = parseFloat($('#xm1004').val());
+                    var sem2 = parseFloat($('#xm2004').val());
+                    var sem3 = parseFloat($('#xm3004').val());
+                    var sem4 = parseFloat($('#xm4004').val());
+                    var sem5 = parseFloat($('#xm5004').val());
+                    var sem6 = parseFloat($('#xm6004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6) / 6;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#dp_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xm4002,#xm4003').keyup(function() {
+            var markObt = $('#xm4002').val();
+            var markMax = $('#xm4003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm4004').val(percRound);
+                if ($('#xm1004').val() != "" && $('#xm2004').val() != "" && $('#xm3004').val() != "" && $('#xm4004').val() != "" && $('#xm5004').val() != "" && $('#xm6004').val() != "") {
+                    var sem1 = parseFloat($('#xm1004').val());
+                    var sem2 = parseFloat($('#xm2004').val());
+                    var sem3 = parseFloat($('#xm3004').val());
+                    var sem4 = parseFloat($('#xm4004').val());
+                    var sem5 = parseFloat($('#xm5004').val());
+                    var sem6 = parseFloat($('#xm6004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6) / 6;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#dp_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xm5002,#xm5003').keyup(function() {
+            var markObt = $('#xm5002').val();
+            var markMax = $('#xm5003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm5004').val(percRound);
+                if ($('#xm1004').val() != "" && $('#xm2004').val() != "" && $('#xm3004').val() != "" && $('#xm4004').val() != "" && $('#xm5004').val() != "" && $('#xm6004').val() != "") {
+                    var sem1 = parseFloat($('#xm1004').val());
+                    var sem2 = parseFloat($('#xm2004').val());
+                    var sem3 = parseFloat($('#xm3004').val());
+                    var sem4 = parseFloat($('#xm4004').val());
+                    var sem5 = parseFloat($('#xm5004').val());
+                    var sem6 = parseFloat($('#xm6004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6) / 6;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#dp_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xm6002,#xm6003').keyup(function() {
+            var markObt = $('#xm6002').val();
+            var markMax = $('#xm6003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xm6004').val(percRound);
+                if ($('#xm1004').val() != "" && $('#xm2004').val() != "" && $('#xm3004').val() != "" && $('#xm4004').val() != "" && $('#xm5004').val() != "" && $('#xm6004').val() != "") {
+                    var sem1 = parseFloat($('#xm1004').val());
+                    var sem2 = parseFloat($('#xm2004').val());
+                    var sem3 = parseFloat($('#xm3004').val());
+                    var sem4 = parseFloat($('#xm4004').val());
+                    var sem5 = parseFloat($('#xm5004').val());
+                    var sem6 = parseFloat($('#xm6004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6) / 6;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#dp_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        // UG section..................................................
+        $('#xmug1002,#xmug1003').keyup(function() {
+            var markObt = $('#xmug1002').val();
+            var markMax = $('#xmug1003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug1004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xmug2002,#xmug2003').keyup(function() {
+            var markObt = $('#xmug2002').val();
+            var markMax = $('#xmug2003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug2004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xmug3002,#xmug3003').keyup(function() {
+            var markObt = $('#xmug3002').val();
+            var markMax = $('#xmug3003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug3004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xmug4002,#xmug4003').keyup(function() {
+            var markObt = $('#xmug4002').val();
+            var markMax = $('#xmug4003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug4004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xmug5002,#xmug5003').keyup(function() {
+            var markObt = $('#xmug5002').val();
+            var markMax = $('#xmug5003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug5004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xmug6002,#xmug6003').keyup(function() {
+            var markObt = $('#xmug6002').val();
+            var markMax = $('#xmug6003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug6004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xmug7002,#xmug7003').keyup(function() {
+            var markObt = $('#xmug7002').val();
+            var markMax = $('#xmug7003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug7004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+        $('#xmug8002,#xmug8003').keyup(function() {
+            var markObt = $('#xmug8002').val();
+            var markMax = $('#xmug8003').val();
+            if (markObt != "" && markMax != "") {
+                var perc = (markObt / markMax) * 100;
+                var percRound = (perc.toFixed(2));
+                $('#xmug8004').val(percRound);
+                if ($('#xmug1004').val() != "" && $('#xmug2004').val() != "" && $('#xmug3004').val() != "" && $('#xmug4004').val() != "" && $('#xmug5004').val() != "" && $('#xmug6004').val() != "" && $('#xmug7004').val() != "" && $('#xmug8004').val() != "") {
+                    var sem1 = parseFloat($('#xmug1004').val());
+                    var sem2 = parseFloat($('#xmug2004').val());
+                    var sem3 = parseFloat($('#xmug3004').val());
+                    var sem4 = parseFloat($('#xmug4004').val());
+                    var sem5 = parseFloat($('#xmug5004').val());
+                    var sem6 = parseFloat($('#xmug6004').val());
+                    var sem7 = parseFloat($('#xmug7004').val());
+                    var sem8 = parseFloat($('#xmug8004').val());
+                    var percEleg = (sem1 + sem2 + sem3 + sem4 + sem5 + sem6 + sem7 + sem8) / 8;
+                    var percElegRound = (percEleg.toFixed(2));
+                    $('#ug_aggregate_percentage').val(percElegRound);
+                }
+            }
+        });
+    });
+    $(document).ready(function() {
+        var totselector = $("form.webform .form-group input[required='required'],form.webform .form-group select[required='required'], form.webform .form-group textarea[required='required']");
+        totselector.parents('.form-group').addClass('requiredfield');
+        totselector.change(function() {
+            $(this).parents('.form-group').addClass('valchanged');
+            if ($(this).val() == "") {
+                $(this).parents('.form-group').removeClass('valchanged');
+            }
+            var tabindex = $(this).parents('.tab-content').index();
+            var changelen = $(this).parents('.tab-content').find('.valchanged').length;
+            var totallen = $(this).parents('.tab-content').find('.requiredfield').length;
+            var totpercent = ((changelen / totallen) * 100) + "%";
+            //            if(totpercent == "100%"){
+            //                setTimeout(function(){
+            //                    $('.applynow-wrap .tab-menu li').removeClass('active');
+            //                    $('.applynow-wrap .tab-menu li').eq(tabindex+1).addClass('active');
+            //                    $('.applynow-wrap .tab-content-wrap .tab-content').removeClass('active in');
+            //                    $('.applynow-wrap .tab-content-wrap .tab-content').eq(tabindex+1).addClass('active in');
+            //                },1000);
+            //            }
+            $('.applynow-wrap .tab-menu li').eq(tabindex).find('.progress').css('width', totpercent);
+        });
+        /**********************Setting Branch and Course using url**********************/
+        var url = document.URL;
+        var urlcourse = url.split('?').pop();
+        var urldept = urlcourse.split('=');
+        $('#ugselect option').each(function() {
+            var attrValue = $(this).val();
+            if (attrValue == urldept[0]) {
+                $('#ugselect option').removeAttr('selected');
+                $(this).attr("selected", "selected");
+                var msg = $(this).html();
+                $('.select_degree .selectric .label').html(msg);
+            }
+        });
+        jQuery(function($) {
+            $.ajax({
+                url: 'https://saec.ac.in/getbranch.php',
+                type: 'POST',
+                data: {
+                    branch: urldept[0]
+                },
+                success: function(msg) {
+                    $('#course_select').html(msg);
+                    $('#course_select').selectric('refresh');
+                    $('#course_select option').each(function() {
+                        var attrValue = $(this).attr('data-url');
+                        if (attrValue == urldept[1]) {
+                            $('#course_select option').removeAttr('selected');
+                            $(this).attr("selected", "selected");
+                            var msg = $(this).html();
+                            $('.select_branch .selectric .label').html(msg);
+                        }
+                    });
+                }
+            });
+        });
+    });
+    //Number check
+    function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
+    //fillAddress
+    function fillAddress() {
+        var radioValue = $('input[name=ap_sameaddrfut]:checked').val();
+        if (radioValue == 'yes') {
+            $(".PreFirstAddr").val($('.PrFirstAddr').val());
+            $(".PreAdd2").val($('.PrAdd2').val());
+            $(".PrePin").val($('.PrPin').val());
+            $(".PreCity").val($('.PrCity').val());
+            $(".PrePhone").val($('.PrPhone').val());
+        } else if (radioValue == 'no') {
+            $(".PreFirstAddr").val('');
+            $(".PreAdd2").val('');
+            $(".PrePin").val('');
+            $(".PreCity").val('');
+            $(".PrePhone").val('');
+        }
+    }
+    //Setting Branch and Course
+    function getbranch(s_branch) {
+        if (s_branch == 'pg') {
+            jQuery('#pgEntry').show();
+        } else {
+            jQuery('#pgEntry').hide();
+        }
+        jQuery(function($) {
+            $.ajax({
+                url: "https://saec.ac.in" + '/wp-admin/admin-ajax.php', // AJAX handler
+                type: 'POST',
+                data: {
+                    action: 'populate_branch',
+                    branch: s_branch
+                },
+                success: function(msg) {
+                    $('#course_select').html(msg);
+                    $('#course_select').selectric('refresh');
+                }
+            });
+        });
+    }
+    $(document).on('change', '#fileselect', function(e) {
+        var file_data = $('#fileselect').prop('files')[0];
+        var form_data = new FormData();
+        form_data.append('file', file_data);
+        form_data.append('action', 'image_uploads');
+        $.ajax({
+            url: "https://saec.ac.in" + '/wp-admin/admin-ajax.php',
+            type: 'POST',
+            dataType: 'text',
+            data: form_data,
+            cache: false,
+            contentType: false,
+            processData: false,
+        }).done(function(data) {
+            if (data !== 'error') {
+                $('#fileselect_hidden').val(data);
+            }
+        }).fail(function(data) {});
+    });
+    //Form Data Collection
+    var form_data = {};
+    var form_data_notreq = {};
+    //Form Data Menu 1
+    $(document).on("click", "#menu1-next-button", function() {
+        var menu1_count = 0;
+        form_data.select_degree = $('#ugselect').val();
+        // form_data.select_file = $('#fileselect_hidden').val();
+        form_data.select_course_type = $('.select_course_type input:checked').val();
+        form_data.select_year = $('#year-select').val();
+        form_data.select_branch = $('#course_select').val();
+        for (var key in form_data) {
+            if (form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined' || form_data[key] == 'off') {
+                $('.' + key + ' .apply-form-error-msg').addClass('error');
+            }
+        }
+        for (var key in form_data) {
+            if (!(form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined')) {
+                menu1_count = menu1_count + 1;
+                $('.' + key + ' .apply-form-error-msg').removeClass('error');
+            }
+        }
+        if (menu1_count >= 4) {
+            $('.applynow-wrap li').removeClass('active');
+            $('.applynow-wrap li:nth-child(2)').addClass('active');
+            $('.tab-content').removeClass('in active');
+            $('#menu2').addClass('in active');
+        }
+    });
+    //Menu 2 Prev click
+    $(document).on('click', '#menu2-prev-button', function() {
+        $('.applynow-wrap li').removeClass('active');
+        $('.applynow-wrap li:nth-child(1)').addClass('active');
+        $('.tab-content').removeClass('in active');
+        $('#menu1').addClass('in active');
+    });
+    //Form Data Menu 2
+    $(document).on('click', '#menu2-next-button', function() {
+        var menu2_count = 0;
+        form_data.aplicants_name = $('#nametext').val();
+        form_data.dob_date = $('#dob_date').val();
+        form_data.dob_month = $('#dob_month').val();
+        form_data.dob_year = $('#dob_year').val();
+        form_data.blood_group = $('#bloodgselect').val();
+        form_data.select_mother_toung = $('#mothtongselect').val();
+        form_data.select_religion = $('#relegselect').val();
+        form_data.select_cast = $('#castselect').val();
+        form_data.select_comminity = $('#communityselect').val();
+        form_data.father_name = $('#fathsnametext').val();
+        form_data.father_occupation = $('#fathsoccuptext').val();
+        form_data.mother_name = $('#mothsnametext').val();
+        form_data.mother_occupation = $('#mothsoccuptext').val();
+        form_data.select_file = $('#fileselect_hidden').val();
+        form_data_notreq.age = $('#agetext').val();
+        form_data_notreq.select_reserved_category = $('#rescatselect').val();
+        form_data_notreq.select_handicapped = $('.physically_handicapped input:checked').val();
+        form_data_notreq.father_income = $('#fathsinctext').val();
+        form_data_notreq.mother_income = $('#mothsinctext').val();
+        form_data_notreq.guarian_name = $('#guardnamtext').val();
+        form_data_notreq.guarian_occupation = $('#guardoccuptext').val();
+        form_data_notreq.guarian_income = $('#guardinctext').val();
+        var dob = form_data.dob_date + '-' + form_data.dob_month + '-' + form_data.dob_year;
+        for (var key in form_data) {
+            if (form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined' || form_data[key] == 'off') {
+                $('.' + key + ' .apply-form-error-msg').addClass('error');
+            }
+        }
+        for (var key in form_data) {
+            if (!(form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined')) {
+                menu2_count = menu2_count + 1;
+                $('.' + key + ' .apply-form-error-msg').removeClass('error');
+            }
+        }
+        //alert(menu2_count);
+        if (menu2_count >= 17) {
+            $('.applynow-wrap li').removeClass('active');
+            $('.applynow-wrap li:nth-child(3)').addClass('active');
+            $('.tab-content').removeClass('in active');
+            $('#menu3').addClass('in active');
+        }
+    });
+    //Menu 3 Prev click 
+    $(document).on('click', '#menu3-prev-button', function() {
+        $('.applynow-wrap li').removeClass('active');
+        $('.applynow-wrap li:nth-child(2)').addClass('active');
+        $('.tab-content').removeClass('in active');
+        $('#menu2').addClass('in active');
+    });
+    // Form Data Menu 3
+    $(document).on('click', '#menu3-next-button', function() {
+        var menu3_count = 0;
+        form_data.nationtext = $('#nationtext').val();
+        form_data.native_place = $('#native_place').val();
+        form_data.civicstattext = $('#civicstattext').val();
+        form_data.stateselect = $('#stateselect').val();
+        form_data.phonetext = $('#phonetext').val();
+        form_data.emailtext = $('#emailtext').val();
+        form_data.perma_addrline1text = $('.permanent-address #addrline1text').val();
+        form_data.perma_addrline2text = $('.permanent-address #addrline2text').val();
+        form_data.perma_citytext = $('.permanent-address #citytext').val();
+        form_data.perma_pincodetext = $('.permanent-address #pincodetext').val();
+        form_data.perma_addressphonetext = $('.permanent-address #addressphonetext').val();
+        form_data.diff_addrline1text = $('.different-address #addrline1text').val();
+        form_data.diff_addrline2text = $('.different-address #addrline2text').val();
+        form_data.diff_citytext = $('.different-address #citytext').val();
+        form_data.diff_pincodetext = $('.different-address #pincodetext').val();
+        form_data.diff_addressphonetext = $('.different-address #addressphonetext').val();
+        //if ( && match('[0-9]{10}')($('#phonetext').val())) {
+        if (form_data.phonetext != '' && !$('#phonetext').val().match('[0-9]{10}')) {
+            //alert(form_data.phonetext);
+            $('.phonetext .apply-form-error-phnumber').addClass('error');
+        } else {
+            $('.phonetext .apply-form-error-phnumber').removeClass('error');
+        }
+        if (($('#emailtext').val()) != null && !validateEmail($('#emailtext').val())) {
+            $('.emailtext .apply-form-error-msgemail').addClass('error');
+        } else {
+            $('.emailtext .apply-form-error-msgemail').removeClass('error');
+        }
+        for (var key in form_data) {
+            if (form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined' || form_data[key] == 'off') {
+                $('.' + key + ' .apply-form-error-msg').addClass('error');
+            }
+        }
+        var comm_add = $('.communication_adress input:checked').val();
+        for (var key in form_data) {
+            if (!(form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined')) {
+                menu3_count = menu3_count + 1;
+                $('.' + key + ' .apply-form-error-msg').removeClass('error');
+            }
+        }
+        if (comm_add == 'no') {
+            menu3_count = menu3_count + 1;
+        }
+        if ((menu3_count >= 29 || menu3_count >= 35) && validateEmail(form_data.emailtext)) {
+            $('.applynow-wrap li').removeClass('active');
+            $('.applynow-wrap li:nth-child(4)').addClass('active');
+            $('.tab-content').removeClass('in active');
+            $('#menu4').addClass('in active');
+        }
+
+        function validateEmail($email) {
+            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            return emailReg.test($email);
+        }
+    });
+    //Menu 4 Prev click
+    $(document).on('click', '#menu4-prev-button', function() {
+        $('.applynow-wrap li').removeClass('active');
+        $('.applynow-wrap li:nth-child(3)').addClass('active');
+        $('.tab-content').removeClass('in active');
+        $('#menu3').addClass('in active');
+    });
+    //Form Data Menu 4
+    $(document).on('click', '#form-submit-button', function() {
+        var menu4_count = 0;
+        form_data.aplicants_name = $('#nametext').val();
+        form_data.dob_date = $('#dob_date').val();
+        form_data.dob_month = $('#dob_month').val();
+        form_data.dob_year = $('#dob_year').val();
+        form_data.blood_group = $('#bloodgselect').val();
+        form_data.select_mother_toung = $('#mothtongselect').val();
+        form_data.select_religion = $('#relegselect').val();
+        form_data.select_cast = $('#castselect').val();
+        form_data.select_comminity = $('#communityselect').val();
+        form_data.father_name = $('#fathsnametext').val();
+        form_data.father_occupation = $('#fathsoccuptext').val();
+        form_data.mother_name = $('#mothsnametext').val();
+        form_data.mother_occupation = $('#mothsoccuptext').val();
+        form_data_notreq.age = $('#agetext').val();
+        form_data_notreq.select_reserved_category = $('#rescatselect').val();
+        form_data_notreq.select_handicapped = $('.physically_handicapped input:checked').val();
+        form_data_notreq.father_income = $('#fathsinctext').val();
+        form_data_notreq.mother_income = $('#mothsinctext').val();
+        form_data_notreq.guarian_name = $('#guardnamtext').val();
+        form_data_notreq.guarian_occupation = $('#guardoccuptext').val();
+        form_data_notreq.guarian_income = $('#guardinctext').val();
+        form_data.nationtext = $('#nationtext').val();
+        form_data.native_place = $('#native_place').val();
+        form_data.civicstattext = $('#civicstattext').val();
+        form_data.stateselect = $('#stateselect').val();
+        form_data.phonetext = $('#phonetext').val();
+        form_data.emailtext = $('#emailtext').val();
+        form_data.perma_addrline1text = $('.permanent-address #addrline1text').val();
+        form_data.perma_addrline2text = $('.permanent-address #addrline2text').val();
+        form_data.perma_citytext = $('.permanent-address #citytext').val();
+        form_data.perma_pincodetext = $('.permanent-address #pincodetext').val();
+        form_data.perma_addressphonetext = $('.permanent-address #addressphonetext').val();
+        form_data.diff_addrline1text = $('.different-address #addrline1text').val();
+        form_data.diff_addrline2text = $('.different-address #addrline2text').val();
+        form_data.diff_citytext = $('.different-address #citytext').val();
+        form_data.diff_pincodetext = $('.different-address #pincodetext').val();
+        form_data.diff_addressphonetext = $('.different-address #addressphonetext').val();
+        form_data.availconcess = $('.availconcess input:checked').val();
+        form_data.tcnumtext = $('#tcnumtext').val();
+        form_data.tc_date = $('#tc_date').val();
+        form_data.tc_month = $('#tc_month').val();
+        form_data.tc_year = $('#tc_year').val();
+        form_data.qualifyexamtext = $('#qualifyexamtext').val();
+        form_data.instrmedtext = $('#instrmedtext').val();
+        for (var key in form_data) {
+            if (form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined' || form_data[key] == 'off') {
+                $('.' + key + ' .apply-form-error-msg').addClass('error');
+            }
+        }
+        for (var key in form_data) {
+            if (!(form_data[key] == null || form_data[key] == '' || form_data[key] == 'undefined')) {
+                menu4_count = menu4_count + 1;
+                $('.' + key + ' .apply-form-error-msg').removeClass('error');
+            }
+        }
+        form_data_notreq.xm11 = $('#xm11').val();
+        form_data_notreq.xm12 = $('#xm12').val();
+        form_data_notreq.xm13 = $('#xm13').val();
+        form_data_notreq.xm14 = $('#xm14').val();
+        form_data_notreq.xm21 = $('#xm21').val();
+        form_data_notreq.xm22 = $('#xm22').val();
+        form_data_notreq.xm23 = $('#xm23').val();
+        form_data_notreq.xm24 = $('#xm24').val();
+        form_data_notreq.xm201 = $('#xm201').val();
+        form_data_notreq.xm202 = $('#xm202').val();
+        form_data_notreq.xm203 = $('#xm203').val();
+        form_data_notreq.xm204 = $('#xm204').val();
+        form_data_notreq.xm31 = $('#xm31').val();
+        form_data_notreq.xm32 = $('#xm32').val();
+        form_data_notreq.xm33 = $('#xm33').val();
+        form_data_notreq.xm34 = $('#xm34').val();
+        form_data_notreq.xm41 = $('#xm41').val();
+        form_data_notreq.xm42 = $('#xm42').val();
+        form_data_notreq.xm43 = $('#xm43').val();
+        form_data_notreq.xm44 = $('#xm44').val();
+        form_data_notreq.xm51 = $('#xm51').val();
+        form_data_notreq.xm52 = $('#xm52').val();
+        form_data_notreq.xm53 = $('#xm53').val();
+        form_data_notreq.xm54 = $('#xm54').val();
+        form_data_notreq.xm61 = $('#xm61').val();
+        form_data_notreq.xm62 = $('#xm62').val();
+        form_data_notreq.xm63 = $('#xm63').val();
+        form_data_notreq.xm64 = $('#xm64').val();
+        form_data_notreq.xm71 = $('#xm71').val();
+        form_data_notreq.xm72 = $('#xm72').val();
+        form_data_notreq.xm73 = $('#xm73').val();
+        form_data_notreq.xm74 = $('#xm74').val();
+        form_data_notreq.xm81 = $('#xm81').val();
+        form_data_notreq.xm82 = $('#xm82').val();
+        form_data_notreq.xm83 = $('#xm83').val();
+        form_data_notreq.xm84 = $('#xm84').val();
+        form_data_notreq.xm401 = $('#xm401').val();
+        form_data_notreq.xm402 = $('#xm402').val();
+        form_data_notreq.xm403 = $('#xm403').val();
+        form_data_notreq.xm404 = $('#xm404').val();
+        form_data_notreq.xm501 = $('#xm501').val();
+        form_data_notreq.xm502 = $('#xm502').val();
+        form_data_notreq.xm503 = $('#xm503').val();
+        form_data_notreq.xm504 = $('#xm504').val();
+        form_data_notreq.xm601 = $('#xm601').val();
+        form_data_notreq.xm602 = $('#xm602').val();
+        form_data_notreq.xm603 = $('#xm603').val();
+        form_data_notreq.xm604 = $('#xm604').val();
+        form_data_notreq.xm701 = $('#xm701').val();
+        form_data_notreq.xm702 = $('#xm702').val();
+        form_data_notreq.xm703 = $('#xm703').val();
+        form_data_notreq.xm704 = $('#xm704').val();
+        form_data_notreq.xm801 = $('#xm801').val();
+        form_data_notreq.xm802 = $('#xm802').val();
+        form_data_notreq.xm803 = $('#xm803').val();
+        form_data_notreq.xm804 = $('#xm804').val();
+        form_data_notreq.boardnametext = $('#boardnametext').val();
+        form_data_notreq.regnumtext = $('#regnumtext').val();
+        form_data_notreq.eligible_percentage = $('#eligible_percentage').val();
+        form_data_notreq.boardnametexts = $('#boardnametexts').val();
+        form_data_notreq.regnumtexts = $('#regnumtexts').val();
+        form_data_notreq.eligible_percentages = $('#eligible_percentages').val();
+        form_data_notreq.course_diploma = $('#courseDiploma').val();
+        form_data_notreq.boardname_diploma = $('#boardnameDiploma').val();
+        form_data_notreq.regnum_diploma = $('#regnumDiploma').val();
+        form_data_notreq.college_dp = $('#college_dp').val();
+        form_data_notreq.xm1001 = $('#xm1001').val();
+        form_data_notreq.xm1002 = $('#xm1002').val();
+        form_data_notreq.xm1003 = $('#xm1003').val();
+        form_data_notreq.xm1004 = $('#xm1004').val();
+        form_data_notreq.xm2001 = $('#xm2001').val();
+        form_data_notreq.xm2002 = $('#xm2002').val();
+        form_data_notreq.xm2003 = $('#xm2003').val();
+        form_data_notreq.xm2004 = $('#xm3004').val();
+        form_data_notreq.xm3001 = $('#xm3001').val();
+        form_data_notreq.xm3002 = $('#xm3002').val();
+        form_data_notreq.xm3003 = $('#xm3003').val();
+        form_data_notreq.xm3004 = $('#xm3004').val();
+        form_data_notreq.xm4001 = $('#xm4001').val();
+        form_data_notreq.xm4002 = $('#xm4002').val();
+        form_data_notreq.xm4003 = $('#xm4003').val();
+        form_data_notreq.xm4004 = $('#xm4004').val();
+        form_data_notreq.xm5001 = $('#xm5001').val();
+        form_data_notreq.xm5002 = $('#xm5002').val();
+        form_data_notreq.xm5003 = $('#xm5003').val();
+        form_data_notreq.xm5004 = $('#xm5004').val();
+        form_data_notreq.xm6001 = $('#xm6001').val();
+        form_data_notreq.xm6002 = $('#xm6002').val();
+        form_data_notreq.xm6003 = $('#xm6003').val();
+        form_data_notreq.xm6004 = $('#xm6004').val();
+        form_data_notreq.dp_aggregate_percentage = $('#dp_aggregate_percentage').val();
+        form_data_notreq.ug_univ = $('#ugUniv').val();
+        form_data_notreq.ug_regno = $('#ugRegno').val();
+        form_data_notreq.ug_degree = $('#ugDegree').val();
+        form_data_notreq.ug_sub = $('#UgMainSub').val();
+        form_data_notreq.ug_college = $('#ugCollege').val();
+        form_data_notreq.xmug1001 = $('#xmug1001').val();
+        form_data_notreq.xmug1002 = $('#xmug1002').val();
+        form_data_notreq.xmug1003 = $('#xmug1003').val();
+        form_data_notreq.xmug1004 = $('#xmug1004').val();
+        form_data_notreq.xmug2001 = $('#xmug2001').val();
+        form_data_notreq.xmug2002 = $('#xmug2002').val();
+        form_data_notreq.xmug2003 = $('#xmug2003').val();
+        form_data_notreq.xmug2004 = $('#xmug2004').val();
+        form_data_notreq.xmug3001 = $('#xmug3001').val();
+        form_data_notreq.xmug3002 = $('#xmug3002').val();
+        form_data_notreq.xmug3003 = $('#xmug3003').val();
+        form_data_notreq.xmug3004 = $('#xmug3004').val();
+        form_data_notreq.xmug4001 = $('#xmug4001').val();
+        form_data_notreq.xmug4002 = $('#xmug4002').val();
+        form_data_notreq.xmug4003 = $('#xmug4003').val();
+        form_data_notreq.xmug4004 = $('#xmug4004').val();
+        form_data_notreq.xmug5001 = $('#xmug5001').val();
+        form_data_notreq.xmug5002 = $('#xmug5002').val();
+        form_data_notreq.xmug5003 = $('#xmug5003').val();
+        form_data_notreq.xmug5004 = $('#xmug5004').val();
+        form_data_notreq.xmug6001 = $('#xmug6001').val();
+        form_data_notreq.xmug6002 = $('#xmug6002').val();
+        form_data_notreq.xmug6003 = $('#xmug6003').val();
+        form_data_notreq.xmug6004 = $('#xmug6004').val();
+        form_data_notreq.xmug7001 = $('#xmug7001').val();
+        form_data_notreq.xmug7002 = $('#xmug7002').val();
+        form_data_notreq.xmug7003 = $('#xmug7003').val();
+        form_data_notreq.xmug7004 = $('#xmug7004').val();
+        form_data_notreq.xmug8001 = $('#xmug8001').val();
+        form_data_notreq.xmug8002 = $('#xmug8002').val();
+        form_data_notreq.xmug8003 = $('#xmug8003').val();
+        form_data_notreq.xmug8004 = $('#xmug8004').val();
+        form_data_notreq.ug_aggregate_percentage = $('#ug_aggregate_percentage').val();
+        //  Store data in DB
+        var dob = form_data.dob_date + '-' + form_data.dob_month + '-' + form_data.dob_year;
+        var tcdate = form_data.tc_date + '-' + form_data.tc_month + '-' + form_data.tc_year;
+        // if (menu4_count == 36 || menu4_count == 41) {
+        $('.gen_svg-loader').addClass('active');
+        jQuery(function($) {
+            $.ajax({
+                //url: 'store-data.php',
+                url: "https://saec.ac.in" + '/wp-admin/admin-ajax.php', // AJAX handler
+                type: 'POST',
+                data: {
+                    action: 'store_ap_data',
+                    dob: dob,
+                    tcdate: tcdate,
+                    form_data: JSON.stringify(form_data),
+                    form_data_notreq: JSON.stringify(form_data_notreq),
+                },
+                success: function(msg) {
+                    $('#online-application-form')[0].reset();
+                    $('.applynow-wrap li').removeClass('active');
+                    $('.applynow-wrap li:nth-child(1)').addClass('active');
+                    $('.tab-content').removeClass('in active');
+                    $('#menu1').addClass('in active');
+                    $('.gen_svg-loader').removeClass('active');
+                }
+            }).done(function() {
+                setTimeout(function() {
+                    var url = window.location.href;
+                    if (url.indexOf('?') > -1) {
+                        url += '&param=1';
+                    } else {
+                        url += '?param=1';
+                    }
+                    window.location.href = url;
+                }, 2500);
+            });
+        });
+        // }
+    });
+    jQuery(document).ready(function() {
+        $(document).on('change', '#dob_date,#dob_month,#dob_year', function() {
+            var inputDate = $("#dob_date option:selected").text();
+            var inputMonth = $("#dob_month option:selected").text();
+            var inputYear = $("#dob_year option:selected").text();
+            var age = calculate_age(inputMonth, inputDate, inputYear);
+            if (age) {
+                $("#agetext").val(age);
+            }
+        });
+    });
+
+    function calculate_age(birth_month, birth_day, birth_year) {
+        dobStr = birth_month + '/' + birth_day + '/' + birth_year;
+        dob = new Date(dobStr);
+        var today = new Date();
+        var age = Math.floor((today - dob) / (365.25 * 24 * 60 * 60 * 1000));
+        return age;
+    }
+</script>
+
+</html>

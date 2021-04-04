@@ -1,0 +1,584 @@
+{% extends "Hospital/base.html" %} {% block content %}
+<!--Banner section-->
+
+<div class="home-banner">
+    <style>
+        .span,
+        .twitter {
+            font: normal normal 10px Arial;
+            text-align: center;
+            color: #998578;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .twitter {
+            color: #000000;
+            text-decoration: none;
+            display: block;
+            padding: 14px;
+            -webkit-transition: all .25s ease;
+            -moz-transition: all .25s ease;
+            -ms-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            transition: all .25s ease;
+        }
+        
+        .twitter:hover {
+            color: #FF7D6D;
+            text-decoration: none;
+        }
+        
+        .span {
+            /* font-style: italic; */
+            display: block;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        /* Floating Social Media Bar Style Starts Here */
+        
+        .fl-fl {
+            background: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 4px;
+            width: 204px;
+            position: absolute;
+            right: -160px;
+            z-index: 1000;
+            font: normal normal 10px Arial;
+            -webkit-transition: all .25s ease;
+            -moz-transition: all .25s ease;
+            -ms-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            transition: all .25s ease;
+        }
+        
+        .fass {
+            font-size: 20px;
+            color: #fff;
+            padding: 10px 10px;
+            width: 40px;
+        }
+        
+        .fl-fl:hover {
+            right: 0;
+        }
+        
+        .fl-fl a {
+            color: #fff !important;
+            text-decoration: none;
+            text-align: center;
+            line-height: 43px!important;
+            vertical-align: top!important;
+        }
+        
+        .float-fb {
+            top: 160px;
+        }
+        
+        .float-tw {
+            top: 215px;
+        }
+        
+        .float-gp {
+            top: 270px;
+        }
+        
+        .float-rs {
+            top: 325px;
+        }
+        
+        .float-ig {
+            top: 380px;
+        }
+        
+        .float-pn {
+            top: 435px;
+        }
+        /* Floating Social Media Bar Style Ends Here */
+    </style>
+    <div class="float-sm">
+        <div class="fl-fl float-fb">
+            <i style="font-weight: 900; font-family: inherit;" class="fa fass fa-c-square">C</i>
+            <a href="{% url 'college:college_home_page' %}" target="_blank"> College</a>
+        </div>
+        <div class="fl-fl float-tw">
+            <i class="fa fass  fa-h-square"></i>
+            <a href="{% url 'hospital:hospital_home_page' %}" target="_blank">Hospital</a>
+        </div>
+        <div class="fl-fl float-gp">
+            <i style="font-weight: 900; font-family: inherit;" class="fa fass fa-c-square">U</i>
+            <a href="https://www.drmgrdu.ac.in/" target="_blank"> University</a>
+        </div>
+
+    </div>
+
+    <div class="home-bnr-slider">
+
+        <div class="item" data-index="1" style="background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/static/sample/hospital/1.jpg')"></div>
+        <div class="item" data-index="2" style="background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url('/static/sample/hospital/2.jpg')"></div>
+        <div class="item" data-index="3" style="background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url('/static/sample/hospital/3.jpg')"></div>
+        <div class="item" data-index="4" style="background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url('/static/sample/hospital/4.jpg')"></div>
+    </div>
+    <div class="banner-content">
+        <div class="container">
+            <div>
+                <div class="banner-left">
+                    <div class="header-wrap">
+                        <h2 class="h1 " data-index="1"> The Best Medical College With Excellent Faculty In Tamil Nadu</h2>
+                        <h2 class="h1" data-index="2"> Highly equipped laboratory for better and practical exposure </h2>
+                        <h2 class="h1" data-index="3"> Highly qualified professionals and well trained staffs</h2>
+                        <h2 class="h1" data-index="4"> Highly automated dynamic secure infrastructure and services</h2>
+                        <h2 class="h1" data-index="5"> With 670 total job offer, we achieved best placements in 2016-2020</h2>
+                        <h2 class="h1" data-index="6"> Virtual Campus Drive for 2021 Students Batch</h2>
+                    </div>
+
+                    <div class="banner-controls">
+                        <div class="dots-contain"></div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="banner-right">
+                    <div class="banner-media media-video">
+                        <a href="#" class="full_cont-link modal-link" data-target="#mediamodal" data-url="#"></a>
+                        <div class="ply-btn">
+                            <svg width="80" height="80" class="play-icon" viewBox="0 0 100 100">
+    <rect x="4" y="4" width="92" height="92" class="box" rx="50" ry="50"></rect>
+    <polygon points="44,42 62,52 44,62" class="play"></polygon>
+  </svg>
+                        </div>
+                        <img alt="ACS - Banner Video" data-src="/static/assets/banner-video-image.jpg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="/static/assets/banner-video-image.jpg" alt="ACS - Banner Video" /></noscript>
+                    </div>
+
+                    <div class="event-container">
+                        <div class="event-nav-wrap"></div>
+                        <div class="event-slider-wrap">
+                            <h4>News Updates </h4>
+                            <div class="event-slider">
+                                {% for news in news %}
+                                <div class="item">
+                                    <span class="event-date">{{news.date}} </span>
+                                    <p>{{news.news}}
+                                    </p>
+                                    <div class="learn-more">
+                                        <a href="{% url 'hospital:news' %}" target="">
+                                            <label>Learn more </label>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- achieve_sec -->
+
+<section class="achieve_sec">
+    <div class="container">
+        <div class="achieve_top">
+            <div class="number-block clearfix">
+
+                <div class="block_item">
+                    <label><span class="counter-num">20</span>+</label>
+                    <h3>Ambulance Vehicles </h3>
+                    <p>We have more than 20 ambulance with 24/7 service.</p>
+                </div>
+
+                <div class="block_item">
+                    <label><span class="counter-num">100</span>+</label>
+                    <h3>Experienced Doctors</h3>
+                    <p>There are more than 100 highly trained and well experienced doctors.</p>
+                </div>
+
+                <div class="block_item">
+                    <label><span class="counter-num">50</span>+</label>
+                    <h3>Modern Equipments</h3>
+                    <p>We have more than 50 Modern Equipments to save people's life. </p>
+                </div>
+            </div>
+
+            <div class="more-block">
+                <div>
+                    <div>
+                        <a href="{% url 'about_page' %}" class="full_cont-link"></a>
+                        <label>Know More</label>
+                        <h3>ABOUT ACS</h3>
+                        <p class="learn-more"><span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve_bottom clearfix">
+            <div class="ach_vision">
+                <label class="title_line">World Class Treatment at Low Costs</label>
+                <p>
+                    For over a decade, International Patients Facilitation Center has been catering to the needs of patients around the world. </p>
+            </div>
+            {% for video in video %}
+            <div class="ach_moments">
+                <div class="media-video">
+                    <a href="{{video.videofile}}" class="full_cont-link modal-link" data-target="#mediamodal_01" data-url="{{video.videofile}}"></a>
+                    <div class="ply-btn">
+                        <svg width="80" height="80" class="play-icon" viewBox="0 0 100 100">
+  <rect x="4" y="4" width="92" height="92" class="box" rx="50" ry="50"></rect>
+  <polygon points="44,42 62,52 44,62" class="play"></polygon>
+</svg>
+                    </div>
+                    <img alt="ACS - banner Video" data-src="{{video.bg_file.url}}" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="{{video.bg_file.url}}" alt="" /></noscript>
+                </div>
+
+                <h2>{{video.Video_Title}} </h2>
+
+                <p>
+                    <p>{{video.Video_Description}}</p>
+                </p>
+            </div>
+            {% endfor %}
+            <div class="ach_slide-wrap">
+                <div class="achieve-slider">
+                    <label class="title_line">Upcomming Events</label>
+                    <div class="slider">
+                        {% for event in events %}
+                        <div class="item">
+                            <a href="{% url 'hospital:news' %}" class="full_cont-link"></a>
+                            <div class="achivements-slide">
+                                <h2>{{event.date}}</h2>
+                                <p>
+                                    {{event.title}}
+                                </p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="ach_lifeat">
+                    <a href="#" class="full_cont-link"></a>
+                    <h2 style="font-size: 18px;">Providing ecceptional health <br />care with compassion</h2>
+                    <label class="title_line">Life @ ACS</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--studies_sec -->
+
+<section class="studies_sec">
+    <div class="container">
+        <h2 class="title_line">Speciality and Facilities</h2>
+        <div class="study_ug clearfix">
+            <div class="course-box">
+                <h3>Specialities</h3>
+            </div>
+
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/heart.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/heart.svg" alt=""></noscript>
+</span>
+                <p>Cardiology</p>
+                <a href="{% url 'hospital:hs_cardiology'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/neurology.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/neurology.svg" alt=""></noscript>
+</span>
+                <p>Neurology</p>
+                <a href="{% url 'hospital:hs_neurology'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/kidneys.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/kidneys.svg" alt=""></noscript>
+</span>
+                <p>Nephrology</p>
+                <a href="{% url 'hospital:hs_nephrology'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/plastic-surgery.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/plastic-surgery.svg" alt=""></noscript>
+</span>
+                <p>Plastic-Surgery</p>
+                <a href="{% url 'hospital:hs_plastic'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/kidneys.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/kidneys.svg" alt=""></noscript>
+</span>
+                <p>Urology</p>
+                <a href="{% url 'hospital:hs_urology'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/heart.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/heart.svg" alt=""></noscript>
+</span>
+                <p>Vascular Surgery</p>
+                <a href="{% url 'hospital:hs_vascular_surgery'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/abdomen.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/abdomen.svg" alt=""></noscript>
+</span>
+                <p>Gastroenterology</p>
+                <a href="{% url 'hospital:hs_gasteroenterology'%}" class="full_cont-link"></a>
+            </div>
+
+        </div>
+        <div class="study_pg clearfix">
+            <div class="course-box">
+                <h3>Facilities</h3>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/24-hours.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/24-hours.svg" alt=""></noscript>
+</span>
+                <p>24*7 Service</p>
+                <a href="{% url 'hospital:hf_service'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/ambulance.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/ambulance.svg" alt=""></noscript>
+</span>
+                <p>Ambulance</p>
+                <a href="{% url 'hospital:hf_ambulance'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/blood-bank.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/blood-bank.svg" alt=""></noscript>
+</span>
+                <p>Blood Bank</p>
+                <a href="{% url 'hospital:hf_blood'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/businessman.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/businessman.svg" alt=""></noscript>
+</span>
+                <p>Covid'19</p>
+                <a href="{% url 'hospital:hf_covid'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/blood-bank.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/blood-bank.svg" alt=""></noscript>
+</span>
+                <p>IP & OP</p>
+                <a href="{% url 'hospital:hf_ip'%}" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/monitor.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/monitor.svg" alt=""></noscript>
+</span>
+                <p>ICU</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="/static/assets/svg/pharmacy.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/pharmacy.svg" alt=""></noscript>
+</span>
+                <p>Pharmacy</p>
+                <a href="{% url 'hospital:hf_pharmacy'%}" class="full_cont-link"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- testimonials -->
+<section class="news_events">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title_line" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Testimonials</h2>
+            </div>
+            <div class="col-sm-8 news_events_left">
+
+
+                <div class="news_events_box single_post-wrap" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="news_events_box_top_img">
+                        <img alt="omg" data-srcset="/static/assets/superstar.jpg" sizes="(max-width: 1747px) 100vw, 1747px" data-src="/static/assets/superstar.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image ls-is-cached lazyloaded" src="/static/assets/superstar.jpg"
+                            srcset=""><noscript><img src="/static/assets/superstar.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="/static/assets/superstar.jpg" sizes="(max-width: 1747px) 100vw, 1747px" /></noscript>                        </div>
+                    <div class="news_events_box_top_content">
+                        <ul>
+                            <li><a href="#">@</a><a href="" rel="category tag">Superstar Rajanikanth</a></li>
+                        </ul>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facilis voluptas odio eveniet? Nam, officia. </h3>
+                        <div></div>
+                        <a href="#" class="full_cont-link"></a>
+                        <div class="evnts_bx_btm">
+                            <span> August 20, 2019 </span>
+                            <a href="#" class="view_more_link">View More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="news_events_box">
+                        <div class="news_events_box_top_content news_events_box_btm_content">
+                            <ul>
+                                <li><a href="#">@</a><a href="#" rel="category tag">Person</a></li>
+                            </ul>
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero itaque doloribus veniam beatae?</h3>
+                            <div></div>
+                            <a href="#" class="full_cont-link"></a>
+                            <div class="evnts_bx_btm">
+                                <span> October 13, 2020 </span>
+                                <a href="#" class="view_more_link">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="news_events_box">
+                        <div class="news_events_box_top_content news_events_box_btm_content">
+                            <ul>
+                                <li><a href="#">@</a><a href="#" rel="category tag">Person</a></li>
+                            </ul>
+                            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores deleniti nisi quaerat.</h3>
+                            <div></div>
+                            <a href="#" class="full_cont-link"></a>
+                            <div class="evnts_bx_btm">
+                                <span> September 18, 2020 </span>
+                                <a href="#" class="view_more_link">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4 news_events_rgt">
+                <!--
+          <div class="news_events_box">
+            <div class="news_events_box_top_content news_events_box_btm_content">
+              
+            </div>
+            <a href="https://twitter.com/saectweets" target="_blank" class="full_cont-link"></a>
+          </div>
+  -->
+
+                <div class="news_events_box" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="news_events_box_top_content news_events_box_btm_content">
+                        <ul>
+                            <li><a href="#">@Person</a></li>
+                            <li><svg>
+                    <use xlink:href="#twitter-icon"></use>
+                  </svg>
+                            </li>
+                        </ul>
+                        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, ut aliquid. Aperiam, amet.</h3>
+                        <span>6 Jan 2018</span>
+                    </div>
+                    <a href="#" target="_blank" class="full_cont-link"></a>
+                </div>
+                <div class="news_events_box" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="news_events_box_top_content news_events_box_btm_content">
+                        <ul>
+                            <li><a href="#">@Person</a></li>
+                            <li><svg>
+                    <use xlink:href="#twitter-icon"></use>
+                  </svg>
+                            </li>
+                        </ul>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam sequi quis officia debitis.</h3>
+                        <span>6 Jan 2018</span>
+                    </div>
+                    <a href="" target="_blank" class="full_cont-link"></a>
+                </div>
+                <div class="news_events_box" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="news_fb_bx">
+                        <h3>facebook</h3>
+                        <p>The Best Medical College in Chennai. Get connect with us.
+                            <a class="fb_link" href="#">facebook.com/ACS Medical College and Hospitals</a>
+                        </p>
+
+                        <span>27 Feb 2017</span>
+                        <div class="hver_bg"></div>
+                    </div>
+                    <a href="#" target="_blank" class="full_cont-link"></a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .footer_sec_btm #menu-footer-menu li.menu-item-home a {
+        color: #999900;
+    }
+    
+    .web-modal.modal-open {
+        z-index: 10500;
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .modal-open .onloadmodal {
+        z-index: 10500;
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .modal-open .modal-backdrop {
+        z-index: 10400;
+        background-color: rgba(0, 0, 0, 0.31);
+    }
+    
+    .onloadmodal .modal-dialog {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 450px;
+        /*min-height: 600px;*/
+    }
+    
+    .onloadmodal button.close {
+        background: #015f91;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        border: none;
+        position: absolute;
+        top: -15px;
+        color: #fff;
+        font-size: 22px;
+        right: -10px;
+        cursor: pointer;
+    }
+    /*.onloadmodal .modal-body img {*/
+    /*    max-height: 700px;*/
+    /*    margin: 0 auto;*/
+    /*    width: 450px;*/
+    /*}*/
+    
+    .onloadmodal .modal-content {
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+    }
+    
+    @media (max-width:500px) {
+        .onloadmodal .modal-dialog {
+            width: 300px;
+        }
+    }
+</style>
+
+{% endblock %}

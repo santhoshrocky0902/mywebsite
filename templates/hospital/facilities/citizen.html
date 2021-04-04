@@ -1,0 +1,81 @@
+{% extends "hospital/base.html" %} {% block content %} {% for fac in main %}
+<style>
+    h5 {
+        font-size: 20px;
+        font-family: 'Eurostile', sans-serif;
+        font-weight: 600;
+        color: #000000;
+        letter-spacing: 0.005em;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    
+    strong {
+        font-weight: 800;
+    }
+    
+    .firstol {
+        list-style-type: decimal;
+    }
+    
+    .firstol li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 20px;
+    }
+    
+    .firstul {
+        list-style-type: disc;
+        margin-top: 5px;
+    }
+    
+    .firstul li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 25px;
+    }
+    
+    .secondul {
+        list-style-type: circle;
+        margin-top: 5px;
+    }
+    
+    .secondul li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 20px;
+    }
+</style>
+{% extends "hospital/base.html" %} {% block content %} {% for fac in main %}
+<div class="resource_inner">
+    <section class="hostl_facility">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 rigt_aln">
+                    <div class="hostel_rgt_img">
+                        <img src="{{fac.image.url}}" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-sm-6 lft_aln">
+                    <div>
+                        <span>
+                01            </span>
+                        <h1>{{fac.get_Name_display}}</h1>
+                        <h3 class="inner_sub_hd">Overview</h3>
+                        <p></p>
+                        <p> {{fac.overview}}
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
+{% endfor %} {% endblock content %}
+

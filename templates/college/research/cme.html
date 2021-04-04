@@ -1,0 +1,1086 @@
+{% extends "college/base.html" %} {% block content %}
+<style>
+    h5 {
+        font-size: 20px;
+        font-family: 'Eurostile', sans-serif;
+        font-weight: 600;
+        color: #000000;
+        letter-spacing: 0.005em;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    
+    strong {
+        font-weight: 800;
+    }
+    
+    .firstol {
+        list-style-type: decimal;
+    }
+    
+    .firstol li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 20px;
+    }
+    
+    .firstul {
+        list-style-type: disc;
+        margin-top: 5px;
+    }
+    
+    .firstul li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 25px;
+    }
+    
+    .bold {
+        font-weight: 800 !important;
+    }
+    
+    .secondul {
+        list-style-type: circle;
+        margin-top: 5px;
+    }
+    
+    .secondul li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 20px;
+    }
+    
+    .table-responsive {
+        min-height: .01%;
+        overflow-x: auto
+    }
+    
+    @media screen and (max-width:767px) {
+        .table-responsive {
+            width: 100%;
+            margin-bottom: 15px;
+            overflow-y: hidden;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            border: 1px solid #ddd
+        }
+    }
+</style>
+<div class="resource_inner">
+    <section class="hostl_facility">
+        <div class="container">
+
+            <div class="row">
+                <div class=" table-responsive col-sm-6 col-lg-12 lft_aln">
+
+
+                    <b><h5 style="text-decoration: underline;">CME conducted under the ageis Of Tamilnadu medical council </h5></b></p>
+                    <p>&nbsp;</p>
+                    <table class="table" cellspacing="0" cellpadding="0">
+                        <col width="63" />
+                        <col width="142" />
+                        <col width="354" />
+                        <col width="75" />
+                        <col width="135" />
+                        <col width="577" />
+                        <tr height="20">
+                            <td height="40" width="63">Event No</td>
+                            <td width="142">Event Organiser</td>
+                            <td width="354">Event Name</td>
+                            <td width="75">Date</td>
+                            <td width="135">Venue</td>
+                            <td width="577">Chief Guest / Speaker details</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">1</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">Guest lecture on Dengue<br /> awareness program </td>
+                            <td align="right">11/24/2009</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. A.Sundaram,KMC </td>
+                        </tr>
+                        <tr height="160">
+                            <td height="160" align="right">2</td>
+                            <td>Pathology </td>
+                            <td width="354">Workshop on<br /> Educational Science<br /> &amp; Technology For<br /> Teachers </td>
+                            <td align="right">5/6/2010</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.D.K.Srinivasan,<br /> Prof of pathology<br /> Dr.Sasikala, <br /> Prof of pathology<br /> SS Medical College<br /> Dr.Dhanabalan.M <br /> PIMS, Pondicherry
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">3</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">CME on Acute<br /> Coronary Syndrome </td>
+                            <td align="right">4/29/2011</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.R.Alagesan, HOD,<br /> Institute of cardiology, MMC </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">4</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">CME on Stroke<br /> Prevention guidelines </td>
+                            <td align="right">7/20/2011</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.A.V.Srinivasan, HOD,<br /> Institute of neurology, MMC </td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">5</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">Guest lecture on<br /> Current concepts<br /> in management of<br /> diabetes </td>
+                            <td align="right">4/30/2012</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Padmashri Dr. Mohan<br /> Vishwanathan
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">6</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">CME on Alzhimers<br /> Disease
+                            </td>
+                            <td align="right">8/23/2012</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.Natarajan, Neurologist</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">7</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">CME on Restore<br /> beta cell function<br /> in type2 DM</td>
+                            <td align="right">12/14/2012</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.A.Paneerselvam,<br /> Diabetologist </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">8</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td>CME on Vertigo</td>
+                            <td align="right">6/16/2013</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Banu, Neurologist,<br /> MMC
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">9</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">Guest lecture on<br /> Management of stroke</td>
+                            <td align="right">12/11/2013</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.M.R.Sivakumar </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">10</td>
+                            <td>Psychiatry</td>
+                            <td width="354">CME on<br /> Understanding
+                                <br /> Schizophrenia
+                            </td>
+                            <td align="right">10/19/2014</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.Nambi, Prof &amp; Head, <br /> Sree Balaji Medical College.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">11</td>
+                            <td width="142">Community<br /> Medicine
+                            </td>
+                            <td width="354">Workshop on Basics<br /> of Research Methodology and Biostatistics with Hands on training in SPSS</td>
+                            <td align="right">7/20/2015</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. K. K. Dutta Gupta,<br /> Prof &amp; HOD, Dept of Community Medicine, ACSMCH</td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">12</td>
+                            <td width="142">Dermatology,<br /> Venerology &amp; Leprosy</td>
+                            <td width="354">Symposium on<br /> Pyoderma Disorders<br /> of Sweat glands &amp;<br /> apocrine galnds </td>
+                            <td align="right">11/12/2015</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Sudha,<br /> Prof &amp; HOD, ACSMCH</td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">13</td>
+                            <td width="142">Dermatology,<br /> Venerology &amp; Leprosy</td>
+                            <td width="354">Guest lecture on<br /> Prespectives in<br /> laboratory diagnosis<br /> in HIV/ AIDS</td>
+                            <td align="right">12/1/2015</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Thilagavathy, Prof,<br /> Dept of Micro, Govt <br /> Stanley Medical College Hospital</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">14</td>
+                            <td width="142">General<br /> Surgery
+                            </td>
+                            <td width="354">Symposium on<br /> Basic Life Support</td>
+                            <td align="right">12/23/2015</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Karunanithi, Prof &amp; HOD,<br /> Aneasthesiology.
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">15</td>
+                            <td width="142">General<br /> Surgery
+                            </td>
+                            <td width="354">Symposium on<br /> How to handle medico legal cases in Emergency</td>
+                            <td align="right">12/23/2015</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Balaji Singh,<br /> Forensic Medicine</td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">16</td>
+                            <td width="142">General<br /> Surgery
+                            </td>
+                            <td width="354">CME on Diabetes<br /> Mellitus &amp; Surgery</td>
+                            <td align="right">3/17/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Paneerselvam <br /> Dr. Senthil<br /> Dr. M. Vishwanathan
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">17</td>
+                            <td>TB &amp; Chest</td>
+                            <td width="354">CME on Updates<br /> in Tuberculosis</td>
+                            <td align="right">3/24/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Selvi </td>
+                        </tr>
+                        <tr height="100">
+                            <td height="100" align="right">18</td>
+                            <td>Microbiology</td>
+                            <td width="354">Guest Lecture on<br /> Emerging &amp; <br /> Re-emerging <br /> Arbo viral infection<br /> in India &amp; SE Asia</td>
+                            <td align="right">4/20/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Shamugam, Emeritus Prof,<br /> MGMC&amp;RI, Pondicherry</td>
+                        </tr>
+                        <tr height="120">
+                            <td height="120" align="right">19</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">CME on Update in<br /> Neurological disorders</td>
+                            <td align="right">4/29/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Prof.Dr.M.R.Sivakumar <br /> Prof.Ranganathan Jothi<br /> Prof.S.Arunan
+                                <br /> Dr.Muthukumar
+                                <br /> Dr.G.Mukundan
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">20</td>
+                            <td width="142">General<br /> Surgery
+                            </td>
+                            <td width="354">Symposium on<br /> Acute Pancreatitis</td>
+                            <td align="right">4/28/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Adharsh Surendranath, MGE<br /> Dr. Shivaraj, SGE</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">21</td>
+                            <td width="142">Obstetrics &amp;<br /> Gynecology
+                            </td>
+                            <td width="354">Guest lecture on <br /> Screening &amp; <br /> prevention of cancer cervix</td>
+                            <td align="right">5/13/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Radha Bai Prabhu </td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">22</td>
+                            <td width="142">Obstetrics &amp;<br /> Gynecology
+                            </td>
+                            <td width="354">CME on Hypertensive<br /> disorders in Pregnancy</td>
+                            <td align="right">6/22/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.R.Premlatha <br /> Dr.Uthpala
+                                <br /> Dr.Santhosh Somani
+                            </td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">23</td>
+                            <td>Microbiology</td>
+                            <td width="354">Symposium on<br /> Combating <br /> microbes in hospital<br /> critical areas</td>
+                            <td align="right">7/8/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Subha, Associate Prof,<br /> SRM Medical College</td>
+                        </tr>
+                        <tr height="100">
+                            <td height="100" align="right">25</td>
+                            <td width="142">Forensic<br /> Medicine
+                            </td>
+                            <td width="354">CME on Negligence<br /> in medical practice</td>
+                            <td align="right">7/28/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Subba Reddy,<br /> Prof &amp; HOD, Dept of <br /> Forensic Medicine, <br /> Muthukumaran medical <br /> college &amp; hospital.</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">26</td>
+                            <td>Paediatrics </td>
+                            <td width="354">CME on World<br /> Breast Feeding <br /> Week
+                            </td>
+                            <td width="75">01/08/16 -<br /> 07/08/16 </td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Gunasundari, Prof</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">27</td>
+                            <td>ENT</td>
+                            <td width="354">Guest lecture on <br /> Snoring &amp; Obstructive Sleep Apnoea </td>
+                            <td align="right">8/10/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Ilambharathi, Consultant<br /> ENT &amp; Plastic surgeon</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">28</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">CME on Challenging<br /> cases of fever &amp; role of advanced fever clinic</td>
+                            <td align="right">8/12/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.T.V.Devarajan,<br /> Apollo Hospitals</td>
+                        </tr>
+                        <tr height="140">
+                            <td height="140" align="right">29</td>
+                            <td width="142">General<br /> Surgery
+                            </td>
+                            <td width="354">CME on Vascular<br /> Diseases
+                            </td>
+                            <td align="right">8/19/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Rajkumar <br /> Dr. S.R. Subramaniam<br /> Dr.Amalorpavanathan
+                                <br /> Dr. Raja Rajan<br /> Dr. Nithyaraj Prakasham<br /> Dr. A.P. Selvam
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">30</td>
+                            <td>Pharmacology</td>
+                            <td width="354">Guest Lecture on <br /> Pharmacovigilance – Sensitization &amp; ADR Reporting </td>
+                            <td align="right">8/24/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. R. Nandhini, Prof &amp; HOD, <br /> Dept of Pharmacology, Tagore Medical College</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">31</td>
+                            <td>Anatomy</td>
+                            <td width="354">Guest Lecture on <br /> TMJ in Health &amp; Dysfunction </td>
+                            <td align="right">9/7/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. E.G.R.Solomon Prof <br /> Emeritus¸ Thai Moogambigai Dental College</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">32</td>
+                            <td>Biochemistry</td>
+                            <td width="354">Guest Lecture on <br /> Recent updates in biochemistry of Obesity</td>
+                            <td align="right">9/19/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Shanthi Silambanan, <br /> Prof &amp; HOD, Deot of biochemistry, SRMC&amp; RI</td>
+                        </tr>
+                        <tr height="100">
+                            <td height="100" align="right">33</td>
+                            <td width="142">Obstetrics &amp; <br /> Gynecology
+                            </td>
+                            <td width="354">CME on Recent<br /> Trends in Infertility</td>
+                            <td align="right">9/21/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.P.M.Gopinath, Director, <br /> Institute of OG&amp;IVF, <br /> SIMS hospital<br /> Dr. Dhivya Selvaraman, Consultant, MD, Shristi Fertility centre.
+                            </td>
+                        </tr>
+                        <tr height="100">
+                            <td height="100" align="right">34</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">CME on Updates<br /> in Medical Emergencies</td>
+                            <td align="right">9/29/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Prof.M.Edwin Fernando, <br /> HOD Nephrology, Govt Stanley Medical College<br /> Prof.N.Shanmugasundam, Cardiologist, Billroth Hospitals<br /> Prof.L.Thayumanavar, MGE, Apollo hospitals
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">35</td>
+                            <td>Psychiatry</td>
+                            <td width="354">Guest lecture on <br /> Mental health care in India with special reference to Medical illness &amp; mental disorders</td>
+                            <td align="right">10/5/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.Nambi, Prof &amp; Head, <br /> Sree Balaji Medical College</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">36</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">Guest lecture on<br /> Dengue awareness program </td>
+                            <td align="right">11/24/2009</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. A.Sundaram,KMC </td>
+                        </tr>
+                        <tr height="160">
+                            <td height="160" align="right">37</td>
+                            <td>Pathology </td>
+                            <td width="354">Workshop on <br /> Educational Science &amp; Technology For Teachers </td>
+                            <td align="right">5/6/2010</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.D.K.Srinivasan,<br /> Prof of pathology<br /> Dr.Sasikala, <br /> Prof of pathology<br /> SS Medical College<br /> Dr.Dhanabalan.M <br /> PIMS, Pondicherry
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">38</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">CME on Acute <br /> Coronary Syndrome </td>
+                            <td align="right">4/29/2011</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.R.Alagesan, HOD, <br /> Institute of cardiology, MMC</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">39</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">CME on Stroke <br /> Prevention guidelines </td>
+                            <td align="right">7/20/2011</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.A.V.Srinivasan, HOD, <br /> Institute of neurology, MMC </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">40</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">Guest lecture on Current <br /> concepts in management of diabetes</td>
+                            <td align="right">4/30/2012</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Padmashri Dr. Mohan <br /> Vishwanathan
+                            </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">41</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">CME on Alzhimers<br /> Disease
+                            </td>
+                            <td align="right">8/23/2012</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.Natarajan, Neurologist</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">42</td>
+                            <td width="142">General</p>
+                                <p> Medicine</td>
+                            <td width="354">CME on Restore <br /> beta cell function in type2 DM</td>
+                            <td align="right">12/14/2012</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.A.Paneerselvam,<br /> Diabetologist </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">43</td>
+                            <td width="142">General<br /> Medicine
+                            </td>
+                            <td width="354">Guest lecture on <br /> Management of stroke</td>
+                            <td align="right">12/11/2013</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.M.R.Sivakumar </td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">44</td>
+                            <td>Psychiatry</td>
+                            <td width="354">CME on <br /> Understanding Schizophrenia</td>
+                            <td align="right">10/19/2014</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.Nambi, Prof &amp; Head, <br /> Sree Balaji Medical College.</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">45</td>
+                            <td width="142">Community <br /> Medicine
+                            </td>
+                            <td width="354">Workshop on <br /> Basics of Research Methodology and Biostatistics with Hands on training in SPSS</td>
+                            <td align="right">7/20/2015</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. K. K. Dutta Gupta, <br /> Prof &amp; HOD, Dept of Community Medicine, ACSMCH.</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">46</td>
+                            <td width="142">Dermatology, <br /> Venerology &amp; Leprosy</td>
+                            <td width="354">Symposium on Pyoderma Disorders of <br /> Sweat glands &amp; apocrine galnds</td>
+                            <td align="right">11/12/2015</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Sudha, Prof &amp; HOD,<br /> ACSMCH
+                            </td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">47</td>
+                            <td>TB &amp; Chest </td>
+                            <td width="354">CME on Updates in <br /> Tuberculosis </td>
+                            <td align="right">3/24/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Selvi <br /> Dr. V. Kalpanadevi, Asso. Prof<br /> Dr. C.S. Brethis, Asst. Prof<br /> Dr. Jackin Moses Asst.Prof</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">48</td>
+                            <td>Microbiology </td>
+                            <td width="354">Guest Lecture on <br /> Emerging &amp; Re-emerging Arbo viral infection in India &amp; SE Asia </td>
+                            <td align="right">4/20/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Shamugam, Emeritus<br /> Prof, MGMC&amp;RI, Pondicherry </td>
+                        </tr>
+                        <tr height="120">
+                            <td height="120" align="right">49</td>
+                            <td width="142">General<br /> Medicine </td>
+                            <td width="354">CME on Update <br /> in Neurological disorders </td>
+                            <td align="right">4/29/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Prof.Dr.M.R.Sivakumar <br /> Prof.Ranganathan Jothi<br /> Prof.S.Arunan
+                                <br /> Dr.Muthukumar
+                                <br /> Dr.G.Mukundan
+                            </td>
+                        </tr>
+                        <tr height="80">
+                            <td height="80" align="right">50</td>
+                            <td width="142">General<br /> Surgery </td>
+                            <td width="354">Symposium on<br /> Acute Pancreatitis </td>
+                            <td align="right">4/28/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Adharsh <br /> Surendranath, MGE<br /> Dr. Shivaraj, SGE
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">51</td>
+                            <td width="142">Obstetrics &amp; <br /> Gynecology
+                            </td>
+                            <td width="354">Guest lecture on <br /> Screening &amp; <br /> prevention of cancer cervix </td>
+                            <td align="right">5/13/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Radha Bai Prabhu</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">52</td>
+                            <td width="142">Obstetrics &amp; <br /> Gynecology
+                            </td>
+                            <td width="354">CME on Hypertensive <br /> disorders in Pregnancy</td>
+                            <td align="right">6/22/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.R.Premlatha <br /> Dr.Uthpala
+                                <br /> Dr.Santhosh Somani</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">53</td>
+                            <td>Microbiology</td>
+                            <td width="354">Symposium on <br /> Combating microbes in hospital critical areas</td>
+                            <td align="right">7/8/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Subha, Associate Prof,<br /> SRM Medical College </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">54</td>
+                            <td width="142">Community <br /> Medicine
+                            </td>
+                            <td width="354">FDP on Attitude<br /> &amp; Communication (ATCOM) </td>
+                            <td align="right">7/27/2016</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Christina Mary Paul, <br /> Prof, <br /> Dr. V. Kalpanadevi Assoc. Prof. ACSMCH</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40"></td>
+                            <td>Microbiology</td>
+                            <td>Acinetobacter Baumannii; All Roads Lead to Resistance</td>
+                            <td align="right">4/24/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Ayush Kumar, Asso.Prof of Microbiology<br /> University of Manitoba, Canada</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">55</td>
+                            <td>General Medicine</td>
+                            <td>Installation of Dialysis Machine</td>
+                            <td align="right">4/28/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Rtn. Natarajan Nagoji, District Governer<br /> Rtn. Suchithra Sagar, DRFCF, Chairman</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">56</td>
+                            <td>Biochemistry</td>
+                            <td>Lipoprotein Metabolism</td>
+                            <td align="right">5/4/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. C. Shanmugapriya, Asso Prof of Biochemistry<br /> Govt. Med. College Omandurar.</td>
+                        </tr>
+                        <tr height="20">
+                            <td height="20" align="right">57</td>
+                            <td>Community Medicine</td>
+                            <td>Research Methodology in Medical Prespective</td>
+                            <td align="right">5/12/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. M. Chandrasekar, Vice Prinicpal, Meenakshi Medical college</td>
+                        </tr>
+                        <tr height="40">
+                            <td height="40" align="right">58</td>
+                            <td>TB &amp; Chest</td>
+                            <td>Smoking &#8211; Stop Killing Yourself.</td>
+                            <td align="right">5/31/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. V. Gangadaran Prof &amp; Hod<br /> Saveetha med. College</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">59</td>
+                            <td>General Surgery</td>
+                            <td>Carcinoma of the Breast</td>
+                            <td align="right">6/15/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Mr. A.C. Senthil Kumar M.S., M.Ch.,<br /> Prof of Surgical Oncology<br /> Saveetha Medical College, Thandalam</td>
+                        </tr>
+                        <tr height="20">
+                            <td height="20" align="right">60</td>
+                            <td></td>
+                            <td>Yoga day celebration</td>
+                            <td align="right">6/22/2017</td>
+                            <td>Basment auditorium</td>
+                            <td width="577">Isha yoga foundation</td>
+                        </tr>
+                        <tr height="20">
+                            <td height="20" align="right">61</td>
+                            <td></td>
+                            <td>Doctors Day</td>
+                            <td align="right">7/1/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. V. Chockalingam, Professor Emirates of Cardiology, Tamilnadu MGR Medical University</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">62</td>
+                            <td>OBG</td>
+                            <td>Holistic Health Approach in Mid Life and Beyond</td>
+                            <td align="right">7/25/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Prof. Dr. Hephzibah Kirubamani<br /> MD., DGO, Ph.D., D.Sc, Hons FRCOG<br /> Saveetha Medical College, Chennai</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">63</td>
+                            <td>MEU</td>
+                            <td width="354">1. ATCOM<br /> 2. OSPE/OSCE Sensitaitaztion program
+                            </td>
+                            <td align="right">7/28/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">1. Dr. K. Loganathan, Prof &amp; HoD of General Surgery<br /> 2. Dr. C.S. Brethis, Asst. Prof of Pharmacology</td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">64</td>
+                            <td>Journal Club</td>
+                            <td>JAMA Guidelines</td>
+                            <td align="right">7/28/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Christina Mary Paul, <br /> Prof of Community Medicine
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">65</td>
+                            <td>Pathology </td>
+                            <td>Viruses and the Brain</td>
+                            <td align="right">9/19/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. R. Sarasa Barathi<br /> Former Director, Institute of Pathalogy &#038; Electron Microscopy, <br />Madras Medical College,<br /> HOD, Dept of Pathology, <br />Frontier Lifeline, Mogappair, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">66</td>
+                            <td>General Surgery</td>
+                            <td>Upper GI Bleeding</td>
+                            <td align="right">9/21/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Sivaraj, M.S., M.Ch.,<br /> Consultant, Surgical Gastro Enterologist, Billroth Hospital,<br /> Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">67</td>
+                            <td>Anesthesiology</td>
+                            <td>Latest Trends in BLS &#038; ACLS</td>
+                            <td align="right">9/27/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. T.V. Ramakrishnan, M.D., (Anes),<br /> Prof &#038; Head, Department of Emergency Medicine,<br /> Sri Ramachandra Medical College &#038; Research Institute, Porur, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">68</td>
+                            <td>Orthopedics</td>
+                            <td>Shoulder Probems &#8211; Diagnosis and Management </td>
+                            <td align="right">10/03/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. R. Senthil Velan, MBBS, <br />D.ortho (Jipmer), FRCS, Ortho (UK) MRCS (Edin), <br />FEBOT (France) Fellowship in Shoulder and Elbow Surgery (UK) Consultant Orthopaedics Surgeon, Apollo Hospital, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">69</td>
+                            <td>OBG</td>
+                            <td>An era of obstetrucs ultrasonography to ultrasonographic obstetrics</td>
+                            <td align="right">10/13/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. S. Sudarshan, MBBS, DNB (OBG), <br />Fellow in Fetal Medicine Consultant Fetal Medicine,<br /> Mediscan Systems &#8211; Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">70</td>
+                            <td>OBG</td>
+                            <td>An era of obstetrucs ultrasonography to ultrasonographic obstetrics</td>
+                            <td align="right">10/27/2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">ACS Medical College and Hospital in Association with Rajarajeswari Medical College and Hospital Begaluru Karnataka
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">71</td>
+                            <td>General Surgery</td>
+                            <td>Thyroid Disorders</td>
+                            <td align="right">27-10-2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">ACS Medical College and Hospital in Association with Rajarajeswari Medical College and Hospital Begaluru Karnataka
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">72</td>
+                            <td>Biochemistry</td>
+                            <td>Basic and Clinical concepts of Vitamin D Metabolism</td>
+                            <td align="right">27-11-2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. K. Sowmya, MD., DNB., Associate Professor of Biochemistry Sri Ramachadra Medical College &#038; Research Institute, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">73</td>
+                            <td>Psychiatrytd></p>
+                                <td>International Day of Persons With Disabilities</td>
+                                <td align="right">04-12-2017</td>
+                                <td>Lecture hall I</td>
+                                <td width="577">Dr. R. Mangala Assistant Director, Awarness and Communitcation Schizophrerila Research Foundation
+                                </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">74</td>
+                            <td>Dermatology</td>
+                            <td>Highlights in Common Bacterial infections</td>
+                            <td align="right">12-12-2017</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. K. Manoharan, MD., DD.,Professor of DermatologySree Balaji Medical College &#038; Hospital Chennai
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">75</td>
+                            <td>Pharmacology</td>
+                            <td>Therapeutic Approach to Acute Coronary Syndrome</td>
+                            <td align="right">23-02-2018</td>
+                            <td>Lecture hall II</td>
+                            <td width="577">Dr. D. Muthu Kumar, M.D., D.M., Cardiologist, ESI Medical College &#038; Hospital, K.K.Nagar
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">76</td>
+                            <td>Physiology</td>
+                            <td>Cardiovascular System</td>
+                            <td align="right">14-03-2018</td>
+                            <td> </td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">77</td>
+                            <td>Biochemistry</td>
+                            <td>ACSBIO Summit &#8211; 18</td>
+                            <td align="right">20-03-2018</td>
+                            <td>College Lobby</td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">78</td>
+                            <td>RNTCP</td>
+                            <td>Wanted Leaders for a TB Free World</td>
+                            <td align="right">21-03-2018</td>
+                            <td>Lecture hall II</td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">79</td>
+                            <td>Anatomy</td>
+                            <td>&#8220;If men are from mars,women are from venus, Does anatomy have an answer&#8221;?</td>
+                            <td align="right">28-03-2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. WMS JOHNSON Pro. &#038; HOD Anatomy, Academic Chief Co-ordinator, Sree Balaji Medical College &#038; Hospital
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">80</td>
+                            <td>Community Medicine</td>
+                            <td>Universal health coverage :Everyone, Everywhere</td>
+                            <td align="right">09.04.2018</td>
+                            <td>Lecture hall II</td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">81</td>
+                            <td>ACS Medical College</td>
+                            <td>Debate </td>
+                            <td align="right">11/04/2018 &#038; 12/04/2018</td>
+                            <td>Basement Auditorium</td>
+                            <td width="577">Mr. K. Dhanavel.Retd. IAS.,Special Officer
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">82</td>
+                            <td>ACS Medical College</td>
+                            <td>Reference management software </td>
+                            <td align="right">29.06.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Ahmed Basha, Associate Professor ,Chettinad Medical College
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">83</td>
+                            <td>Pediatric</td>
+                            <td>Common Pediatric Problems</td>
+                            <td align="right">27.07.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. P. Ramachandran M.D(PED),DNB Former Director, ICH &#038; HC Associate Dean PG Studies,Professor &#038; HOD, Department of Pediatrics, SRMC, Porur Dr.S.Thangavelu M.D.,DCH.,MRCP.,Former Director, ICH &#038; HC Pediatric
+                                Consultant, Dr. Mehta&#8217;s Children Hospital, Chennai
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">84</td>
+                            <td>General Medicine</td>
+                            <td>ACS MEDICON 2018</td>
+                            <td align="right">03/08/2018 &#038; 04/08/2018</td>
+                            <td>Basement Auditorium</td>
+                            <td width="577">Dr. Pragna B Dolia Dean Organizing Chairperson Dr. N. Raghu Dean Organizing Secretary
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">85</td>
+                            <td>Pediatric</td>
+                            <td>World Breast Feeding Week</td>
+                            <td align="right">07.08.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. N. Saraswathi, M.D., DCH Former Dean, Chengalpattu Medical College, Former HOD &#038; Professor, Department of Neonatology, IOG, Egmore
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">86</td>
+                            <td>General Surgery</td>
+                            <td>Updates on the Management of Surgical Patients in Need of Critical Care</td>
+                            <td align="right">09.08.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Senthil Kumar, MD., IDCCM., FICCM., EDIC., Senior Consultant of Critical Medicine, Appollo Hospitals, Chennai
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">87</td>
+                            <td>Psychiatry</td>
+                            <td>World Mental Health Day </td>
+                            <td align="right">10.10.2018</td>
+                            <td>College Basement Auditorium</td>
+                            <td width="577">DR. M. Suresh Kumar Adjunct Professor of Psychiatry, SRMC Director and Consultant Psychiatrist Psymed Hospitals, Chennai. Professor of Psychiatry (Retd.) MMC &#038; IMH Dr. Hema Tharoor Consultant Psychiatrist Schizophrenia
+                                Research Foundation, Chennai
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">88</td>
+                            <td>Pharmacology</td>
+                            <td>Pharmacological approach to Drug Toxicity &#038; Poisoning</td>
+                            <td align="right">30.11.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. T.Aruna M.D. (Pharm) Professor of Pharmacology Kilpauk Medical College &#038; Hospital Chennai &#8211; 10 Dr. Raghunandanan M.D. (Gen Med) PG(HE) MBA(HM) Professor of Internal Medicine &#038; Toxicology Rajiv Gandhi Govt.General
+                                Hospital Chennai &#8211; 3
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">89</td>
+                            <td>Community Medicine</td>
+                            <td>HIV &#8211; AIDS</td>
+                            <td align="right">01.12.2018</td>
+                            <td>Basement Auditorium</td>
+                            <td width="577">Actor &#038; Director R. Pandiarajan Dr. Rifa Khan, Dr. Archana Lakshmi
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">90</td>
+                            <td>Ophthalmology</td>
+                            <td>Rendezvous In Ophthalmologys</td>
+                            <td align="right">04.12.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Kalpana Suresh M.S, FRGS, MBA.,Medical Director, Kalpana Eye Care, Chennai, Former HOD, Department of Ophthalmology, Sri Ramachandra Medical College,Prof. Dr. Radha Annamalai DNB, FICO,Ph.D, Department of Ophthalmology,
+                                Sri Ramachandra Medical College,
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">91</td>
+                            <td>Microbiology</td>
+                            <td>Winter Epidemics</td>
+                            <td align="right">07.12.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Sumathi MD.,Ph.D Prof. &#038; HOD of Microbiology Sri Muthukumaran Medical College and Hospital Dr. Kaveri MD., DCH., Deputy Director, Dept. of Virology King Institute of Preventive Medicines Research, Guindy, Chennai
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">92</td>
+                            <td>Biochemistry</td>
+                            <td>An Insight into vitamin B12 &#038; Folic acid Metabolism</td>
+                            <td align="right">13.12.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. V. Madhubala, M.D.,Professor &#038; Head, Department of Biochemistry, ESIC Medical College &#038; PGIMSR, K.K. Nagar, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">93</td>
+                            <td>Physiology</td>
+                            <td>Understanding Human Physiology &#8211; A New Perspective</td>
+                            <td align="right">15.12.2018</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Semmal, M.D., Professor &#038; HOD, Department of Physiology, Shri Sathya Sai Medical College Recearch Institute, Chennai Dr. Arifath Mohideen, M.D., Physiology Vice Principal, Trileaves Global School, Chennai
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">94</td>
+                            <td>General Surgery</td>
+                            <td>&#8220;VENOUS DISORDERS&#8221; &#8216;VARICOSE VEIN &#8211; AN UPDATE&#8221;</td>
+                            <td align="right">03.01.2019</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr.S.M. Sivaraj, M.S.,M.Ch(Vasc).,DNB.,FVSI Former Director of Institute of Vascular Surgery, Madras Medical College, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">95</td>
+                            <td>Rotary Club of Madras &#038; Cura Health Care Private Limited</td>
+                            <td>Breast Cancer Screening Camp Using Thermograpy</td>
+                            <td align="right">05.03.2019</td>
+                            <td>A C S Medical College and Hospital</td>
+                            <td width="577">Dr. Vijayabharathi Rangarajan, B.D.S., M.B.A. (canada) Immediate President &#8211; Rotary Club of Madras &#038; Members of Rotary Club of Madras
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">96</td>
+                            <td>Biochemistry</td>
+                            <td>Exhibition On ACSBIO Summit &#8211; 19</td>
+                            <td align="right">03.20.2019</td>
+                            <td>College Lobby</td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">97</td>
+                            <td>Anatomy</td>
+                            <td>CME On PANCREAS &#8211; A MULTITALENTED ORGAN</br> WITH SECRETS</td>
+                            <td align="right">03.29.2019</td>
+                            <td>Lecture hall I</td>
+                            <td width="577">Dr. Gunapriya Raghunath Professor &#038; HOD, Department of Anatomy, Saveetha Medical College Hospital and Research Institute, Chennai. Dr. T. Srimathi,Associate Proffessor, Department of Anatomy, Sri Ramachandra Medical College
+                                and Research Institute, Chennai.Dr. C. Senthil, Associate Proffessor,Department of General Medicine,ACS Medical College and Hospital,Chennai.Dr. R. Ebenezer,Senior consultant &#038; ICU In-Charge,Department of Critical
+                                care Medicine,Apollo Specialty Hospital, Vanagaram,Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">98</td>
+                            <td>MEU</td>
+                            <td>CME On Curriculum Implementation Support Program</td>
+                            <td align="right">20.06.2019</td>
+                            <td>Medical Education Unit &#8211; College Block</td>
+                            <td width="577">Dr. Leena
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">99</td>
+                            <td>General Surgery</td>
+                            <td>CME On INGUINALHERNIA</td>
+                            <td align="right">21.06.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">Dr. P. Senthilnathan, M.S.,DNB,MRCS(Ed),DNB(GI Surgery),FACS,FMAS,FAIS Director, GEM Hospital, Perungudi, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">100</td>
+                            <td>Pathology </td>
+                            <td>Guest Lecture On Transfusion Therapy &#038; Good Transfusion Practice</td>
+                            <td align="right">23.07.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">Dr. Ravindra Prasad, M.D.,Asst. Professor of Pathology Sri Ramachandra Medical College &#038; Research Institute
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">101</td>
+                            <td>General Surgery </td>
+                            <td>CME On Salivary Glands</td>
+                            <td align="right">25.07.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">Prof. Dr.R. Kannan Director,Institute of General Surgery,Rajiv Gandhi Government General Hospital
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">102</td>
+                            <td>Paediatrics </td>
+                            <td>CME On Adolescent Immunization &#8211; Are we Neglecting It?</td>
+                            <td align="right">26.07.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">103</td>
+                            <td>Microbiology </td>
+                            <td>CME On WORLD HEPATITIS DAY</td>
+                            <td align="right">02.08.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">Dr. A. R. Venkateswaran M.D., D.M.,Director &#038; Head of Department,Institute of Medical Gestro Enterology,RGGGH &#038; MMC, Chennai.Dr. R. Murali M.D., D.M.,Senior Assistant Professor,Institute of Medical Gestro Enterology,RGGGH
+                                &#038; MMC, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">104</td>
+                            <td> Microbiology</td>
+                            <td>Students Scientific Exhibition </br>On WORLD HEPATITIS DAY</td>
+                            <td align="right">06.08.2019</td>
+                            <td>College Lobby</td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">105</td>
+                            <td>General Medicine </td>
+                            <td>CME On RECENT TRENDS IN TOXICOLOGY</td>
+                            <td align="right">07.08.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">Dr. S. Raghunathan, MD.,Prof. &#038; Director (i/c) Institute of Internal Medicine,MMC &#038; RGGGH, Chennai &#8211; 3.Dr. V. Rajendran,M.D.,Associate Professor of Medicine, Institute Medicine,MMC &#038; RGGGH, Chennai &#8211;
+                                3
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">106</td>
+                            <td>OBG </td>
+                            <td>CME On COLPOSCOPY IN PREVENTION OF CANCER CERVIX</td>
+                            <td align="right">08.08.2019</td>
+                            <td>Lecture Hall- 4</td>
+                            <td width="577">Dr. Ramani Rajendran,M.D.,DGOConsultant, Apollo Hospitals, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">107</td>
+                            <td>Ophthalmology</td>
+                            <td>CME On Retinopathy of Prematurity</td>
+                            <td align="right">27.08.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">Dr. Ekta Anand Rishi, M.s., FRCS,Senior Consultant,Shri Bhagwan Mahavir Vitreo Retinal Services,Sankara Nethralaya, Chennai.
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">108</td>
+                            <td> Community Medicine</td>
+                            <td>CME </td>
+                            <td align="right">09.05.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">
+                            </td>
+                        </tr>
+                        <tr height="60">
+                            <td height="60" align="right">109</td>
+                            <td>Forensic Medicine </td>
+                            <td>CME On Legal Aspects of Medical Practice</td>
+                            <td align="right">09.06.2019</td>
+                            <td>Lecture Hall I</td>
+                            <td width="577">Doctor and the Law,Dr. K. Thangaraj Professor and HOD, SRM Medical College, Kattankulathur.Health Services and the CPA .Dr. Gambir Singh Professor, SRM MEdical College, Kattankulthur
+                            </td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
+
+{% endblock content %}

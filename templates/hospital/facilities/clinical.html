@@ -1,0 +1,340 @@
+{% extends "hospital/base.html" %} {% block content %}
+<style>
+    h5 {
+        font-size: 20px;
+        font-family: 'Eurostile', sans-serif;
+        font-weight: 600;
+        color: #000000;
+        letter-spacing: 0.005em;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    
+    strong {
+        font-weight: 800;
+    }
+    
+    .firstol {
+        list-style-type: decimal;
+    }
+    
+    .firstol li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 20px;
+    }
+    
+    .firstul {
+        list-style-type: disc;
+        margin-top: 5px;
+    }
+    
+    .firstul li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 25px;
+    }
+    
+    .bold {
+        font-weight: 800 !important;
+    }
+    
+    .secondul {
+        list-style-type: circle;
+        margin-top: 5px;
+    }
+    
+    .secondul li {
+        margin-bottom: 12px;
+        margin-left: 60px;
+        line-height: 20px;
+    }
+</style>
+<div class="resource_inner">
+    <section class="hostl_facility">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 rigt_aln">
+                    <div class="hostel_rgt_img">
+                        <img src="/static/sample/hospital/facility/clinical.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-sm-6 lft_aln">
+                    <div>
+                        <span>
+                04          </span>
+                        <h1>Clinical Material</h1>
+                        <h3 class="inner_sub_hd"> CLINICAL MATERIAL FOR THE MONTH OF SEPTMBER – 2019</h3>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class=" col-sm-6 col-lg-12 lft_aln">
+
+                    <p>&nbsp;</p>
+                    <p>
+                    </p>
+                    <table width="305" height="234" border="2">
+                        <tr>
+                            <td width="178">&nbsp;</td>
+                            <td class="bold" style="text-align: center ;" width="109">Average per Day</td>
+                        </tr>
+                        <tr>
+                            <td>O.P.</td>
+                            <td>
+                                <div align="center">1183</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Casuality</td>
+                            <td>
+                                <div align="center">76</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Admission
+                            </td>
+                            <td>
+                                <div align="center">117</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Discharge</td>
+                            <td>
+                                <div align="center">116</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BOR</td>
+                            <td>
+                                <div align="center">88 %</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>No. of Normal Delivery</td>
+                            <td>
+                                <div align="center">3</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>No. of Caesarian Cases</td>
+                            <td>
+                                <div align="center">1</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p class="bold" align="left"> AVERAGE PER DAY</p>
+                    <p align="left">&nbsp;</p>
+                    <table width="425" border="2">
+                        <tr>
+                            <td width="274"><strong>INVESTIGATIONS</strong></td>
+                            <td width="64">
+                                <div align="center"><strong>OP</strong></div>
+                            </td>
+                            <td width="63">
+                                <div align="center"><strong>IP</strong></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                X-RAY
+                            </td>
+                            <td>
+                                <div align="center">100</div>
+                            </td>
+                            <td>
+                                <div align="center">48</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SPL INVESTIGATIONS</td>
+                            <td>
+                                <div align="center">2</div>
+                            </td>
+                            <td>
+                                <div align="center">1</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CT</td>
+                            <td>
+                                <div align="center">5</div>
+                            </td>
+                            <td>
+                                <div align="center">2</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>US SCAN</td>
+                            <td>
+                                <div align="center">55</div>
+                            </td>
+                            <td>
+                                <div align="center">20</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>LABORATORY</td>
+                            <td>
+                                <div align="center"></div>
+                            </td>
+                            <td>
+                                <div align="center"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BIO CHEMISTRY</td>
+                            <td>
+                                <div align="center">1160</div>
+                            </td>
+                            <td>
+                                <div align="center">875</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MICRO BIOLOGY</td>
+                            <td>
+                                <div align="center">95</div>
+                            </td>
+                            <td>
+                                <div align="center">43</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SEROLOGY</td>
+                            <td>
+                                <div align="center">136</div>
+                            </td>
+                            <td>
+                                <div align="center">44</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HAEMATOLOGY</td>
+                            <td>
+                                <div align="center">1175</div>
+                            </td>
+                            <td>
+                                <div align="center">963</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HISTOPATHOLOGY</td>
+                            <td>
+                                <div align="center">10</div>
+                            </td>
+                            <td>
+                                <div align="center">9</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CYSTOPATHOLOGY</td>
+                            <td>
+                                <div align="center">13</div>
+                            </td>
+                            <td>
+                                <div align="center">2</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ANY OTHER (HIV, AIDS, DOTS MALARIA ETC.)</td>
+                            <td colspan="2">
+                                <div align="center"></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p class="bold">AVERAGE PER DAY</p>
+                    <p>&nbsp;</p>
+                    <table width="422" height="196" border="2">
+                        <tr>
+                            <td>
+                                <div align="center"><strong>O.T</strong></div>
+                            </td>
+                            <td>
+                                <div align="center"><strong>MAJOR</strong></div>
+                            </td>
+                            <td>
+                                <div align="center"><strong>MINOR</strong></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SURGERY</td>
+                            <td>
+                                <div align="center">6</div>
+                            </td>
+                            <td>
+                                <div align="center">11</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>OPHTHAL</td>
+                            <td>
+                                <div align="center">2</div>
+                            </td>
+                            <td>
+                                <div align="center">3</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ENT</td>
+                            <td>
+                                <div align="center">1</div>
+                            </td>
+                            <td>
+                                <div align="center">4</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ORTHO</td>
+                            <td>
+                                <div align="center">1</div>
+                            </td>
+                            <td>
+                                <div align="center">4</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>OBG</td>
+                            <td>
+                                <div align="center">3</div>
+                            </td>
+                            <td>
+                                <div align="center">6</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CASUALTY</td>
+                            <td>
+                                <div align="center">0</div>
+                            </td>
+                            <td>
+                                <div align="center">4</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td>
+                                <div align="center">13</div>
+                            </td>
+                            <td>
+                                <div align="center">32</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "college/base.html" %} {% block content %}
+
+<style>
+    .tic_list li a {
+        font-weight: 500;
+    }
+    
+    .tic_list li:hover a {
+        color: #005b94;
+    }
+</style>
+<section>
+    <div class="container content-only">
+        <h3 style="    font-size: 30px;" class="clearfix">Information under Clause B.1.11 of Minimum Standard Requirement Regulations, 1999. Updated on March 2019</h3>
+        <ul class="tic_list">
+            {% for mci in mci %}
+            <li><a href="{{mci.document_pdf.url}}" target="_blank">{{mci.title}}</a> </li>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+</section>
+
+
+{% endblock %}

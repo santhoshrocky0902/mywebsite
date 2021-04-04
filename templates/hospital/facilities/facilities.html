@@ -1,0 +1,241 @@
+{% extends "hospital/base.html" %} {% block content %}
+
+<section class="inner res_intro">
+    <style>
+        .btn_web {
+            overflow: hidden;
+            min-width: 175px;
+            height: 54px;
+            border: 1px solid #bd943c;
+            font-family: 'Eurostile', sans-serif;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: 0.05em;
+            color: #002e4b;
+            font-weight: 600;
+            background: #ffffff;
+            padding: 0 15px;
+            display: inline-block;
+            text-align: center;
+            line-height: 52px;
+            position: relative;
+            z-index: 0;
+            text-indent: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+            -moz-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+            -o-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+            -ms-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        
+        .btn_web:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            background: #bd943c;
+            z-index: -1;
+            -webkit-transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+            -moz-transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+            -o-transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+            -ms-transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        
+        .btn_web:hover {
+            color: #ffffff;
+        }
+        
+        .btn_web:hover:before {
+            transform: translate3d(100%, 0, 0);
+            -webkit-transform: translate3d(100%, 0, 0);
+            -ms-transform: translate3d(100%, 0, 0);
+            -moz-transform: translate3d(100%, 0, 0);
+            -o-transform: translate3d(100%, 0, 0);
+        }
+    </style>
+    <div class="container">
+        <h1 class="title_line">Facilities</h1>
+    </div>
+</section>
+<section class="nopadding res_course-wrap">
+
+    <div class="course-pg clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/24.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/24.jpg" sizes="(max-width: 961px) 100vw, 961px"> </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>24*7 Service</h2>
+                    <p>
+                    </p>
+                    <p>24 hour service is provided by ACS hospital by the departments like General medicine, pharmacy, lab services and Casualty.
+
+                    </p> <a href="{% url 'hospital:hf_service' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-ug clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/ambulance.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/ambulance.jpg " sizes="(max-width: 961px) 100vw, 961px">                </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>Ambulance</h2>
+                    <p>
+                    </p>
+                    <p>The hospital has a large number of advanced ambulances with mobile ICUs to monitor the patient’s condition. The 24*7 facility is staffed by specialists for the care and upkeep of the patients in transit.</p>
+                    <p></p>
+                    <a href="{% url 'hospital:hf_ambulance' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-pg clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/ambulance.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/ambulance.jpg" sizes="(max-width: 961px) 100vw, 961px">                </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>Blood Bank</h2>
+
+                    <p>Sophisticated blood bank to meet the needs of the patients is available for the best care of the patients.</p>
+                    <a href="{% url 'hospital:hf_blood' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-ug clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/clinical.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/clinical.jpg" sizes="(max-width: 961px) 100vw, 961px">                </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>Clinical Material</h2>
+                    <p>
+                    </p>
+                    <p> Our excellent infrastructure provides a very conductive atmosphere for effective learning to each and every student. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo eaque sapiente quibusdam quidem iure deleniti
+                        eum, dolor, fugit voluptatum ducimus pariatur fugiat eius rerum molestias, consequuntur magni consequatur. Quod!.</p>
+                    <p></p>
+                    <a href="{% url 'hospital:hf_clinical' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-pg clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/citizen.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/citizen.jpg" sizes="(max-width: 961px) 100vw, 961px">                </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>Citizen Charter</h2>
+
+                    <p>
+
+                        To develop into an institute of medical excellence, imparting quality medical education to students and quality medical care to patients. To create doctors with knowledge, values and principles and to help them attain their highest functional ability.
+                        To spread health and to make the nation a healthier and happier place to live in.
+
+
+                    </p>
+
+                    <a href="{% url 'hospital:hf_citizen' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-ug clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/24.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/24.jpg 961w, https://saec.ac.in/wp-content/uploads/2019/11/health-300x225.jpg 300w, https://saec.ac.in/wp-content/uploads/2019/11/health-768x575.jpg 768w"
+                    sizes="(max-width: 961px) 100vw, 961px"> </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>Covid'19</h2>
+                    <p>
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eum ex omnis iusto, debitis sit officia, sapiente quam molestias, ad cum voluptatum beatae itaque quo id nulla natus odit! Quasi..</p>
+                    <p></p>
+                    <a href="{% url 'hospital:hf_covid' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-pg clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/icu.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/icu.jpg " sizes="(max-width: 961px) 100vw, 961px"> </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>ICU</h2>
+                    <p>
+                    </p>
+                    <p> ICU, ICCU, SICU, RICU, NICU, PICU, are available with state of art equipments and specially trained ICU doctors to provide Quaternary level critical care service round the clock.</p>
+                    <p></p>
+                    <a href="{% url 'hospital:hf_icu' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-ug clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/ip.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/ip.jpg" sizes="(max-width: 961px) 100vw, 961px"> </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>IP & OP Service</h2>
+                    <p>
+                    </p>
+                    <p>Spacious waiting hall, well-equipped examination chambers. Seperate rooms for special clinics like immunisation, baby clinic and family welfare clinic.</p>
+                    <p></p>
+                    <a href="{% url 'hospital:hf_ip' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-pg clearfix">
+        <div class="container">
+
+            <div class="img-contain col-md-6 col-xs-5 nopadding" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <img src="/static/sample/hospital/facility/pharmacy.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="/static/sample/hospital/facility/pharmacy.jpg" sizes="(max-width: 961px) 100vw, 961px">                </div>
+            <div class="text-contain col-sm-6" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                <div>
+                    <h2>Pharmacy</h2>
+                    <p>
+                    </p>
+                    <p>Pharmacy-A well stocked 24 hour pharmacy is available.
+                    </p>
+                    <a href="{% url 'hospital:hf_pharmacy' %}" class="btn_web">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+{% endblock content %}

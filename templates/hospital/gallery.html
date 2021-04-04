@@ -1,0 +1,54 @@
+{% extends "hospital/base.html" %} {% block content %}
+<style>
+    .gallery_page .gallery_sec ul li:last-child img {
+        opacity: 1 !important;
+    }
+    
+    .gallery_page .gallery_sec ul li a .hov_overlay {
+        background: transparent !important;
+    }
+    
+    .course-tab-contain {
+        z-index: -1;
+    }
+</style>
+<div class="course-tab-contain">
+    <div class="container">
+        <div class="tab-menu">
+
+            <ul>
+                <li class="active"><a data-toggle="tab" href="#menu01">Gallery</a></li>
+            </ul>
+        </div>
+        <div class="gallery_page clearfix">
+            <div class="tab-content-wrap clearfix">
+                <div class="tab-content fade in active" id="menu01">
+                    <div class="container">
+                        <div class="gallery_sec clearfix">
+                            <ul>
+                                {% for gal in gallery %}
+                                <li>
+                                    <a href="#">
+                                        <img src="{{gal.image.url}}" class="img-responsive">
+                                        <div class="gallery_sec_content inr_glry_cntnt">
+                                            <p>{{gal.title}}</p>
+                                        </div>
+                                        <div class="hov_overlay"></div>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        fadeinup('.gallery_page_title > *', '#main');
+        fadeinup('.gallery_page .gallery_sec ul li', '#main');
+    });
+</script>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "hospital/base.html" %} {% block content %} {% for fac in main %}
+<div class="resource_inner">
+    <section class="hostl_facility">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 rigt_aln">
+                    <div class="hostel_rgt_img">
+                        <img src="{{fac.image.url}}" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-sm-6 lft_aln">
+                    <div>
+                        <span>
+                04            </span>
+                        <h1>{{fac.get_Name_display}}</h1>
+                        <h3 class="inner_sub_hd">Overview</h3>
+                        <p></p>
+                        <p> {{fac.overview}}
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
+{% endfor %} {% endblock content %}

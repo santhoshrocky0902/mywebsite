@@ -1,0 +1,637 @@
+{% extends "college/base.html" %} {% block content %}
+<!--Banner section-->
+<style>
+    .achieve_sec .achieve_bottom>div.ach_slide-wrap .achieve-slider .item {
+        padding-bottom: 20px;
+        height: auto !important;
+        padding-left: 80px !important;
+    }
+    
+    .achieve_sec .achieve_bottom>div.ach_moments .media-video .ply-btn:before,
+    .banner-content .container>div .banner-right .banner-media.media-video .ply-btn:before {
+        left: 1px !important;
+        top: 0.5px !important;
+    }
+</style>
+<div class="home-banner">
+
+    <style>
+        .span,
+        .twitter {
+            font: normal normal 10px Arial;
+            text-align: center;
+            color: #998578;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .twitter {
+            color: #000000;
+            text-decoration: none;
+            display: block;
+            padding: 14px;
+            -webkit-transition: all .25s ease;
+            -moz-transition: all .25s ease;
+            -ms-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            transition: all .25s ease;
+        }
+        
+        .twitter:hover {
+            color: #FF7D6D;
+            text-decoration: none;
+        }
+        
+        .span {
+            /* font-style: italic; */
+            display: block;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        /* Floating Social Media Bar Style Starts Here */
+        
+        .fl-fl {
+            background: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 4px;
+            width: 204px;
+            position: absolute;
+            right: -160px;
+            z-index: 1000;
+            font: normal normal 10px Arial;
+            -webkit-transition: all .25s ease;
+            -moz-transition: all .25s ease;
+            -ms-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            transition: all .25s ease;
+        }
+        
+        .fass {
+            font-size: 20px;
+            color: #fff;
+            padding: 10px 10px;
+            width: 40px;
+        }
+        
+        .fl-fl:hover {
+            right: 0;
+        }
+        
+        .fl-fl a {
+            color: #fff !important;
+            text-decoration: none;
+            text-align: center;
+            line-height: 43px!important;
+            vertical-align: top!important;
+        }
+        
+        .float-fb {
+            top: 160px;
+        }
+        
+        .float-tw {
+            top: 215px;
+        }
+        
+        .float-gp {
+            top: 270px;
+        }
+        
+        .float-rs {
+            top: 325px;
+        }
+        
+        .float-ig {
+            top: 380px;
+        }
+        
+        .float-pn {
+            top: 435px;
+        }
+        /* Floating Social Media Bar Style Ends Here */
+    </style>
+    <div class="float-sm">
+        <div class="fl-fl float-fb">
+            <i style="font-weight: 900; font-family: inherit;" class="fa fass fa-c-square">C</i>
+            <a href="{% url 'college:college_home_page' %}" target="_blank"> College</a>
+        </div>
+        <div class="fl-fl float-tw">
+            <i class="fa fass  fa-h-square"></i>
+            <a href="{% url 'hospital:hospital_home_page' %}" target="_blank">Hospital</a>
+        </div>
+        <div class="fl-fl float-gp">
+            <i style="font-weight: 900; font-family: inherit;" class="fa fass fa-c-square">U</i>
+            <a href="https://www.drmgrdu.ac.in/" target="_blank"> University</a>
+        </div>
+
+    </div>
+    <div class="home-bnr-slider">
+
+        <div class="item" data-index="1" style="background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/static/sample/college/fifth.jpg')"></div>
+        <div class="item" data-index="2" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/static/sample/college/fourth.jpg')"></div>
+        <div class="item" data-index="3" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('/static/sample/college/first.jpg')"></div>
+        <div class="item" data-index="4" style="background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/static/sample/college/third.jpg')"></div>
+        <div class="item" data-index="5" style="background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/static/sample/college/second.jpg')"></div>
+    </div>
+    <div class="banner-content">
+        <div class="container">
+            <div>
+                <div class="banner-left">
+                    <div class="header-wrap">
+                        <h2 class="h1 " data-index="1"> We have one of the biggest Convacation Center in South India with 9000 seating capacity.</h2>
+                        <h2 class="h1" data-index="2"> Best infrastructure to support every activity of our students</h2>
+                        <h2 class="h1" data-index="3"> Highly equipped laboratory for better and practical exposure </h2>
+                        <h2 class="h1" data-index="4"> Fully furnished hostel with health club with advanced facilities</h2>
+                        <h2 class="h1" data-index="6"> Virtual Campus Drive for 2021 Students Batch</h2>
+                    </div>
+
+                    <div class="banner-controls">
+                        <div class="dots-contain"></div>
+
+                    </div>
+
+                    <div class="banner-boxcontent">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div>
+                                    <span>1<sup>st</sup></span>
+                                    <p>Rank In Chronicle Medical Survey 2016</p>
+                                    <div class="hov_overlay"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-3">
+                                <div>
+                                    <span>6<sup>Th</sup></span>
+                                    <p>Rank Among South Zone Colleges</p>
+                                    <div class="hov_overlay"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-3">
+                                <div>
+                                    <span>8<sup>Th</sup></span>
+                                    <p>Rank Among Private Medical Colleges</p>
+                                    <div class="hov_overlay"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-3">
+                                <div>
+                                    <span>12<sup>Th</sup></span>
+                                    <p>Rank in Tamil Nadu</p>
+                                    <div class="hov_overlay"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="banner-right">
+                    <div class="banner-media media-video">
+                        <a href="#" class="full_cont-link modal-link" data-target="#mediamodal" data-url="#"></a>
+                        <div class="ply-btn">
+                            <svg width="80" height="80" class="play-icon" viewBox="0 0 100 100">
+    <rect x="4" y="4" width="92" height="92" class="box" rx="50" ry="50"></rect>
+    <polygon points="44,42 62,52 44,62" class="play"></polygon>
+  </svg>
+                        </div>
+                        <img alt="ACS - Banner Video" data-src="/static/assets/banner-video-image.jpg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="/static/assets/banner-video-image.jpg" alt="ACS - Banner Video" /></noscript>
+                    </div>
+
+                    <div class="event-container">
+                        <div class="event-nav-wrap"></div>
+                        <div class="event-slider-wrap">
+                            <h4>News Updates </h4>
+                            <div class="event-slider">
+                                {% for news in news %}
+                                <div class="item">
+                                    <span class="event-date">{{news.date}} </span>
+                                    <p>{{news.news}}
+                                    </p>
+                                    <div class="learn-more">
+                                        <a href="{% url 'college:news' %}" target="">
+                                            <label>Learn more </label>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- datas -->
+
+<section class="achieve_sec">
+    <div class="container">
+        <div class="achieve_top">
+            <div class="number-block clearfix">
+
+                <div class="block_item">
+                    <label><span class="counter-num">670</span>+</label>
+                    <h3>Student Placed (2016-2020 Batch) till date. </h3>
+                    <p>We provide placement to students in our hospital and helps to achieve the recruitments conducted by Hospitality Industry.</p>
+                </div>
+
+                <div class="block_item">
+                    <label><span class="counter-num">20</span>+</label>
+                    <h3>Professional programs </h3>
+                    <p>There are so many Professional Programs than one can develop their skill.</p>
+                </div>
+
+                <div class="block_item">
+                    <label><span class="counter-num">10</span>+</label>
+                    <h3>Modern Lab Facilities</h3>
+                    <p>There are more than 10 advanced lab facilities for Modern Research. </p>
+                </div>
+            </div>
+
+            <div class="more-block">
+                <div>
+                    <div>
+                        <a href="#" class="full_cont-link"></a>
+                        <label>Know More</label>
+                        <h3>ABOUT ACS</h3>
+                        <p class="learn-more"><span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Services -->
+<!-- 
+<section class="studies_sec">
+    <div class="container">
+        <h2 class="title_line">Popular Courses</h2>
+        <div class="study_ug clearfix">
+            <div class="course-box">
+                <h3>UG Courses</h3>
+            </div>
+
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-it.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-it.svg" alt=""></noscript>
+</span>
+                <p>course name 1</p>
+                <a href="#" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-cse.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-cse.svg" alt=""></noscript>
+</span>
+                <p>course name 2</p>
+                <a href="#" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-ece.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-ece.svg" alt=""></noscript>
+</span>
+                <p>course name 3</p>
+                <a href="#" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-ce.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-ce.svg" alt=""></noscript>
+</span>
+                <p>course name 4</p>
+                <a href="#" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-me.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-me.svg" alt=""></noscript>
+</span>
+                <p>course name 5</p>
+                <a href="#" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-human.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-human.svg" alt=""></noscript>
+</span>
+                <p>course name 6</p>
+                <a href="#" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" alt=""></noscript>
+</span>
+                <p>course name 7</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+
+        </div>
+        <div class="study_pg clearfix">
+            <div class="course-box">
+                <h3>PG Courses</h3>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" alt=""></noscript>
+</span>
+                <p>course name 1</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" alt=""></noscript>
+</span>
+                <p>course name 2</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" alt=""></noscript>
+</span>
+                <p>course name 3</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" alt=""></noscript>
+</span>
+                <p>course name 4</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" alt=""></noscript>
+</span>
+                <p>course name 5</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+            <div class="course-box">
+                <span>
+<img  alt="" data-src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://saec.ac.in/wp-content/uploads/2019/10/ug-eee.svg" alt=""></noscript>
+</span>
+                <p>course name 6</p>
+                <a href="" class="full_cont-link"></a>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- great vision -->
+<section class="achieve_sec">
+    <div class="container">
+
+        <div class="achieve_bottom clearfix">
+            <div class="ach_vision">
+                <label class="title_line">Great vision</label>
+                <p>
+                    To create doctors with knowledge, values and principles and to help them attain their highest functional ability.
+                </p>
+            </div>
+            <div class="ach_moments">
+                <div class="media-video">
+                    <a href="#" class="full_cont-link modal-link" data-target="#mediamodal_01" data-url=""></a>
+                    <div class="ply-btn">
+                        <svg width="80" height="80" class="play-icon" viewBox="0 0 100 100">
+  <rect x="4" y="4" width="92" height="92" class="box" rx="50" ry="50"></rect>
+  <polygon points="44,42 62,52 44,62" class="play"></polygon>
+</svg>
+                    </div>
+                    <img alt="ACS - APJ Video" data-src="/static/assets/ach_apj.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="/static/assets/ach_apj.png" alt="SAEC - APJ Video" /></noscript>
+                </div>
+
+                <h2>Great Words From The Greatest Personality. </h2>
+                <h3>Bharat Ratna Dr.A.P.J.Abdul Kalam </h3>
+                <label class="desc">Hon'ble former President of India  </label>
+                <p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora harum labore fugit hic nobis corrupti laudantium et optio consectetur modi cum obcaecati facilis architecto delectus, maxime repellat eum eius ullam?</p>
+                </p>
+                <label class="title_line">Special Moments</label>
+            </div>
+
+            <div class="ach_slide-wrap">
+                <div class="achieve-slider">
+                    <label class="title_line">Upcomming Events</label>
+                    <div class="slider">
+                        {% for event in events %}
+                        <div style="padding-left: 0 !important;" class="item">
+                            <a href="{% url 'hospital:news' %}" class="full_cont-link"></a>
+                            <div class="achivements-slide">
+                                <h2>{{event.date}}</h2>
+                                <p>
+                                    {{event.title}}
+                                </p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="ach_lifeat">
+                    <a href="#" class="full_cont-link"></a>
+                    <h2 style="font-size: 18px;">Providing ecceptional health <br />care with compassion</h2>
+                    <label class="title_line">Life @ ACS</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Testimonial -->
+<section class="infra_sec">
+    <div class="container">
+        <div id="testimonial" class="row">
+            <div class="col-sm-4 infra_sec_left">
+                <div class="review_bx">
+                    <div class="review_slider owl-carousel">
+
+                        <div class="review_innr">
+
+                            <img alt="" data-srcset=" 269w,  221w" sizes="(max-width: 269px) 100vw, 269px" data-src="S" class="img-circle wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="" class="img-circle wp-post-image" alt="" srcset="https://saec.ac.in/wp-content/uploads/2020/08/lakshimi.png 269w, https://saec.ac.in/wp-content/uploads/2020/08/lakshimi-221x300.png 221w" sizes="(max-width: 269px) 100vw, 269px" /></noscript>
+                            <h3>A.LAKSHMI</h3>
+                            <span>Department, University rank: 23  Position,At<br> 2015-19 Batch</span>
+                            <div>
+                                <p>&#8220;Education is the best way to enlighten young minds and I feel proud of studied in <em>ACS Medical college</em>. The department faculty and tutors have always guided me to work to the best of my ability while encouraging
+                                    me to achieve full potential in every aspect. The placement training right from the first year is the biggest advantage so as to shape our future in the best possible manner&#8221;</p>
+                            </div>
+                        </div>
+
+                        <div class="review_innr">
+
+                            <img alt="" data-srcset=" 269w,  221w" sizes="(max-width: 269px) 100vw, 269px" data-src="S" class="img-circle wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="" class="img-circle wp-post-image" alt="" srcset="https://saec.ac.in/wp-content/uploads/2020/08/lakshimi.png 269w, https://saec.ac.in/wp-content/uploads/2020/08/lakshimi-221x300.png 221w" sizes="(max-width: 269px) 100vw, 269px" /></noscript>
+                            <h3>A.LAKSHMI</h3>
+                            <span>Department, University rank: 23  Position,At<br> 2015-19 Batch</span>
+                            <div>
+                                <p>&#8220;Education is the best way to enlighten young minds and I feel proud of studied in <em>ACS Medical college</em>. The department faculty and tutors have always guided me to work to the best of my ability while encouraging
+                                    me to achieve full potential in every aspect. The placement training right from the first year is the biggest advantage so as to shape our future in the best possible manner&#8221;</p>
+                            </div>
+                        </div>
+                        <div class="review_innr">
+
+                            <img alt="" data-srcset=" 269w,  221w" sizes="(max-width: 269px) 100vw, 269px" data-src="S" class="img-circle wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="" class="img-circle wp-post-image" alt="" srcset="https://saec.ac.in/wp-content/uploads/2020/08/lakshimi.png 269w, https://saec.ac.in/wp-content/uploads/2020/08/lakshimi-221x300.png 221w" sizes="(max-width: 269px) 100vw, 269px" /></noscript>
+                            <h3>A.LAKSHMI</h3>
+                            <span>Department, University rank: 23  Position,At<br> 2015-19 Batch</span>
+                            <div>
+                                <p>&#8220;Education is the best way to enlighten young minds and I feel proud of studied in <em>ACS Medical college</em>. The department faculty and tutors have always guided me to work to the best of my ability while encouraging
+                                    me to achieve full potential in every aspect. The placement training right from the first year is the biggest advantage so as to shape our future in the best possible manner&#8221;</p>
+                            </div>
+                        </div>
+                        <div class="review_innr">
+
+                            <img alt="" data-srcset=" 269w,  221w" sizes="(max-width: 269px) 100vw, 269px" data-src="S" class="img-circle wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="" class="img-circle wp-post-image" alt="" srcset="https://saec.ac.in/wp-content/uploads/2020/08/lakshimi.png 269w, https://saec.ac.in/wp-content/uploads/2020/08/lakshimi-221x300.png 221w" sizes="(max-width: 269px) 100vw, 269px" /></noscript>
+                            <h3>A.LAKSHMI</h3>
+                            <span>Department, University rank: 23  Position,At<br> 2015-19 Batch</span>
+                            <div>
+                                <p>&#8220;Education is the best way to enlighten young minds and I feel proud of studied in <em>ACS Medical college</em>. The department faculty and tutors have always guided me to work to the best of my ability while encouraging
+                                    me to achieve full potential in every aspect. The placement training right from the first year is the biggest advantage so as to shape our future in the best possible manner&#8221;</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="quot_div"></div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="great_infra">
+                    <div class="col-sm-12">
+                        <h3 class="title_line">Great <br> Infrastructure
+                        </h3>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div>
+                            <span>
+    <img  alt="" data-src="/static/assets/digital_library.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/digital_library.svg" alt=""></noscript>
+  </span>
+                            <p>Digital Library</p>
+                            <div class="hov_overlay"></div>
+                            <a href="{% url 'college:cf_library' %}" class="full_cont-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <span>
+    <img  alt="" data-src="/static/assets/svg/clg.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/svg/college.svg" alt=""></noscript>
+  </span>
+                            <p>Infrastructure</p>
+                            <div class="hov_overlay"></div>
+                            <a href="{% url 'college:cf_infrastructure' %}" class="full_cont-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <span>
+    <img  alt="" data-src="/static/assets/transport_fascility.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/transport_fascility.svg" alt=""></noscript>
+  </span>
+                            <p>Transport Facility</p>
+                            <div class="hov_overlay"></div>
+                            <a href="{% url 'college:cf_transport' %}" class="full_cont-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <span>
+    <img  alt="" data-src="/static/assets/college_cafeteria.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/college_cafeteria.svg" alt=""></noscript>
+  </span>
+                            <p>College Cafeteria</p>
+                            <div class="hov_overlay"></div>
+                            <a href="{% url 'college:cf_canteen' %}" class="full_cont-link"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <span>
+    <img  alt="" data-src="/static/assets/hostel_facilities.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/assets/hostel_facilities.svg" alt=""></noscript>
+  </span>
+                            <p>Hostel Facility</p>
+                            <div class="hov_overlay"></div>
+                            <a href="{% url 'college:cf_hostel' %}" class="full_cont-link"></a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div style="padding:40px 0">
+                            <p>Explore Facilities</p>
+                            <p class="learn-more"><span></span> </p>
+                            <div class="hov_overlay5"></div>
+                            <a href="{% url 'college:college_facility_page' %}" class="full_cont-link"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+    .footer_sec_btm #menu-footer-menu li.menu-item-home a {
+        color: #bd943c;
+    }
+    
+    .web-modal.modal-open {
+        z-index: 10500;
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .modal-open .onloadmodal {
+        z-index: 10500;
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .modal-open .modal-backdrop {
+        z-index: 10400;
+        background-color: rgba(0, 0, 0, 0.31);
+    }
+    
+    .onloadmodal .modal-dialog {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 450px;
+        /*min-height: 600px;*/
+    }
+    
+    .onloadmodal button.close {
+        background: #015f91;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        border: none;
+        position: absolute;
+        top: -15px;
+        color: #fff;
+        font-size: 22px;
+        right: -10px;
+        cursor: pointer;
+    }
+    /*.onloadmodal .modal-body img {*/
+    /*    max-height: 700px;*/
+    /*    margin: 0 auto;*/
+    /*    width: 450px;*/
+    /*}*/
+    
+    .onloadmodal .modal-content {
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+    }
+    
+    @media (max-width:500px) {
+        .onloadmodal .modal-dialog {
+            width: 300px;
+        }
+    }
+</style>
+
+{% endblock %}

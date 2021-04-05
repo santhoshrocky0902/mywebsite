@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.forms import TextInput, Textarea
-import nested_admin
 
 from .models import New,Event,Department,Achievement,best_moments,Awards,HOD,Professor,Facility,Gallery, Main_facility, Hyperlink, PaperPublication,OnlineApplication
 
@@ -45,8 +44,6 @@ class PaperPublicationInline(admin.StackedInline):
 class HyperlinkInline(admin.StackedInline):
     model = Hyperlink
     extra = 2
-
-
 
 
 class PersonAdmin(admin.ModelAdmin):

@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'college',
     'hospital',
-    'nested_admin',
     'MainPage'
 ]
 

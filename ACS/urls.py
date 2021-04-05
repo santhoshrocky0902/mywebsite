@@ -7,10 +7,8 @@ from django.urls import re_path
 from college.views import admission
 from django.conf.urls.static import static
 from . import views
-import nested_admin
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('_nested_admin/', include('nested_admin.urls')),
     path('', views.index, name = "home_page" ),
 
     # about page

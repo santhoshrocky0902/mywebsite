@@ -653,7 +653,7 @@ $('.content-only span').addClass('clearfix');
 
 
 $(document).ready(function() {
-    $('.saecalumni_link a').attr('target', '_blank');
+    $('.acsalumni_link a').attr('target', '_blank');
 });
 
 $(document).ready(function() {

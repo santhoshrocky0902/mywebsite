@@ -12,6 +12,24 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
+def thankyou(request):
+    form = SubscriberForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        sender_email = form.cleaned_data['email']
+        message = ""
+        subject = "Thankyou for Subscribing!"
+        html_message = loader.render_to_string(
+            'email.html',
+            {
+                'user_name': User.first_name,
+                'subject':  'Thank you fo',
+                
+            }
+        )
+        send_mail(subject, message, 'foodrepo4@gmail.com', [sender_email], html_message= html_message)
+    return render(request, 'thankyou.html', context)
+
 def error_404(request, exception):
     form = SubscriberForm(request.POST or None)
     if form.is_valid():

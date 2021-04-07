@@ -173,11 +173,6 @@
             right: -10px;
             cursor: pointer;
         }
-        /*.onloadmodal .modal-body img {*/
-        /*    max-height: 700px;*/
-        /*    margin: 0 auto;*/
-        /*    width: 450px;*/
-        /*}*/
         
         .onloadmodal .modal-content {
             background: transparent;
@@ -195,27 +190,6 @@
         .headnews-scroller ul li.active {
             background: #ff5245ad;
         }
-        /* .menu-logo .container .header-logo img {
-    width: 120px;
-    top: 50%;
-    transform: translateY(-50%);
-    position: relative;
-    max-width: 425px;
-    object-fit: cover;
-}
-
-@media (max-width:1360px) {
-	.menu-logo .container .header-logo img {
-		width: 110px;}
-}
-@media (max-width:767px) {
-	.menu-logo .container .header-logo img {
-		width: 80px;}
-	.menu-logo .container .mobile-header-logo img{
-		width: 75px;
-	}
-} */
-        /***/
         
         blink {
             animation: blinker 0.6s linear infinite;
@@ -376,7 +350,7 @@
                         </a>
 
                         <a href="#" class="mobile-header-logo">
-                            <img title="ACS Medical College and Hospitals" alt="ACS Medical College and Hospitals" data-src="/static/logo/acslogo.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/logo/logo.png" title="ACS Medical College and Hospitals" alt="ACS Medical College and Hospitals"></noscript>
+                            <img title="ACS Medical College and Hospitals" alt="ACS Medical College and Hospitals" data-src="/static/logo/acslogo.jpg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="/static/logo/logo.png" title="ACS Medical College and Hospitals" alt="ACS Medical College and Hospitals"></noscript>
                         </a>
 
                         <div>
@@ -691,7 +665,6 @@
                                                 }
                                             })();
                                         </script>
-                                        <!-- Mailchimp for WordPress v4.6.2 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
                                         <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-379" method="post" data-id="379" data-name="Subscribe Form">
                                             <div class="mc4wp-form-fields">
                                                 <div class="subscriber_box">
@@ -725,7 +698,7 @@
                                             <li id="menu-item-2636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2636"><a href="{%url 'college:cr_cme' %}">Cme</a></li>
                                             <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="{%url 'college:cm' %}">Community Medicine</a></li>
                                             <li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="{%url 'college:cg_ourgroup' %}">Our Group</a></li>
-                                            <li id="menu-item-117" class="saecalumni_link menu-item menu-item-type-custom menu-item-object-custom menu-item-117"><a href="{%url 'college:cf_library' %}">Library</a></li>
+                                            <li id="menu-item-117" class="acsalumni_link menu-item menu-item-type-custom menu-item-object-custom menu-item-117"><a href="{%url 'college:cf_library' %}">Library</a></li>
                                             <li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="{%url 'college:cf_hostel' %}">Hostels & Quarters</a></li>
                                             <li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="{% url 'contact-us' %}">Contact Us</a></li>
                                             <li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="{%url 'college:cf_seminar' %}">Seminar Hall</a></li>
@@ -791,13 +764,9 @@
                                 <ul id="menu-footer-bottom-menu" class="menu">
                                     <li id="menu-item-2643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2643"><a target="_blank" href="https://www.drmgrdu.ac.in/">
                                         Dr.M.G.R. Educational and Research Institute</a></li>
-                                    <!-- <li id="menu-item-2650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2650"><a href="#">Site map</a></li> -->
-                                    <!-- <li id="menu-item-4297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4297"><a href="#">Terms-and-conditions</a></li> -->
                                 </ul>
                             </div>
-                            <!-- <div class="col-sm-5">
-                                <p> Designed by:<a href="#" target="_blank">webandcrafts.com </a></p>
-                            </div> -->
+
                         </div>
                     </div>
                 </div>
@@ -1042,15 +1011,6 @@
             });
         });
 
-
-
-        /*$(document).ready(function() {
-          $(document).ajaxStart(function() {
-            $('.svg-loader').show();
-          }).ajaxStop(function() {
-            $('.svg-loader').hide();
-          });*/
-
         $(document).ready(function() {
             // Get the modal
             var modal = document.getElementById('gen_car_modal');
@@ -1084,31 +1044,6 @@
             }, 500);
         });
     </script>
-
-    <!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAHWM3sMRD05PQk_wVExFjxRwXEPJsDLoo"></script> -->
-
-    <!-- <script>
-        $(document).ready(function() {
-            function init_map() {
-                var myOptions = {
-                    zoom: 14,
-                    center: new google.maps.LatLng(13.065630, 80.110942),
-
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-                map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-                marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(13.065630, 80.110942)
-
-                });
-                infowindow = new google.maps.InfoWindow({});
-
-            }
-            google.maps.event.addDomListener(window, 'load', init_map);
-        });
-    </script> -->
-
 
 </body>
 
@@ -1156,7 +1091,7 @@
     /* <![CDATA[ */
     var wpcf7 = {
         "apiSettings": {
-            "root": "https:\/\/saec.ac.in\/wp-json\/contact-form-7\/v1",
+            "root": "",
             "namespace": "contact-form-7\/v1"
         }
     };

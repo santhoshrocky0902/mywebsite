@@ -1,9 +1,8 @@
-Error: EBUSY: resource busy or locked, read
-	at Object.readSync (fs.js:513:3)
-	at tryReadSync (fs.js:338:20)
-	at Object.readFileSync (fs.js:367:19)
-	at Object.fs.readFileSync (electron/js2c/asar.js:542:40)
-	at Object.fs.readFileSync (electron/js2c/asar.js:542:40)
+Error: EBUSY: resource busy or locked, open 'c:\Users\santhosh\Desktop\ACS Medical College and hospital\static\assets\accrediations\nabh.JPG'
+	at Object.openSync (fs.js:466:3)
+	at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1812)
+	at Object.readFileSync (fs.js:368:35)
+	at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8583)
 	at VscodeEditor.getFileContent (c:\Users\santhosh\.vscode\extensions\qiu8310.dot-template-vscode-0.1.2\out\adapter\VscodeEditor.js:187:19)
 	at isFileEmpty (c:\Users\santhosh\.vscode\extensions\qiu8310.dot-template-vscode-0.1.2\node_modules\dot-template-core\out\core\commands\Command.js:65:113)
 	at c:\Users\santhosh\.vscode\extensions\qiu8310.dot-template-vscode-0.1.2\node_modules\dot-template-core\out\core\commands\Command.js:72:80
@@ -46,5 +45,5 @@ Error: EBUSY: resource busy or locked, read
 	at new Promise (<anonymous>)
 	at Object.__awaiter (c:\Users\santhosh\.vscode\extensions\qiu8310.dot-template-vscode-0.1.2\node_modules\dot-template-core\node_modules\tslib\tslib.js:103:16)
 	at Timeout._onTimeout (c:\Users\santhosh\.vscode\extensions\qiu8310.dot-template-vscode-0.1.2\node_modules\dot-template-core\out\core\Application.js:144:59)
-	at listOnTimeout (internal/timers.js:531:17)
-	at processTimers (internal/timers.js:475:7)
+	at listOnTimeout (internal/timers.js:549:17)
+	at processTimers (internal/timers.js:492:7)

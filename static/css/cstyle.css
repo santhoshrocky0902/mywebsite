@@ -3976,7 +3976,7 @@ form.webform .checkbox-group [type="checkbox"]+label:before {
 }
 
 .infra_sec {
-    background: url("/static/assets/infra-bg.jpg") no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/static/assets/infra-bg.jpg') no-repeat center center;
     background-size: cover;
 }
 

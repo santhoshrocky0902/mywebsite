@@ -29,9 +29,10 @@ urlpatterns = [
 
     # accrediations
 
-    path('acc1/', views.acc1, name = "acc1" ),
-    path('acc2/', views.acc2, name = "acc2" ),
-    path('acc3/', views.acc3, name = "acc3" ),
+    path('NABH-ACCREDITATION/', views.nabh, name = "acc1" ),
+    path('NABL-ACCREDITATION/', views.acc2, name = "acc2" ),
+    path('ISO-ACCREDITATION/', views.acc3, name = "acc3" ),
+    path('NAAC-ACCREDITATION/', views.acc4, name = "acc4" ),
 
 
 

@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'college',
     'hospital',
     'MainPage',
-    'django_extensions'
 ]
 
 MIDDLEWARE = [

@@ -203,7 +203,7 @@ def contact(request):
 # accrediations
 
 
-def acc1(request):
+def nabh(request):
     form = SubscriberForm(request.POST or None)
     if form.is_valid():
         form.save()
@@ -224,7 +224,7 @@ def acc1(request):
             'form':form
 
         }
-    return render(request, 'acc1.html', {'form':form})
+    return render(request, 'nabh.html', {'form':form})
 
 
 def acc2(request):
@@ -248,7 +248,7 @@ def acc2(request):
             'form':form
 
         }
-    return render(request, 'acc2.html', {'form':form})
+    return render(request, 'nabl.html', {'form':form})
 
 
 def acc3(request):
@@ -270,4 +270,25 @@ def acc3(request):
     context = {
         'form':form
     }
-    return render(request, 'acc3.html', {'form':form})
+    return render(request, 'iso.html', {'form':form})
+
+def acc4(request):
+    form = SubscriberForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        sender_email = form.cleaned_data['email']
+        message = ""
+        subject = "Thankyou for Subscribing!"
+        html_message = loader.render_to_string(
+            'email.html',
+            {
+                'user_name': User.first_name,
+                'subject':  'Thank you fo',
+                
+            }
+        )
+        send_mail(subject, message, 'foodrepo4@gmail.com', [sender_email], html_message= html_message)
+    context = {
+        'form':form
+    }
+    return render(request, 'naac.html', {'form':form})

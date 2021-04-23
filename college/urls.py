@@ -42,12 +42,12 @@ urlpatterns = [
     path('college/department/general-medicine',views.gm, name ="gm"),
 
     # ourgroup
-    path('college/ourgp',views.ourgroup, name = "cg_ourgroup"),
+    path('college/our-groups',views.ourgroup, name = "cg_ourgroup"),
 
     # research
    path('college/research/cme',views.cme, name = "cr_cme"),
-   path('college/research/paper',views.paper, name = "cr_paper"),
+   path('college/research/paper-publishments',views.paper, name = "cr_paper"),
    path('college/research/researchproj',views.researchproj, name = "cr_research_project"),
-   path('college/research/conf',views.conf, name = "cr_conference"),
+   path('college/research/confrence-attended',views.conf, name = "cr_conference"),
    path('college/research/awards',views.awards, name = "cr_awards"),
  ]
